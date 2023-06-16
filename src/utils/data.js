@@ -35,21 +35,19 @@ export const data = [
 
 export const fetchAllStudents = async () => {
   try {
-    const students = await axios.get(
-      "https://heydaisy-backend.onrender.com/students"
-    );
+    const students = await axios.get(`${process.env.REACT_APP_API}/students`);
     return students;
   } catch (err) {
-    console.log(err);
+    console.error("Error fetching students:", err);
+    throw err; // Rethrow the error to handle it at a higher level if needed
   }
 };
-export const fetchSingleStudent = async () => {
+export const fetchUsers = async () => {
   try {
-    const student = await axios.get(
-      "https://heydaisy-backend.onrender.com/students/:id"
-    );
-    return student;
+    const users = await axios.get(`${process.env.REACT_APP_API}/users`);
+    return users;
   } catch (err) {
-    console.log(err);
+    console.error("Error fetching users:", err);
+    throw err; // Rethrow the error to handle it at a higher level if needed
   }
 };
