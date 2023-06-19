@@ -1,7 +1,7 @@
 import React from "react";
 
-
 import "./App.css";
+import AppPreviewSection from "./components/homepage/AppPreviewSection";
 
 import HeroSection from "./components/homepage/HeroSection";
 import Navbar from "./components/main/Navbar";
@@ -15,16 +15,14 @@ import CallToActionSection from "./components/homepage/CallToActionSection";
 function App() {
   return (
     <>
-     <Navbar />
-    <HeroSection />
-
+      <Navbar />
+      <HeroSection />
       <AboutUsSection />
       <EventsSection />
+      <AppPreviewSection />
       <ReviewsSection />
       <CallToActionSection />
       <Footer />
-
-   
     </>
   );
 }
