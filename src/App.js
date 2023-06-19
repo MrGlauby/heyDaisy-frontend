@@ -1,4 +1,6 @@
 import React from 'react';
+import AboutUsSection from './components/homepage/AboutUsSection';
+import ReviewsSection from './components/homepage/ReviewsSection';
 
 import "./App.css";
 
@@ -10,12 +12,14 @@ function App() {
       <h1 className='text-6xl text-red-400'>
       HeyDaisy
     </h1>
+    <AboutUsSection />
+    <ReviewsSection />
 
 
    
-
+{/* 
 {/* DOPDOWN MENU */}
-<div className="navbar bg-base-300 rounded-box">
+{/* <div className="navbar bg-base-300 rounded-box">
   <div className="flex-1 px-2 lg:flex-none">
     <a className="text-lg font-bold">daisyUI</a>
   </div> 
@@ -31,10 +35,10 @@ function App() {
       </div>
     </div>
   </div>
-</div>
+</div> */}
 
 {/* HERO SECTION */}
-      <div className="hero min-h-screen bg-base-200">
+      {/* <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
@@ -63,7 +67,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
     </>
   );
