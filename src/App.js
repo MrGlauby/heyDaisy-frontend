@@ -17,14 +17,12 @@ function App() {
     <>
       <Navbar />
       <HeroSection />
-
       <AboutUsSection />
       <EventsSection />
+      <AppPreviewSection />
       <ReviewsSection />
       <CallToActionSection />
       <Footer />
-
-      <AppPreviewSection />
     </>
   );
 }
