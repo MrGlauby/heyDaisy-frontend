@@ -6,7 +6,7 @@ export default function EventsSection() {
       <div className="flex justify-center m-8">
         <h2 className="text-5xl font-bold">Events</h2>
       </div>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto m-10">
         <table className="table">
           {/* head */}
           <thead>
@@ -21,19 +21,11 @@ export default function EventsSection() {
           <tbody>
             {/* row 1 */}
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="/tailwind-css-component-profile-2@56w.png"
-                        alt="Avatar Tailwind CSS Component"
-                      />
+                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                     </div>
                   </div>
                   <div>
@@ -56,19 +48,11 @@ export default function EventsSection() {
             </tr>
             {/* row 2 */}
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="/tailwind-css-component-profile-3@56w.png"
-                        alt="Avatar Tailwind CSS Component"
-                      />
+                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                     </div>
                   </div>
                   <div>
@@ -89,19 +73,11 @@ export default function EventsSection() {
             </tr>
             {/* row 3 */}
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="/tailwind-css-component-profile-4@56w.png"
-                        alt="Avatar Tailwind CSS Component"
-                      />
+                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                     </div>
                   </div>
                   <div>
