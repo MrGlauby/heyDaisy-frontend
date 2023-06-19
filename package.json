@@ -1,12 +1,15 @@
 {
   "name": "heydaisy_frontend",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
   "dependencies": {
+    "@iconscout/react-unicons": "^2.0.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "debug": "^4.3.4",
     "dom": "^0.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -40,7 +43,14 @@
     ]
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
     "daisyui": "^3.1.0",
+    "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "tailwind.config.js",
+  "author": "",
+  "license": "ISC"
 }
