@@ -1,17 +1,15 @@
-
-
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      Epiloque: ["epilogue", "sans-serif"],
+    },
     extend: {},
   },
-  plugins: [require("daisyui")],
+
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
     themes: ["pastel"],
   },
-}
-   
+};
