@@ -3,17 +3,15 @@ import React from "react";
 export default function EventsSection() {
   return (
     <div>
-      <h1 className="text-5xl font-bold ">Events</h1>
+      <div className="flex justify-center m-8">
+        <h2 className="text-5xl font-bold">Events</h2>
+      </div>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
           <thead>
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
+              <th></th>
               <th>Name</th>
               <th>Description</th>
               <th>Language</th>
@@ -53,7 +51,7 @@ export default function EventsSection() {
               </td>
               <td>Spanish</td>
               <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button className="btn btn-primary btn-xs">details</button>
               </th>
             </tr>
             {/* row 2 */}
@@ -86,7 +84,7 @@ export default function EventsSection() {
               </td>
               <td>Italian</td>
               <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button className="btn btn-primary btn-xs">details</button>
               </th>
             </tr>
             {/* row 3 */}
@@ -121,7 +119,7 @@ export default function EventsSection() {
               </td>
               <td>Portuguese</td>
               <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button className="btn btn-primary btn-xs">details</button>
               </th>
             </tr>
             {/* row 4 */}
