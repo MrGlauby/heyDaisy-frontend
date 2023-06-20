@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 import "./App.css";
-
+import { useEffect, useState } from "react";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
@@ -15,8 +15,44 @@ import VideoCall from "./pages/VideoCall";
 import StudentGallery from "./pages/StudentGallery";
 import SingleStudent from "./components/main/SingleStudent";
 import UilReact from "@iconscout/react-unicons/icons/uil-react";
+import { getUser } from "./utils/authUtils";
 
 function App() {
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const validateToken = async () => {
+      try {
+        setLoading(true);
+        const user = await getUser(token);
+        setUser(user);
+        setIsAuthenticated(true);
+      } catch (error) {
+        console.error(error.message);
+        localStorage.removeItem("token");
+        setToken(null);
+        setUser(null);
+        setIsAuthenticated(false);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (token) {
+      validateToken();
+    }
+  }, [token]);
+
+  /*  const logOut = () => {
+    localStorage.removeItem("token");
+    setToken(null);
+    setUser(null);
+    setIsAuthenticated(false);
+  };
+*/
   return (
     <>
       <Routes>
@@ -27,8 +63,30 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="chat" element={<Chat />} />
         <Route path="faq" element={<Faq />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
+        <Route
+          path="login"
+          element={
+            <Login
+              isAuthenticated={isAuthenticated}
+              setIsAuthenticated={setIsAuthenticated}
+              loading={loading}
+              setLoading={setLoading}
+              setToken={setToken}
+            />
+          }
+        />
+        <Route
+          path="register"
+          element={
+            <Register
+              isAuthenticated={isAuthenticated}
+              setIsAuthenticated={setIsAuthenticated}
+              loading={loading}
+              setLoading={setLoading}
+              setToken={setToken}
+            />
+          }
+        />
         <Route path="videocall" element={<VideoCall />} />
         <Route path="students" element={<StudentGallery />} />
         <Route path="students/:id" element={<SingleStudent />} />
