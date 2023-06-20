@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 import "../../App.css";
 
 function AppPreviewSection() {
+  // State to keep track of the active tab
   const [activeTab, setActiveTab] = useState(2); // Initially set Tab 2 as active
 
+  // Function to handle tab click and update the active tab
   const handleTabClick = (tabIndex) => {
     setActiveTab(tabIndex);
   };
 
+  // Function to render the text content based on the active tab
   const renderTabText = () => {
     switch (activeTab) {
       case 1:
@@ -62,6 +65,7 @@ function AppPreviewSection() {
     }
   };
 
+  // Function to render the image content based on the active tab
   const renderTabImage = () => {
     switch (activeTab) {
       case 1:
@@ -104,8 +108,9 @@ function AppPreviewSection() {
       <div className="flex md:container md:mx-auto justify-center content-center p-10">
         <div className="flex content-center gap-10">
           <div className="max-w-md p-5">
-            <h2 className=" font-bold text-4xl mb-5">Features</h2>
+            <h2 className="font-bold text-4xl mb-5">Features</h2>
             <div className="tabs tabs-boxed mb-5">
+              {/* Links for each tab */}
               <Link
                 className={`tab ${activeTab === 1 ? "tab-active" : ""}`}
                 onClick={() => handleTabClick(1)}
@@ -132,6 +137,7 @@ function AppPreviewSection() {
               <div className="camera"></div>
               <div className="display">
                 <div className="artboard artboard-demo phone-1">
+                  {/* Render the image content based on the active tab */}
                   {renderTabImage()}
                 </div>
               </div>
