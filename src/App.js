@@ -11,7 +11,7 @@ import Chat from "./pages/Chat";
 import Faq from "./pages/Faq";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import VideoCall from "./pages/VideoCall";
+import VideoCalls from "./pages/VideoCalls";
 import StudentGallery from "./pages/StudentGallery";
 import SingleStudent from "./components/main/SingleStudent";
 import UilReact from "@iconscout/react-unicons/icons/uil-react";
