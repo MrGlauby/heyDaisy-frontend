@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 export const fetchAllStudents = async () => {
   try {
     const students = await axios.get(`${process.env.REACT_APP_API}/students`);
