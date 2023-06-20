@@ -87,7 +87,7 @@ function App() {
             />
           }
         />
-        <Route path="videocall" element={<VideoCall />} />
+        <Route path="videocall" element={<VideoCalls />} />
         <Route path="students" element={<StudentGallery />} />
         <Route path="students/:id" element={<SingleStudent />} />
       </Routes>
