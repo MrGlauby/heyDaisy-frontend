@@ -105,7 +105,7 @@ function AppPreviewSection() {
 
   return (
     <>
-      <div className="hero p-32 md:container md:mx-auto justify-center content-center">
+      <div className="hero p-32 md:mx-auto justify-center content-center bg-base-200">
         <div className="flex content-center gap-x-48">
           <div className="max-w-md p-5">
             <h2 className="font-bold text-4xl mb-5">Features</h2>
