@@ -43,7 +43,7 @@ export default function EventsSection() {
               </td>
               <td>Spanish</td>
               <th>
-                <button className="btn btn-primary btn-xs">details</button>
+                 <a href="events" className="btn btn-primary btn-xs" >details </a>
               </th>
             </tr>
             {/* row 2 */}
@@ -68,7 +68,7 @@ export default function EventsSection() {
               </td>
               <td>Italian</td>
               <th>
-                <button className="btn btn-primary btn-xs">details</button>
+              <a href="events" className="btn btn-primary btn-xs" >details </a>
               </th>
             </tr>
             {/* row 3 */}
@@ -95,7 +95,7 @@ export default function EventsSection() {
               </td>
               <td>Portuguese</td>
               <th>
-                <button className="btn btn-primary btn-xs">details</button>
+              <a href="events" className="btn btn-primary btn-xs" >details </a>
               </th>
             </tr>
             {/* row 4 */}
