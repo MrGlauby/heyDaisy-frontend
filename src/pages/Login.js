@@ -86,9 +86,9 @@ export default function Login({
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary" type="submit">
+                <a href="myStudentprofile" className="btn btn-primary" type="submit">
                   Login
-                </button>
+                </a>
               </div>
             </form>
           </div>

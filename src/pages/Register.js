@@ -102,13 +102,13 @@ export default function Register({
                 <option>Portuguese</option>
               </select>
               <div className="form-control mt-6">
-                <button
+                <button ><a href="MyStudentProfile"
                   className="btn btn-primary"
                   type="submit"
                   onClick={handleSubmit}
                 >
                   Signup
-                </button>
+                  </a></button>
               </div>
             </form>
           </div>
