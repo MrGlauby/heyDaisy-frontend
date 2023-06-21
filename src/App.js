@@ -16,6 +16,7 @@ import StudentGallery from "./pages/StudentGallery";
 import SingleStudent from "./components/main/SingleStudent";
 import UilReact from "@iconscout/react-unicons/icons/uil-react";
 import { getUser } from "./utils/authUtils";
+import MyStudentProfile from "./pages/MyStudentProfile";
 
 //Pedro Tech Start
 import io from "socket.io-client";
@@ -74,8 +75,6 @@ function App() {
             <Login
               isAuthenticated={isAuthenticated}
               setIsAuthenticated={setIsAuthenticated}
-              loading={loading}
-              setLoading={setLoading}
               setToken={setToken}
             />
           }
@@ -86,8 +85,6 @@ function App() {
             <Register
               isAuthenticated={isAuthenticated}
               setIsAuthenticated={setIsAuthenticated}
-              loading={loading}
-              setLoading={setLoading}
               setToken={setToken}
             />
           }
@@ -95,6 +92,7 @@ function App() {
         <Route path="videocall" element={<VideoCalls />} />
         <Route path="students" element={<StudentGallery />} />
         <Route path="students/:id" element={<SingleStudent />} />
+        <Route path="myprofile" element={<MyStudentProfile />} />
       </Routes>
     </>
   );

@@ -3,7 +3,7 @@ import React from "react";
 export default function CallToActionSection() {
   return (
     <div>
-      <div className="hero h-full p-16 bg-base-200">
+      <div className="hero h-full p-32 bg-base-200">
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h2 className="text-5xl font-bold">Interested in joining us?</h2>
@@ -14,7 +14,9 @@ export default function CallToActionSection() {
               linguistic possibilities. Register now and embark on your language
               learning adventure today!
             </p>
-            <button className="btn btn-primary ">REGISTER</button>
+            <a href="register" target="_blank" className="btn btn-primary ">
+              REGISTER
+            </a>
           </div>
         </div>
       </div>

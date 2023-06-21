@@ -1,21 +1,18 @@
-import { StateContext } from '../stateContext';
-import { useParams } from 'react-router-dom';
-import React, { useContext } from 'react';
-
+import { StateContext } from "../stateContext";
+//import { useParams } from 'react-router-dom';
+import React, { useContext } from "react";
 
 function StudentGallery() {
-
-  const {students} = useContext(StateContext);
+  const { students } = useContext(StateContext);
   console.log(students);
-
 
   return (
     <div>
-        {students.length && students.map((student) => 
-           <div> {student.firstName} </div> )}
+      {students.length &&
+        students.map((student) => <div> {student.firstName} </div>)}
       StudentGallery
-      </div>
-  )
+    </div>
+  );
 }
 
-export default StudentGallery
+export default StudentGallery;
