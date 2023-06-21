@@ -15,23 +15,23 @@ export default function Footer() {
         </div>
         <div>
           <span className="footer-title">Company</span>
-          <a className="link link-hover hover:scale-110">About us</a>
-          <a className="link link-hover hover:scale-110">Contact</a>
-          <a className="link link-hover hover:scale-110">Blog</a>
+          <a href="about"target="_blank" className="link link-hover hover:scale-110">About us</a>
+          <a href="contact" className="link link-hover hover:scale-110">Contact</a>
+          <a href="register"target="_blank" className="link link-hover hover:scale-110">Blog</a>
         </div>
         <div>
           <span className="footer-title">Services</span>
-          <a className="link link-hover hover:scale-110">Legal</a>
-          <a className="link link-hover hover:scale-110">Terms of use</a>
-          <a className="link link-hover hover:scale-110">Privacy policy</a>
-          <a className="link link-hover hover:scale-110">Cookie policy</a>
+          <a href="register"target="_blank" className="link link-hover hover:scale-110">Legal</a>
+          <a href="register"target="_blank" className="link link-hover hover:scale-110">Terms of use</a>
+          <a href="register"target="_blank"className="link link-hover hover:scale-110">Privacy policy</a>
+          <a href="register"target="_blank" className="link link-hover hover:scale-110">Cookie policy</a>
         </div>
         <div>
           <span className="footer-title">User</span>
-          <a className="link link-hover hover:scale-110">Register</a>
-          <a className="link link-hover hover:scale-110">Login</a>
-          <a className="link link-hover hover:scale-110">FAQs</a>
-          <a className="link link-hover hover:scale-110">Downloads</a>
+          <a href="register"target="_blank" className="link link-hover hover:scale-110">Register</a>
+          <a href="login" className="link link-hover hover:scale-110">Login</a>
+          <a href="faq" className="link link-hover hover:scale-110">FAQs</a>
+          <a href="download" className="link link-hover hover:scale-110">Downloads</a>
         </div>
       </footer>
     </div>
