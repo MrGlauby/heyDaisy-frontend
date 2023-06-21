@@ -7,14 +7,13 @@ import { loginUser } from "../utils/authUtils";
 export default function Login({
   isAuthenticated,
   setIsAuthenticated,
-  loading,
-  setLoading,
+  /*loading,
+  setLoading,*/
   setToken,
 }) {
   const [formState, setFormState] = useState({
     email: "",
     password: "",
-    language: "",
   });
 
   const { email, password } = formState;

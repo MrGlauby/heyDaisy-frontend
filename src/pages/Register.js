@@ -32,6 +32,7 @@ export default function Register({
         language,
       };
       const response = await registerUser(formData);
+      console.log("response", response);
       const { token } = response.data;
       localStorage.setItem("token", token);
       setToken(token);
