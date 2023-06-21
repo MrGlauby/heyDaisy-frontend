@@ -1,26 +1,26 @@
-import firebase from "./firebase";
+// import firebase from "./firebase";
 
-var firebaseConfig = {
-  apiKey: "AIzaSyBdqQKSWLtDy7Gvn7xbTXDArEKKUTz1T6s", // Add API Key
-  databaseURL:
-    "https://videocall-f46bf-default-rtdb.europe-west1.firebasedatabase.app/", // Add databaseURL
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// var firebaseConfig = {
+//   apiKey: "AIzaSyBdqQKSWLtDy7Gvn7xbTXDArEKKUTz1T6s", // Add API Key
+//   databaseURL:
+//     "https://videocall-f46bf-default-rtdb.europe-west1.firebasedatabase.app/", // Add databaseURL
+// };
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
 
-export const db = firebase;
+// export const db = firebase;
 
-var firepadRef = firebase.database().ref();
+// var firepadRef = firebase.database().ref();
 
-export const userName = prompt("What's your name?");
-const urlparams = new URLSearchParams(window.location.search);
-const roomId = urlparams.get("id");
+// export const userName = prompt("What's your name?");
+// const urlparams = new URLSearchParams(window.location.search);
+// const roomId = urlparams.get("id");
 
-if (roomId) {
-  firepadRef = firepadRef.child(roomId);
-} else {
-  firepadRef = firepadRef.push();
-  window.history.replaceState(null, "Meet", "?id=" + firepadRef.key);
-}
+// if (roomId) {
+//   firepadRef = firepadRef.child(roomId);
+// } else {
+//   firepadRef = firepadRef.push();
+//   window.history.replaceState(null, "Meet", "?id=" + firepadRef.key);
+// }
 
-export default firepadRef;
+// export default firepadRef;
