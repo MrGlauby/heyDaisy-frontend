@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Navigate } from "react-router-dom";
 //import Loader from ".Loader";
 import { loginUser } from "../utils/authUtils";
+import { Link } from "react-router-dom";
 
 export default function Login({
   isAuthenticated,
@@ -79,16 +80,15 @@ export default function Login({
                   value={password}
                   onChange={handleChange}
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="form-control mt-6">
-                <a href="myStudentprofile" className="btn btn-primary" type="submit">
+                <Link
+                  to={"/myprofile"}
+                  className="btn btn-primary"
+                  type="submit"
+                >
                   Login
-                </a>
+                </Link>
               </div>
             </form>
           </div>
