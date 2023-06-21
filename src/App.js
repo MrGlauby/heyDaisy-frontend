@@ -18,6 +18,11 @@ import UilReact from "@iconscout/react-unicons/icons/uil-react";
 import { getUser } from "./utils/authUtils";
 import MyStudentProfile from "./pages/MyStudentProfile";
 
+//Pedro Tech Start
+import io from "socket.io-client";
+
+const socket = io.connect("http://localhost:3000");
+//Pedro Tech End
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
