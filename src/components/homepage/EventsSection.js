@@ -5,7 +5,7 @@ import RandomUserSix from "../../img/randomUserReview6.jpg";
 
 export default function EventsSection() {
   return (
-    <div>
+    <div className="flex flex-col justify-center p-32">
       <div className="flex justify-center m-8">
         <h2 className="text-5xl font-bold">Events</h2>
       </div>
