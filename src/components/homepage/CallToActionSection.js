@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 export default function CallToActionSection() {
   return (
@@ -14,7 +16,8 @@ export default function CallToActionSection() {
               linguistic possibilities. Register now and embark on your language
               learning adventure today!
             </p>
-            <a href="register" target="_blank" className="btn btn-primary ">REGISTER</a> 
+            <Link to="register" className="btn btn-primary">REGISTER</Link>
+
           </div>
         </div>
       </div>

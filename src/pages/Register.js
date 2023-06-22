@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
 // import Loader from "./Loader";
 import { registerUser } from "../utils/authUtils";
+import { Link } from "react-router-dom";
+
 
 export default function Register({
   isAuthenticated,
@@ -101,13 +103,7 @@ export default function Register({
                 <option>Portuguese</option>
               </select>
               <div className="form-control mt-6">
-                <button ><a href="MyStudentProfile"
-                  className="btn btn-primary"
-                  type="submit"
-                  onClick={handleSubmit}
-                >
-                  Signup
-                  </a></button>
+              <Link to="MyStudentProfile" className="btn btn-primary" onClick={handleSubmit}>Signup</Link>
               </div>
             </form>
           </div>
@@ -116,3 +112,4 @@ export default function Register({
     </div>
   );
 }
+

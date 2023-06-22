@@ -1,5 +1,7 @@
 import React from "react";
 import { UilFlower } from "@iconscout/react-unicons";
+import { Link } from "react-router-dom";
+
 
 export default function Footer() {
   return (
@@ -14,25 +16,25 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <span className="footer-title">Company</span>
-          <a href="about"target="_blank" className="link link-hover hover:scale-110">About us</a>
-          <a href="contact" className="link link-hover hover:scale-110">Contact</a>
-          <a href="register"target="_blank" className="link link-hover hover:scale-110">Blog</a>
-        </div>
-        <div>
-          <span className="footer-title">Services</span>
-          <a href="register"target="_blank" className="link link-hover hover:scale-110">Legal</a>
-          <a href="register"target="_blank" className="link link-hover hover:scale-110">Terms of use</a>
-          <a href="register"target="_blank"className="link link-hover hover:scale-110">Privacy policy</a>
-          <a href="register"target="_blank" className="link link-hover hover:scale-110">Cookie policy</a>
-        </div>
-        <div>
-          <span className="footer-title">User</span>
-          <a href="register"target="_blank" className="link link-hover hover:scale-110">Register</a>
-          <a href="login" className="link link-hover hover:scale-110">Login</a>
-          <a href="faq" className="link link-hover hover:scale-110">FAQs</a>
-          <a href="download" className="link link-hover hover:scale-110">Downloads</a>
-        </div>
+            <span className="footer-title">Company</span>
+            <Link to="about" className="link link-hover hover:scale-110">About us</Link>
+            <Link to="contact" className="link link-hover hover:scale-110">Contact</Link>
+            <Link to="register" className="link link-hover hover:scale-110">Blog</Link>
+          </div>
+          <div>
+            <span className="footer-title">Services</span>
+            <Link to="register" className="link link-hover hover:scale-110">Legal</Link>
+            <Link to="register" className="link link-hover hover:scale-110">Terms of use</Link>
+            <Link to="register" className="link link-hover hover:scale-110">Privacy policy</Link>
+            <Link to="register" className="link link-hover hover:scale-110">Cookie policy</Link>
+          </div>
+          <div>
+            <span className="footer-title">User</span>
+            <Link to="register" className="link link-hover hover:scale-110">Register</Link>
+            <Link to="login" className="link link-hover hover:scale-110">Login</Link>
+            <Link to="faq" className="link link-hover hover:scale-110">FAQs</Link>
+            <Link to="download" className="link link-hover hover:scale-110">Downloads</Link>
+          </div>
       </footer>
     </div>
   );

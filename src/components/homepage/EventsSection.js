@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 export default function EventsSection() {
   return (
@@ -95,7 +97,7 @@ export default function EventsSection() {
               </td>
               <td>Portuguese</td>
               <th>
-              <a href="events" className="btn btn-primary btn-xs" >details </a>
+              <Link to="events" className="btn btn-primary btn-xs" >details </Link>
               </th>
             </tr>
             {/* row 4 */}
