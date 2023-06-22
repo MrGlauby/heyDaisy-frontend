@@ -11,8 +11,8 @@ function AboutUsSection() {
           className="max-w-sm rounded-lg shadow-2xl"
         />
         <div>
-          <h1 className="text-5xl font-bold">What we do and why:</h1>
-          <p className="py-6">
+          <h1 className="text-5xl font-bold m-8">What we do and why:</h1>
+          <p className="py-6 m-8">
             Speaking a new language is an unparalleled tool for personal growth.
             <br></br>
             <br></br>
