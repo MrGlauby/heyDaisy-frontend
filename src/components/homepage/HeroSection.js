@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 
 export default function HeroSection() {
+
   return <div>
             <div className="hero min-h-screen bg-violet-100">
               <div className="hero-content text-center">
@@ -15,4 +16,6 @@ export default function HeroSection() {
             </div>
         </div>;
 
+
+ 
 }

@@ -2,7 +2,7 @@ import React from "react";
 // import { StateContext } from "../stateContext";
 // import { useContext } from "react";
 
-import SingleStudent from "./SingleStudent"
+import SingleStudent from "./SingleStudent";
 
 export default function AllStudents({students}) {
   return <div>
