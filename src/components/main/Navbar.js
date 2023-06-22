@@ -20,7 +20,7 @@ export default function Navbar() {
           <ul className="menu menu-horizontal  text-lg">
             <li className="p-5">
               <Link to={"/register"}>
-                <button className="btn btn-primary">Register</button>
+                <button className="btn btn-primary ">Register</button>
               </Link>
             </li>
             <li className="p-5">
