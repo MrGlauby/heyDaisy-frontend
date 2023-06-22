@@ -1,12 +1,10 @@
-import React from "react";
-<<<<<<< HEAD
+
 import { Link } from "react-router-dom";
 
-=======
+
 import RandomUserOne from "../../img/randomUserReview1.jpg";
 import RandomUserFive from "../../img/randomUserReview5.jpg";
 import RandomUserSix from "../../img/randomUserReview6.jpg";
->>>>>>> b4154112ad8dd5d44b38f4342af79121d28f2d99
 
 export default function EventsSection() {
   return (
@@ -107,13 +105,7 @@ export default function EventsSection() {
               </td>
               <td>Portuguese</td>
               <th>
-<<<<<<< HEAD
               <Link to="events" className="btn btn-primary btn-xs" >details </Link>
-=======
-                <a href="events" className="btn btn-primary btn-xs">
-                  details{" "}
-                </a>
->>>>>>> b4154112ad8dd5d44b38f4342af79121d28f2d99
               </th>
             </tr>
             {/* row 4 */}

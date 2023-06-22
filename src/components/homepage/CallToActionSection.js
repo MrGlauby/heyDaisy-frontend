@@ -16,14 +16,9 @@ export default function CallToActionSection() {
               linguistic possibilities. Register now and embark on your language
               learning adventure today!
             </p>
-<<<<<<< HEAD
             <Link to="register" className="btn btn-primary">REGISTER</Link>
 
-=======
-            <a href="register" target="_blank" className="btn btn-primary ">
-              REGISTER
-            </a>
->>>>>>> b4154112ad8dd5d44b38f4342af79121d28f2d99
+
           </div>
         </div>
       </div>

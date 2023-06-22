@@ -1,19 +1,16 @@
 import React from "react";
 import { UilFlower } from "@iconscout/react-unicons";
 import { Link } from "react-router-dom";
+import logo from "../../img/heyDaisy1.png";
 
 
 export default function Footer() {
   return (
     <div>
       <footer className="footer p-10 bg-base-300 text-base-content">
-        <div>
-          <UilFlower size={60} color="#F4F498" />
-
-          <div>
-            <p className="text-3xl font-semibold">heyDaisy</p>
-            <p>Learn. Share. Communicate.</p>
-          </div>
+        <div className="flex-1 ">
+                  <Link to="home">
+                  <img className="logoflex self-start  pl-2  h-35 w-full m-left-4px  min-w-[6rem]   max-w-[12rem]   duration-150 ease-in-out hover:scale-110" src={logo} alt="logo" /></Link>
         </div>
         <div>
             <span className="footer-title">Company</span>
