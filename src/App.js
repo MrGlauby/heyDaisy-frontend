@@ -16,7 +16,13 @@ import StudentGallery from "./pages/StudentGallery";
 import SingleStudent from "./components/main/SingleStudent";
 import UilReact from "@iconscout/react-unicons/icons/uil-react";
 import { getUser } from "./utils/authUtils";
+import MyStudentProfile from "./pages/MyStudentProfile";
 
+//Pedro Tech Start
+import io from "socket.io-client";
+
+const socket = io.connect("http://localhost:3000");
+//Pedro Tech End
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -69,8 +75,6 @@ function App() {
             <Login
               isAuthenticated={isAuthenticated}
               setIsAuthenticated={setIsAuthenticated}
-              loading={loading}
-              setLoading={setLoading}
               setToken={setToken}
             />
           }
@@ -81,8 +85,6 @@ function App() {
             <Register
               isAuthenticated={isAuthenticated}
               setIsAuthenticated={setIsAuthenticated}
-              loading={loading}
-              setLoading={setLoading}
               setToken={setToken}
             />
           }
@@ -90,6 +92,7 @@ function App() {
         <Route path="videocall" element={<VideoCalls />} />
         <Route path="students" element={<StudentGallery />} />
         <Route path="students/:id" element={<SingleStudent />} />
+        <Route path="myprofile" element={<MyStudentProfile />} />
       </Routes>
     </>
   );

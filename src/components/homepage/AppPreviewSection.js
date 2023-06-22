@@ -105,8 +105,8 @@ function AppPreviewSection() {
 
   return (
     <>
-      <div className="flex md:container md:mx-auto justify-center content-center p-10">
-        <div className="flex content-center gap-10">
+      <div className="hero p-32 md:mx-auto justify-center content-center bg-base-200">
+        <div className="flex content-center gap-x-48">
           <div className="max-w-md p-5">
             <h2 className="font-bold text-4xl mb-5">Features</h2>
             <div className="tabs tabs-boxed mb-5">

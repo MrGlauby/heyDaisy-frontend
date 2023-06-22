@@ -34,6 +34,7 @@ export default function Register({
         language,
       };
       const response = await registerUser(formData);
+      console.log("response", response);
       const { token } = response.data;
       localStorage.setItem("token", token);
       setToken(token);
@@ -44,7 +45,8 @@ export default function Register({
       return error.response?.data.error || error.message;
     }
   };
-  if (isAuthenticated) return <Navigate to="/" />;
+  if (isAuthenticated) return <Navigate to="/login" />;
+
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-wrap w-2/4 text-center">
@@ -103,7 +105,20 @@ export default function Register({
                 <option>Portuguese</option>
               </select>
               <div className="form-control mt-6">
+<<<<<<< HEAD
               <Link to="MyStudentProfile" className="btn btn-primary" onClick={handleSubmit}>Signup</Link>
+=======
+                <button>
+                  <a
+                    href="MyStudentProfile"
+                    className="btn btn-primary"
+                    type="submit"
+                    onClick={handleSubmit}
+                  >
+                    Signup
+                  </a>
+                </button>
+>>>>>>> b4154112ad8dd5d44b38f4342af79121d28f2d99
               </div>
             </form>
           </div>

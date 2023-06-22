@@ -1,10 +1,16 @@
 import React from "react";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 
+=======
+import RandomUserOne from "../../img/randomUserReview1.jpg";
+import RandomUserFive from "../../img/randomUserReview5.jpg";
+import RandomUserSix from "../../img/randomUserReview6.jpg";
+>>>>>>> b4154112ad8dd5d44b38f4342af79121d28f2d99
 
 export default function EventsSection() {
   return (
-    <div>
+    <div className="flex flex-col justify-center p-32">
       <div className="flex justify-center m-8">
         <h2 className="text-5xl font-bold">Events</h2>
       </div>
@@ -27,7 +33,7 @@ export default function EventsSection() {
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
                     <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                      <img src={RandomUserOne} alt="User Events" />
                     </div>
                   </div>
                   <div>
@@ -45,7 +51,9 @@ export default function EventsSection() {
               </td>
               <td>Spanish</td>
               <th>
-                 <a href="events" className="btn btn-primary btn-xs" >details </a>
+                <a href="events" className="btn btn-primary btn-xs">
+                  details{" "}
+                </a>
               </th>
             </tr>
             {/* row 2 */}
@@ -54,7 +62,7 @@ export default function EventsSection() {
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
                     <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                      <img src={RandomUserFive} alt="User Events" />
                     </div>
                   </div>
                   <div>
@@ -70,7 +78,9 @@ export default function EventsSection() {
               </td>
               <td>Italian</td>
               <th>
-              <a href="events" className="btn btn-primary btn-xs" >details </a>
+                <a href="events" className="btn btn-primary btn-xs">
+                  details{" "}
+                </a>
               </th>
             </tr>
             {/* row 3 */}
@@ -79,7 +89,7 @@ export default function EventsSection() {
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
                     <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                      <img src={RandomUserSix} alt="User Events" />
                     </div>
                   </div>
                   <div>
@@ -97,7 +107,13 @@ export default function EventsSection() {
               </td>
               <td>Portuguese</td>
               <th>
+<<<<<<< HEAD
               <Link to="events" className="btn btn-primary btn-xs" >details </Link>
+=======
+                <a href="events" className="btn btn-primary btn-xs">
+                  details{" "}
+                </a>
+>>>>>>> b4154112ad8dd5d44b38f4342af79121d28f2d99
               </th>
             </tr>
             {/* row 4 */}
