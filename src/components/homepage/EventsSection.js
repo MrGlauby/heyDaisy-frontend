@@ -1,4 +1,7 @@
-import React from "react";
+
+import { Link } from "react-router-dom";
+
+
 import RandomUserOne from "../../img/randomUserReview1.jpg";
 import RandomUserFive from "../../img/randomUserReview5.jpg";
 import RandomUserSix from "../../img/randomUserReview6.jpg";
@@ -102,9 +105,7 @@ export default function EventsSection() {
               </td>
               <td>Portuguese</td>
               <th>
-                <a href="events" className="btn btn-primary btn-xs">
-                  details{" "}
-                </a>
+              <Link to="events" className="btn btn-primary btn-xs" >details </Link>
               </th>
             </tr>
             {/* row 4 */}
