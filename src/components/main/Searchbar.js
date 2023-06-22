@@ -2,46 +2,48 @@ import React, { useContext, useState, useEffect } from "react";
 import { StateContext } from "../../stateContext";
 import { useParams } from "react-router-dom";
 
-function Searchbar({ onChange, searchLanguage }) {
+
+function Searchbar({ inputValue, onInputChange, onSearch }) {
+  // const { users } = useContext(StateContext);
   const { users } = useContext(StateContext);
-  console.log(users);
+  console.log("searchbar users",users);
 
-  const [searchLanguage, setSearchLanguage] = useState("");
-  const [filteredLanguage, setFilteredLanguage] = useState(users);
+  // const [searchLanguage, setSearchLanguage] = useState("");
+  // const [filteredLanguage, setFilteredLanguage] = useState(users);
 
-  useEffect(() => {
-    setFilteredLanguage(users);
-  }, [users]);
+  // useEffect(() => {
+  //   setFilteredLanguage(users);
+  // }, [users]);
 
-  const handleInputChange = (event) => {
-    setSearchLanguage(event.target.value);
-  };
+  // const handleInputChange = (event) => {
+  //   setSearchLanguage(event.target.value);
+  // };
 
-  const handleSearch = (event) => {
-    event.preventDefault();
-    const filteredResults = users.filter((user) => {
-      // const motherLanguage = user.motherLanguage.toLowerCase();
-      const desiredLanguage = user.language.toLowerCase();
-      return (
-        // motherLanguage.includes(searchLanguage.toLowerCase()) ||
-        desiredLanguage.includes(searchLanguage.toLowerCase())
-      );
-    });
-    setFilteredLanguage(filteredResults);
-  };
+  // const handleSearch = (event) => {
+  //   event.preventDefault();
+  //   const filteredResults = users.filter((user) => {
+  //     // const motherLanguage = user.motherLanguage.toLowerCase();
+  //     const desiredLanguage = user.language.toLowerCase();
+  //     return (
+  //       // motherLanguage.includes(searchLanguage.toLowerCase()) ||
+  //       desiredLanguage.includes(searchLanguage.toLowerCase())
+  //     );
+  //   });
+  //   setFilteredLanguage(filteredResults);
+  // };
 
   return (
     <div>
-      <form onSubmit={handleSearch}>
+      <form>
         <div className="flex justify-end m-5 space-x-2">
           <input
             className="text-gray-800 rounded-sm p-1 text-lg"
             type="text"
             placeholder="Search language..."
-            value={searchLanguage}
-            onChange={handleInputChange}
+            value={inputValue}
+            onChange={onInputChange}
           />
-          <button className="btn btn-ghost btn-circle" type="submit">
+          <button className="btn btn-ghost btn-circle" type="submit" onClick={onSearch}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -59,9 +61,9 @@ function Searchbar({ onChange, searchLanguage }) {
           </button>
         </div>
       </form>
-      <div className="flex justify-center m-8 p-8">
+      {/* <div className="flex justify-center m-8 p-8">
         <h1 className="text-5xl font-bold">All Students</h1>
-      </div>
+      </div> */}
     </div>
   );
 }
