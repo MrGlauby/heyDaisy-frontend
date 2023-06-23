@@ -147,6 +147,7 @@ export default function MyStudentProfile() {
               )}
             </div>
             <div>
+<<<<<<< HEAD
               <span className="font-bold">I want also speak:</span>
               {isEditing ? (
                 <input
@@ -157,6 +158,10 @@ export default function MyStudentProfile() {
               ) : (
                 <span>{spokenLanguage}</span>
               )}
+=======
+              <span className="font-bold">I also speak:</span>
+              <span> English</span>
+>>>>>>> ce3dd5c09b028464fe5ac896b44e3f60f427c6cf
             </div>
             <div>
               <span className="font-bold">I want to learn:</span>

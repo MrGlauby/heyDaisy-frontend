@@ -17,6 +17,7 @@ import SingleStudent from "./components/main/SingleStudent";
 import UilReact from "@iconscout/react-unicons/icons/uil-react";
 import { getUser } from "./utils/authUtils";
 import MyStudentProfile from "./pages/MyStudentProfile";
+import StudentProfile from "./pages/StudentProfile";
 
 // //Pedro Tech Start
 // import io from "socket.io-client";
@@ -91,7 +92,7 @@ function App() {
         />
         <Route path="videocall" element={<VideoCalls />} />
         <Route path="students" element={<StudentGallery />} />
-        <Route path="students/:id" element={<SingleStudent />} />
+        <Route path="student/:_id" element={<StudentProfile />} />
         <Route path="myprofile" element={<MyStudentProfile />} />
       </Routes>
     </>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -6,13 +7,13 @@ export default function Sidebar() {
       <div className="flex absolute mt-8">
         <ul className="menu bg-base-200 w-56 rounded-box">
           <li>
-            <a>User Gallery</a>
+            <Link to="/students">User Gallery</Link>
           </li>
           <li>
             <a>Chat</a>
           </li>
           <li>
-            <a>Events</a>
+            <Link to="/events">Events</Link>
           </li>
           <li>
             <a>Create Channel</a>

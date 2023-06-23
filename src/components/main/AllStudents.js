@@ -17,35 +17,34 @@ function AllStudents() {
 
   const handleSearch = (event) => {
     event.preventDefault();
-
+  
     const filteredResults = users.filter((user) => {
-      // const motherLanguage = user.motherLanguage.toLowerCase();
-      const desiredLanguage = user.language.toLowerCase();
+      const motherLanguage = (user.motherLanguage || "").toLowerCase();
+      const desiredLanguage = (user.language || "").toLowerCase();
       return (
-        // motherLanguage.includes(inputValue.toLowerCase()) ||
+        motherLanguage.includes(inputValue.toLowerCase()) ||
         desiredLanguage.includes(inputValue.toLowerCase())
       );
     });
     setFilteredLanguage(filteredResults);
   };
-
+  
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
-
   return (
     <>
-      <Searchbar 
-      inputValue={inputValue} 
-      onInputChange={handleInputChange} 
-      onSearch={handleSearch} 
+      <Searchbar
+        inputValue={inputValue}
+        onInputChange={handleInputChange}
+        onSearch={handleSearch}
       />
-      <div></div>
-      <div>
-        {/* {users.length && users.map((user) => <SingleStudent user={user} />)} */}
-        {filteredLanguage.length && filteredLanguage.map((user) => <SingleStudent user={user} />)}
+
+      <div className="flex flex-wrap justify-around">
+        {filteredLanguage.length &&
+          filteredLanguage.map((user) => <SingleStudent user={user} />)}
       </div>
     </>
   );
