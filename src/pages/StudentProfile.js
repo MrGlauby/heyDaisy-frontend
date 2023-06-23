@@ -20,8 +20,8 @@ function StudentProfile() {
     return (
       <div>
         <Sidebar />
-        <div className="flex justify-center">
-          <h2>Loading</h2>
+        <div className="flex justify-center m-8">
+          <h2 className="m-2">Loading</h2>
           <span className="loading loading-dots loading-xs"></span>
           <span className="loading loading-dots loading-sm"></span>
           <span className="loading loading-dots loading-md"></span>
@@ -138,17 +138,7 @@ function StudentProfile() {
         <div className="flex m-4 card w-3/4 bg-base-100 shadow-xl ">
           <div className="card-body">
             <div className="card-actions justify-end"></div>
-            <p>
-              "Hi! I'm Sirenita, a passionate tennis, music and dance lover. I
-              love getting lost in the rhythms and letting myself get carried
-              away by the music, whether dancing with friends or enjoying live
-              concerts. In addition, I have a great interest in learning and
-              practicing Spanish. I would love to immerse myself in the Hispanic
-              culture, meet new people and improve my language skills. I am
-              excited for the journey ahead as I combine my passions and
-              continue to enrich my life through tennis, music, dance and
-              learning Spanish."
-            </p>
+            <p>{user.description}</p>
           </div>
         </div>
       </div>
