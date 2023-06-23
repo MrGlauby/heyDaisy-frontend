@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function SingleStudent({ user }) {
   return (
-    <div className="flex flex-wrap justify-around w-full">
+    <div>
       <div
         className="m-8 card card-compact w-96 bg-base-100 shadow-xl"
         key={user._id}

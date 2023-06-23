@@ -41,7 +41,7 @@ function AllStudents() {
         onSearch={handleSearch}
       />
 
-      <div>
+      <div className="flex flex-wrap justify-around">
         {/* {users.length && users.map((user) => <SingleStudent user={user} />)} */}
         {filteredLanguage.length &&
           filteredLanguage.map((user) => <SingleStudent user={user} />)}

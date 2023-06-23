@@ -88,7 +88,7 @@ function StudentProfile() {
         </div>
       </div>
 
-      <div className="content flex justify-center p-4">
+      <div className="content flex justify-center p-2">
         {activeTab === "personalDetails" && (
           <div className="tab-content text-center">
             <div>
@@ -126,14 +126,7 @@ function StudentProfile() {
           </div>
         )}
       </div>
-      <div className="flex justify-center">
-        <div className="flex m-4 card w-3/4 bg-base-100 shadow-xl ">
-          <div className="card-body">
-            <div className="card-actions justify-end"></div>
-            <p></p>
-          </div>
-        </div>
-      </div>
+
       <div className="flex justify-center">
         <div className="flex m-4 card w-3/4 bg-base-100 shadow-xl ">
           <div className="card-body">
