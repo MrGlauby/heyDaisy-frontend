@@ -92,7 +92,7 @@ function App() {
         />
         <Route path="videocall" element={<VideoCalls />} />
         <Route path="students" element={<StudentGallery />} />
-        <Route path="/student/:_id" element={<StudentProfile />} />
+        <Route path="student/:_id" element={<StudentProfile />} />
         <Route path="myprofile" element={<MyStudentProfile />} />
       </Routes>
     </>

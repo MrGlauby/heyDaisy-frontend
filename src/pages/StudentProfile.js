@@ -15,6 +15,32 @@ function StudentProfile() {
   };
 
   const user = users.find((user) => user._id === _id);
+
+  if (!users || users.length === 0) {
+    return (
+      <div>
+        <Sidebar />
+        <div className="flex justify-center">
+          <h2>Loading</h2>
+          <span className="loading loading-dots loading-xs"></span>
+          <span className="loading loading-dots loading-sm"></span>
+          <span className="loading loading-dots loading-md"></span>
+          <span className="loading loading-dots loading-lg"></span>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div>
+        <Sidebar />
+        <div className="flex justify-center">
+          <h2>User not found!</h2>
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       <Sidebar />
