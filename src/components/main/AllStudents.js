@@ -29,23 +29,22 @@ function AllStudents() {
     setFilteredLanguage(filteredResults);
   };
 
-
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
-
   return (
     <>
-      <Searchbar 
-      inputValue={inputValue} 
-      onInputChange={handleInputChange} 
-      onSearch={handleSearch} 
+      <Searchbar
+        inputValue={inputValue}
+        onInputChange={handleInputChange}
+        onSearch={handleSearch}
       />
-      <div></div>
+
       <div>
         {/* {users.length && users.map((user) => <SingleStudent user={user} />)} */}
-        {filteredLanguage.length && filteredLanguage.map((user) => <SingleStudent user={user} />)}
+        {filteredLanguage.length &&
+          filteredLanguage.map((user) => <SingleStudent user={user} />)}
       </div>
     </>
   );
