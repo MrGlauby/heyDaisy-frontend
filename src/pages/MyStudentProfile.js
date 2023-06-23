@@ -75,7 +75,7 @@ export default function MyStudentProfile() {
               <span> Swedish</span>
             </div>
             <div>
-              <span className="font-bold">I want also speak:</span>
+              <span className="font-bold">I also speak:</span>
               <span> English</span>
             </div>
             <div>
