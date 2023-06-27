@@ -25,18 +25,18 @@ export default function Events() {
       <Navbar/>
       {/* search */}
     <form>
-      <div className="flex items-center">
+      <div className="flex items-center pl-40 p-14">
         <input
           className="w-64 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           type="text"
           placeholder="Search Language..."/><button
           className="ml-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-          type="submit">Search for Language Event</button>
+          type="submit">Search Event</button>
       </div>
     </form>
       {/*  */}
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto  pl-32" >
         <table className="table">
           {/* head */}
           <thead>
@@ -237,10 +237,6 @@ export default function Events() {
                 </span></td>
               <th><button className="btn btn-ghost btn-xs">details</button></th>
             </tr>
-
-      
-
-
           </tbody>
         </table>
       </div>
