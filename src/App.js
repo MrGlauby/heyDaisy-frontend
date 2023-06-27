@@ -63,7 +63,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="events" element={<Events />} />
         <Route path="download" element={<Download />} />
@@ -90,7 +90,7 @@ function App() {
             />
           }
         />
-        <Route path="videocall" element={<VideoCalls />} />
+        {/* <Route path="videocall" element={<VideoCalls />} /> */}
         <Route path="students" element={<StudentGallery />} />
         <Route path="student/:_id" element={<StudentProfile />} />
         <Route path="myprofile" element={<MyStudentProfile />} />
