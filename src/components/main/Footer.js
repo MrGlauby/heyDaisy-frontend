@@ -8,7 +8,7 @@ export default function Footer() {
     <div>
       <footer className="footer p-10 bg-base-300 text-base-content">
         <div className="flex-1 ">
-          <Link to="home">
+          <Link to="/home">
             <img
               className="logoflex self-start  pl-2  h-35 w-full m-left-4px  min-w-[6rem]   max-w-[12rem]   duration-150 ease-in-out hover:scale-110"
               src={logo}

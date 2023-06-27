@@ -9,7 +9,7 @@ export default function Navbar() {
     <div>
       <div className="navbar   bg-indigo-200 p-5 ">
         <div className="flex-1 ">
-          <Link to="home">
+          <Link to="/home">
             <img
               className="logoflex self-start  pl-2  h-35 w-full m-left-4px  min-w-[6rem]   max-w-[12rem]   duration-150 ease-in-out hover:scale-110"
               src={logo}
@@ -22,7 +22,7 @@ export default function Navbar() {
           <ul className="menu menu-horizontal">
             <li className="p-5   text-lg ">
               <Link
-                to="register"
+                to="/register"
                 target="_blank"
                 className="shadow-xl bg-indigo-100"
               >
@@ -30,12 +30,12 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="p-5 text-lg">
-              <Link to="Login" className="shadow-xl bg-indigo-100 ">
+              <Link to="/login" className="shadow-xl bg-indigo-100 ">
                 Login
               </Link>
             </li>
             <li className="p-5 text-lg">
-              <Link to="About" className="shadow-xl bg-indigo-100 ">
+              <Link to="/about" className="shadow-xl bg-indigo-100 ">
                 About Us
               </Link>
             </li>
