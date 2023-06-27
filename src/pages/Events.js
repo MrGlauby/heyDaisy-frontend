@@ -2,6 +2,22 @@ import React from "react";
 import Navbar from "../components/main/Navbar";
 import Footer from "../components/main/Footer";
 
+
+import RandomUserOne from "../img/randomUserReview1.jpg";
+import RandomUserTwo from "../img/randomUserReview2.jpg";
+import RandomUserThree from "../img/randomUserReview3.jpg";
+import RandomUserFour from "../img/randomUserReview4.jpg";
+import RandomUserFive from "../img/randomUserReview5.jpg";
+import RandomUserSix from "../img/randomUserReview6.jpg";
+import RandomUserSeven from "../img/randomUserReview7.jpg";
+
+
+
+
+
+// import RandomUserFive from "../../img/randomUserReview5.jpg";
+// import RandomUserSix from "../../img/randomUserReview6.jpg";
+
 export default function Events() {
   return (
     <div>
@@ -38,8 +54,10 @@ export default function Events() {
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                       <img
-                        src="/tailwind-css-component-profile-2@56w.png"
-                        alt="Avatar Tailwind CSS Component"/>
+                        src={RandomUserOne}
+                        alt="User Review 1"
+                        className="rounded-box w-64"
+                        />
                     </div>
                   </div>
                   <div>
@@ -69,9 +87,10 @@ export default function Events() {
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                       <img
-                        src="/tailwind-css-component-profile-3@56w.png"
-                        alt="Avatar Tailwind CSS Component"
-                      />
+                        src={RandomUserTwo}
+                        alt="User Review 1"
+                        className="rounded-box w-64"
+                        />
                     </div>
                   </div>
                   <div>
@@ -101,7 +120,11 @@ export default function Events() {
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
-                      <img src="/tailwind-css-component-profile-4@56w.png" alt="Avatar Tailwind CSS Component"/>
+                    <img
+                        src={RandomUserThree}
+                        alt="User Review 2"
+                        className="rounded-box w-64"
+                      />
                     </div>
                   </div>
                   <div>
@@ -124,9 +147,10 @@ export default function Events() {
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12"><img
-                        src="/tailwind-css-component-profile-5@56w.png"
-                        alt="Avatar Tailwind CSS Component"/>
+                    <div className="mask mask-squircle w-12 h-12"> <img
+                        src={RandomUserFour}
+                        alt="User Review 2"
+                        className="rounded-box w-64"/>
                     </div>
                   </div>
                   <div>
@@ -135,18 +159,89 @@ export default function Events() {
                   </div>
                 </div>
               </td>
-              <td>
+                <td>
                 <br />
-                <span className="badge badge-ghost badge-sm">
-                  Community Restaurant
-                </span>
-              </td>
-              <th>
-                <button className="btn btn-ghost btn-xs">details</button>
-              </th>
+                <span className="badge badge-ghost badge-sm">Community Restaurant
+                </span></td>
+              <th><button className="btn btn-ghost btn-xs">details</button></th>
             </tr>
+
+             {/* row 5 */}
+             <tr>
+              <td>
+                <div className="flex items-center space-x-3">
+                  <div className="avatar">
+                    <div className="mask mask-squircle w-12 h-12"> <img
+                        src={RandomUserFive}
+                        alt="User Review 2"
+                        className="rounded-box w-64"/>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">Yancy Tear</div>
+                    <div className="text-sm opacity-50">Brazil</div>
+                  </div>
+                </div>
+              </td>
+                <td>
+                <br />
+                <span className="badge badge-ghost badge-sm">Community Restaurant
+                </span></td>
+              <th><button className="btn btn-ghost btn-xs">details</button></th>
+            </tr>
+
+             {/* row 6 */}
+             <tr>
+              <td>
+                <div className="flex items-center space-x-3">
+                  <div className="avatar">
+                    <div className="mask mask-squircle w-12 h-12"> <img
+                        src={RandomUserSix}
+                        alt="User Review 2"
+                        className="rounded-box w-64"/>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">Yancy Tear</div>
+                    <div className="text-sm opacity-50">Brazil</div>
+                  </div>
+                </div>
+              </td>
+                <td>
+                <br />
+                <span className="badge badge-ghost badge-sm">Community Restaurant
+                </span></td>
+              <th><button className="btn btn-ghost btn-xs">details</button></th>
+            </tr>
+
+        {/* row 7 */}
+          <tr>
+              <td>
+                <div className="flex items-center space-x-3">
+                  <div className="avatar">
+                    <div className="mask mask-squircle w-12 h-12"> <img
+                        src={RandomUserSeven}
+                        alt="User Review 2"
+                        className="rounded-box w-64"/>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold">Yancy Tear</div>
+                    <div className="text-sm opacity-50">Brazil</div>
+                  </div>
+                </div>
+              </td>
+                <td>
+                <br />
+                <span className="badge badge-ghost badge-sm">Community Restaurant
+                </span></td>
+              <th><button className="btn btn-ghost btn-xs">details</button></th>
+            </tr>
+
+      
+
+
           </tbody>
-        
         </table>
       </div>
       <Footer/>

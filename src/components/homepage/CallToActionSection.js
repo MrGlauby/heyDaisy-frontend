@@ -17,8 +17,6 @@ export default function CallToActionSection() {
               learning adventure today!
             </p>
             <Link to="register" className="btn btn-primary">REGISTER</Link>
-
-
           </div>
         </div>
       </div>
