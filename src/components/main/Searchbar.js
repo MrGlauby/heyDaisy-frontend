@@ -4,33 +4,8 @@ import { useParams } from "react-router-dom";
 
 
 function Searchbar({ inputValue, onInputChange, onSearch }) {
-  // const { users } = useContext(StateContext);
   const { users } = useContext(StateContext);
   console.log("searchbar users",users);
-
-  // const [searchLanguage, setSearchLanguage] = useState("");
-  // const [filteredLanguage, setFilteredLanguage] = useState(users);
-
-  // useEffect(() => {
-  //   setFilteredLanguage(users);
-  // }, [users]);
-
-  // const handleInputChange = (event) => {
-  //   setSearchLanguage(event.target.value);
-  // };
-
-  // const handleSearch = (event) => {
-  //   event.preventDefault();
-  //   const filteredResults = users.filter((user) => {
-  //     // const motherLanguage = user.motherLanguage.toLowerCase();
-  //     const desiredLanguage = user.language.toLowerCase();
-  //     return (
-  //       // motherLanguage.includes(searchLanguage.toLowerCase()) ||
-  //       desiredLanguage.includes(searchLanguage.toLowerCase())
-  //     );
-  //   });
-  //   setFilteredLanguage(filteredResults);
-  // };
 
   return (
     <div>
@@ -61,9 +36,6 @@ function Searchbar({ inputValue, onInputChange, onSearch }) {
           </button>
         </div>
       </form>
-      {/* <div className="flex justify-center m-8 p-8">
-        <h1 className="text-5xl font-bold">All Students</h1>
-      </div> */}
     </div>
   );
 }
