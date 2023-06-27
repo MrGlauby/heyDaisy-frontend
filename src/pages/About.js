@@ -1,10 +1,13 @@
 import React from "react";
 
 import BackIMG from "../img/team.jpg";
+import Navbar from "../components/main/Navbar";
+import Footer from "../components/main/Footer";
+
 
 export default function About() {
   return <div>
-    
+    <Navbar/>
     <div className="hero min-h-screen" ><img src={BackIMG} alt="Team Picture" /> 
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
@@ -18,6 +21,6 @@ export default function About() {
     
   <h2>Behin the scenzes</h2>
   <h2>Motivation</h2>
-
+  <Footer/>
     </div>;
 }
