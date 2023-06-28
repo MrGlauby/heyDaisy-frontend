@@ -8,10 +8,10 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 
 export default function MyStudentProfile() {
-  const { users } = useContext(StateContext);
+  const { user, users } = useContext(StateContext);
   console.log("MyStudentProfile", users);
   const { id } = useParams();
-  const user = users.find((user) => user.id === id);
+  // const user = users.find((user) => user.id === id);
 
   console.log("MyStudentProfile - current user", user);
 
