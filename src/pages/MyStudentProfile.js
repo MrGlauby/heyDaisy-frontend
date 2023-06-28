@@ -1,9 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import Sidebar from "../components/main/Sidebar";
-import profilepic from "../img/randomUserReview4.jpg";
+import { useContext } from "react";
+import { StateContext } from "../stateContext";
 
 export default function MyStudentProfile() {
+  const { imageUrl } = useContext(StateContext);
+
   const [activeTab, setActiveTab] = useState("personalDetails");
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -17,7 +20,7 @@ export default function MyStudentProfile() {
           <div className="p-4">
             <div className="avatar">
               <div className="w-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src={profilepic} alt="profilpic" />
+                <img src={imageUrl} alt="profilpic" />
               </div>
             </div>
           </div>

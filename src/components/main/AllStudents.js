@@ -6,7 +6,9 @@ import Searchbar from "./Searchbar";
 
 function AllStudents() {
   const { users } = useContext(StateContext);
-  console.log(users);
+
+  console.log("userImage", users.profilePicture);
+  console.log("users", users);
 
   const [inputValue, setInputValue] = useState("");
   const [filteredLanguage, setFilteredLanguage] = useState([]);
@@ -32,6 +34,7 @@ function AllStudents() {
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
+  console.log("inAllStudents");
 
   return (
     <>
@@ -44,7 +47,9 @@ function AllStudents() {
       <div className="flex flex-wrap justify-around">
         {/* {users.length && users.map((user) => <SingleStudent user={user} />)} */}
         {filteredLanguage.length &&
-          filteredLanguage.map((user) => <SingleStudent user={user} />)}
+          filteredLanguage.map((user) => (
+            <SingleStudent user={user} key={user._id} />
+          ))}
       </div>
     </>
   );

@@ -127,10 +127,10 @@ function StudentProfile() {
         )}
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center text-justify">
         <div className="flex m-4 card w-3/4 bg-base-100 shadow-xl ">
           <div className="card-body">
-            <div className="card-actions justify-end"></div>
+            <div className="card-actions justify-end "></div>
             <p>{user.description}</p>
           </div>
         </div>
