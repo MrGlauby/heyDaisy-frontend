@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Sidebar from "../components/main/Sidebar";
+import getUser from "../utils/authUtils";
 
-import profilepic from "../img/randomUserReview4.jpg";
+// import profilepic from "../img/randomUserReview4.jpg";
 import { StateContext } from "../stateContext";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
@@ -11,14 +12,15 @@ export default function MyStudentProfile() {
   console.log("MyStudentProfile", users);
   const { id } = useParams();
   const user = users.find((user) => user.id === id);
-  console.log("MyStudentProfile - current user", user);
 
+  console.log("MyStudentProfile - current user", user);
 
   const [activeTab, setActiveTab] = useState("personalDetails");
   const [isEditing, setIsEditing] = useState(false);
 
   // State variables for the profile information
   const [age, setAge] = useState("");
+  const [email, setEmail] = useState("");
   const [nationality, setNationality] = useState("");
   const [livingLocation, setLivingLocation] = useState("");
   const [motherLanguage, setMotherLanguage] = useState("");
@@ -59,7 +61,7 @@ export default function MyStudentProfile() {
           <div className="p-4">
             <div className="avatar">
               <div className="w-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src={imageUrl} alt="profilpic" />
+                {/* <img src={imageUrl} alt="profilpic" /> */}
               </div>
             </div>
           </div>
@@ -106,6 +108,18 @@ export default function MyStudentProfile() {
                 />
               ) : (
                 <span>{age}</span>
+              )}
+            </div>
+            <div>
+              <span className="font-bold">Email:</span>
+              {isEditing ? (
+                <input
+                  type="text"
+                  value={user.email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              ) : (
+                <span>{email}</span>
               )}
             </div>
             <div>
