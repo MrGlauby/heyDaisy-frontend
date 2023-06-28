@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
 
+import GoogleMeet from "../../img/googleMeet.jpg"
+import Chat from "../../img/chat.png"
+import Event from "../../img/event.png"
+
 function AppPreviewSection() {
   // State to keep track of the active tab
   const [activeTab, setActiveTab] = useState(2); // Initially set Tab 2 as active
@@ -70,20 +74,19 @@ function AppPreviewSection() {
     switch (activeTab) {
       case 1:
         return (
-          <div className="image-content">
-            <p>Video</p>
+          <div className="image-content max-w-[60rem]">
             <img
-              src="https://via.placeholder.com/300x500"
+              src={GoogleMeet}
               alt="Video Placeholder"
             />
           </div>
         );
       case 2:
         return (
-          <div className="image-content">
-            <p>Chat</p>
+          <div className="image-content max-w-[16rem]" >
+           
             <img
-              src="https://via.placeholder.com/300x500"
+              src={Chat}
               alt="Chat Placeholder"
             />
           </div>
@@ -91,9 +94,8 @@ function AppPreviewSection() {
       case 3:
         return (
           <div className="image-content">
-            <p>Events</p>
             <img
-              src="https://via.placeholder.com/300x500"
+              src={Event}
               alt="Events Placeholder"
             />
           </div>
