@@ -50,7 +50,7 @@ function StudentProfile() {
           <div className="p-4">
             <div className="avatar">
               <div className="w-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src={profilepic} alt="profilpic" />
+                <img src={user?.profilePicture} alt="profilpic" />
               </div>
             </div>
           </div>
