@@ -22,7 +22,7 @@ export default function Navbar() {
           <ul className="menu menu-horizontal">
             <li className="p-5   text-lg ">
               <Link
-                to="register"
+                to="/register"
                 target="_blank"
                 className="shadow-xl bg-indigo-100"
               >
@@ -30,12 +30,12 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="p-5 text-lg">
-              <Link to="Login" className="shadow-xl bg-indigo-100 ">
+              <Link to="/login" className="shadow-xl bg-indigo-100 ">
                 Login
               </Link>
             </li>
             <li className="p-5 text-lg">
-              <Link to="About" className="shadow-xl bg-indigo-100 ">
+              <Link to="/about" className="shadow-xl bg-indigo-100 ">
                 About Us
               </Link>
             </li>

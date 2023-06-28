@@ -1,57 +1,48 @@
-// import "../../src/App.css";
-// import io from "socket.io-client";
-// import { useState } from "react";
-// import ChatWindow from "../components/chat/ChatWindow";
-// import ChatInput from "../components/chat/ChatInput";
-// import Navbar from "../components/main/Navbar";
-// import Footer from "../components/main/Footer";
+import "../../src/App.css";
+import { useState } from "react";
+import AuthPage from "../components/chat/AuthPage";
+import ChatPage from "../components/chat/ChatPage";
+import Navbar from "../components/main/Navbar";
+import Footer from "../components/main/Footer";
 
-// const socket = io.connect("http://localhost:3000");
+import io from 'socket.io-client';
 
-// function App() {
-//   const [username, setUsername] = useState("");
-//   const [room, setRoom] = useState("");
-//   const [showChat, setShowChat] = useState(false);
+// Connect to the server
+const socket = io('http://localhost:3002');
 
-//   const joinRoom = () => {
-//     if (username !== "" && room !== "") {
-//       socket.emit("join_room", room);
-//       setShowChat(true);
-//     }
-//   };
+// Send a message
+socket.emit('message', 'Hello, server!');
 
-//   return (
-//     <>
-//     <Navbar />
-//     {/* <div className="App m-auto">
-//       {!showChat ? (
-//         <div className="joinChatContainer m-auto">
-//           <h3>Join A Chat</h3>
-//           <input className="input input-bordered w-full max-w-xs"
-//             type="text"
-//             placeholder="John..."
-//             onChange={(event) => {
-//               setUsername(event.target.value);
-//             }}
-//           />
-//           <input className="input input-bordered w-full max-w-xs"
-//             type="text"
-//             placeholder="Room ID..."
-//             onChange={(event) => {
-//               setRoom(event.target.value);
-//             }}
-//           />
-//           <button className="btn btn-primary" onClick={joinRoom}>Join A Room</button>
-//         </div>
-//       ) : ( */}
-//         <ChatWindow socket={socket} username={username} room={room} />
-//       {/* )} */}
-//     {/* </div> */}
-//     <ChatInput />
-//     <Footer />
-//     </>
+// Receive a message
+socket.on('message', message => {
+  console.log('Received message:', message);
+});
 
-//   );
-// }
 
-// export default App;
+
+
+function Chat() {
+    const [user, setUser] = useState(undefined);
+  
+    if (!user) {
+      return (
+        <>
+          <Navbar />
+          <AuthPage onAuth={(user) => setUser(user)} />
+          <Footer />
+        </>
+      );
+    } else {
+      return (
+        <>
+          <Navbar />
+          <ChatPage user={user} />
+          <Footer />
+
+        </>
+      );
+    }
+  }
+  
+  export default Chat;
+  

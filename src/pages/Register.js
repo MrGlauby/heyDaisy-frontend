@@ -5,7 +5,11 @@ import { ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
 import { storage } from "../utils/firebase";
 import { registerUser } from "../utils/authUtils";
+
 import { StateContext } from "../stateContext";
+
+import Navbar from "../components/main/Navbar";
+import Footer from "../components/main/Footer";
 
 export default function Register({
   isAuthenticated,
@@ -132,6 +136,10 @@ export default function Register({
 
   if (isAuthenticated) return <Navigate to="/login" />;
   return (
+
+
+    <div>
+      <Navbar/>
     <div className="hero min-h-screen bg-base-200">
       {/* {userImage && <img alt={"userimage"} src={userImage} />} */}
       <div className="hero-content flex-wrap w-2/4 text-center">
@@ -225,6 +233,8 @@ export default function Register({
           </div>
         </div>
       </div>
+      </div>
+      <Footer/>
     </div>
   );
 }

@@ -110,15 +110,6 @@ export default function EventsSection() {
             </tr>
             {/* row 4 */}
           </tbody>
-          {/* foot */}
-          <tfoot>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Language</th>
-            </tr>
-          </tfoot>
         </table>
       </div>
     </div>
