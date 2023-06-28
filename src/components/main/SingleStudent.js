@@ -1,7 +1,7 @@
-import StudentImg from "../../img/randomUserReview1.jpg";
 import { Link } from "react-router-dom";
 
 export default function SingleStudent({ user }) {
+  console.log("imageInSingleStudent", user.profilePicture);
   return (
     <div>
       <div
@@ -9,7 +9,9 @@ export default function SingleStudent({ user }) {
         key={user._id}
       >
         <figure>
-          <img src={StudentImg} alt="" />
+          {user.profilePicture && (
+            <img alt={"userimage"} src={`http://${user.profilePicture}`} />
+          )}
         </figure>
         <div className="card-body">
           <h2 className="self-center card-title">

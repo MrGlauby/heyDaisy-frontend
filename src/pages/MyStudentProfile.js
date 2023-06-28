@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../components/main/Sidebar";
+
 import profilepic from "../img/randomUserReview4.jpg";
 import { StateContext } from "../stateContext";
 import { useContext } from "react";
@@ -11,6 +12,7 @@ export default function MyStudentProfile() {
   const { id } = useParams();
   const user = users.find((user) => user.id === id);
   console.log("MyStudentProfile - current user", user);
+
 
   const [activeTab, setActiveTab] = useState("personalDetails");
   const [isEditing, setIsEditing] = useState(false);
@@ -57,7 +59,7 @@ export default function MyStudentProfile() {
           <div className="p-4">
             <div className="avatar">
               <div className="w-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src={profilepic} alt="profilpic" />
+                <img src={imageUrl} alt="profilpic" />
               </div>
             </div>
           </div>

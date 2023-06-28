@@ -12,6 +12,7 @@ export const registerUser = async (formData) => {
     `${process.env.REACT_APP_API}/auth/signup`,
     formData
   );
+  console.log(data);
   return data;
 };
 
