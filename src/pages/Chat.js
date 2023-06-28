@@ -8,15 +8,15 @@ import Footer from "../components/main/Footer";
 import io from 'socket.io-client';
 
 // Connect to the server
-const socket = io('http://localhost:3002');
+// const socket = io('http://localhost:3002');
 
 // Send a message
-socket.emit('message', 'Hello, server!');
+// socket.emit('message', 'Hello, server!');
 
 // Receive a message
-socket.on('message', message => {
-  console.log('Received message:', message);
-});
+// socket.on('message', message => {
+//   console.log('Received message:', message);
+// });
 
 
 

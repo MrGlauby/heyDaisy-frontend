@@ -1,4 +1,6 @@
 import axios from "axios";
+import { StateContext } from "../../stateContext";
+import { useContext } from "react";
 
 const AuthPage = (props) => {
   const onSubmit = (e) => {
