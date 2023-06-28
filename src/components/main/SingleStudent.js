@@ -10,7 +10,7 @@ export default function SingleStudent({ user }) {
       >
         <figure>
           {user.profilePicture && (
-            <img alt={"userimage"} src={`http://${user.profilePicture}`} />
+            <img alt={"userimage"} src={user?.profilePicture} />
           )}
         </figure>
         <div className="card-body">
