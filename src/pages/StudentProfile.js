@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useContext, useState } from "react";
-import profilepic from "../img/randomUserReview1.jpg";
+
 import Sidebar from "../components/main/Sidebar";
 import { StateContext } from "../stateContext";
 
