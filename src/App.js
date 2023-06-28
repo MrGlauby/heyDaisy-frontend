@@ -86,21 +86,15 @@ function App() {
             />
           }
         />
-        <Route
+        {/* <Route
           path="protected"
           element={<PrivateRoute loggedIn={isAuthenticated} />}
-        >
-          <Route path="chat" element={<Chat token={token} />} />
-          <Route path="students" element={<StudentGallery token={token} />} />
-          <Route
-            path="student/:_id"
-            element={<StudentProfile token={token} />}
-          />
-          <Route
-            path="myprofile"
-            element={<MyStudentProfile token={token} />}
-          />
-        </Route>
+        > */}
+        <Route path="chat" element={<Chat token={token} />} />
+        <Route path="students" element={<StudentGallery token={token} />} />
+        <Route path="student/:_id" element={<StudentProfile token={token} />} />
+        <Route path="myprofile" element={<MyStudentProfile token={token} />} />
+        {/* </Route> */}
       </Routes>
     </>
   );
