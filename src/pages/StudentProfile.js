@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useContext, useState } from "react";
-import profilepic from "../img/randomUserReview1.jpg";
+
 import Sidebar from "../components/main/Sidebar";
 import { StateContext } from "../stateContext";
 
@@ -50,7 +50,7 @@ function StudentProfile() {
           <div className="p-4">
             <div className="avatar">
               <div className="w-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src={profilepic} alt="profilpic" />
+                <img src={user?.profilePicture} alt="profilpic" />
               </div>
             </div>
           </div>
