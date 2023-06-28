@@ -21,10 +21,10 @@ function AllStudents() {
     event.preventDefault();
 
     const filteredResults = users.filter((user) => {
-      // const motherLanguage = user.motherLanguage.toLowerCase();
-      const desiredLanguage = user.language.toLowerCase();
+      const motherLanguage = (user.motherLanguage || "").toLowerCase();
+      const desiredLanguage = (user.language || "").toLowerCase();
       return (
-        // motherLanguage.includes(inputValue.toLowerCase()) ||
+        motherLanguage.includes(inputValue.toLowerCase()) ||
         desiredLanguage.includes(inputValue.toLowerCase())
       );
     });
@@ -45,7 +45,6 @@ function AllStudents() {
       />
 
       <div className="flex flex-wrap justify-around">
-        {/* {users.length && users.map((user) => <SingleStudent user={user} />)} */}
         {filteredLanguage.length &&
           filteredLanguage.map((user) => (
             <SingleStudent user={user} key={user._id} />

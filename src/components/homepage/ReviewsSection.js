@@ -118,5 +118,4 @@ export default function ReviewsSection() {
       </div>
     </div>
   );
-  //OPTION 2
 }

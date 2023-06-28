@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Events from "./pages/Events";
 import Download from "./pages/Download";
 import Contact from "./pages/Contact";
-// import Chat from "./pages/Chat";
+import Chat from "./pages/Chat";
 import Faq from "./pages/Faq";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -20,9 +20,9 @@ import MyStudentProfile from "./pages/MyStudentProfile";
 import StudentProfile from "./pages/StudentProfile";
 
 // //Pedro Tech Start
-// import io from "socket.io-client";
+import io from "socket.io-client";
 
-// const socket = io.connect("http://localhost:3000");
+const socket = io.connect("http://localhost:3000");
 // //Pedro Tech End
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
@@ -68,7 +68,7 @@ function App() {
         <Route path="events" element={<Events />} />
         <Route path="download" element={<Download />} />
         <Route path="contact" element={<Contact />} />
-        {/* <Route path="chat" element={<Chat />} /> */}
+        <Route path="chat" element={<Chat />} />
         <Route path="faq" element={<Faq />} />
         <Route
           path="login"
@@ -90,7 +90,7 @@ function App() {
             />
           }
         />
-        <Route path="videocall" element={<VideoCalls />} />
+        {/* <Route path="videocall" element={<VideoCalls />} /> */}
         <Route path="students" element={<StudentGallery />} />
         <Route path="student/:_id" element={<StudentProfile />} />
         <Route path="myprofile" element={<MyStudentProfile />} />
