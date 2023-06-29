@@ -15,21 +15,18 @@ import RandomUserSeven from "../img/randomUserReview7.jpg";
 
 export default function Events() {
   return (
-    <div>
+    <div className="flex flex-col justify-between min-h-screen">
       <Navbar />
       {/* search */}
       <div>
         <form>
-          <div className="flex items-center pl-40 p-14">
+          <div className="flex items-center pl-40 pb-14">
             <input
-              className="w-64 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               type="text"
-              placeholder="Search Language..."
+              placeholder="Search Event..."
+              className="input input-bordered input-primary w-full max-w-xs"
             />
-            <button
-              className="ml-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-              type="submit"
-            >
+            <button className="ml-2 btn btn-primary font-bold" type="submit">
               Search Event
             </button>
           </div>
@@ -269,8 +266,8 @@ export default function Events() {
             </tbody>
           </table>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

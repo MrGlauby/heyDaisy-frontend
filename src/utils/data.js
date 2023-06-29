@@ -22,3 +22,15 @@ export const fetchImageUrl = async (imageRef) => {
     throw error;
   }
 };
+
+export const fetchUser = async (id) => {
+  try {
+    console.log("user_id", id);
+    const user = await axios.get(`${process.env.REACT_APP_API}/users/${id}`);
+    console.log("another user", user);
+    return user.data;
+  } catch (err) {
+    console.error("Error fetching user:", err);
+    throw err;
+  }
+};

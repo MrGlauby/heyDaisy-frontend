@@ -1,11 +1,14 @@
 import axios from "axios";
 
-export const getUser = async (token) => {
+export const getUser = async (id, token) => {
   try {
-    const { data } = await axios.get(`${process.env.REACT_APP_API}/auth/me`, {
-      headers: { Authorization: token },
-    });
-    console.log("data", data);
+    const { data } = await axios.get(
+      `${process.env.REACT_APP_API}/users/${id}`,
+      {
+        // headers: { Authorization: token },
+      }
+    );
+    console.log("data in getUser authUtils for App.js", data);
     return data;
   } catch (err) {
     console.log("oops");
