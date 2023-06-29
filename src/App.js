@@ -20,6 +20,8 @@ import MyStudentProfile from "./pages/MyStudentProfile";
 import StudentProfile from "./pages/StudentProfile";
 import PrivateRoute from "./components/main/PrivateRoute";
 
+import Blog from "./pages/Blog";
+
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -64,6 +66,8 @@ function App() {
         <Route path="events" element={<Events />} />
         <Route path="download" element={<Download />} />
         <Route path="contact" element={<Contact />} />
+
+        <Route path="blog" element={<Blog />} />
 
         <Route path="faq" element={<Faq />} />
         <Route

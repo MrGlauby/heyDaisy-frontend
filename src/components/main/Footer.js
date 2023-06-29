@@ -24,7 +24,7 @@ export default function Footer() {
           <Link to="/contact" className="link link-hover hover:scale-110">
             Contact
           </Link>
-          <Link to="/register" className="link link-hover hover:scale-110">
+          <Link to="/blog" className="link link-hover hover:scale-110">
             Blog
           </Link>
         </div>
