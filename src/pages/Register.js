@@ -233,11 +233,9 @@ export default function Register({
                   <option>Portuguese</option>
                 </select>
                 <div className="form-control mt-6">
-                  <Link to={`/login`}>
-                    <button className="btn btn-primary" onClick={handleSubmit}>
-                      Signup
-                    </button>
-                  </Link>
+                  <button className="btn btn-primary" onClick={handleSubmit}>
+                    Signup
+                  </button>
                 </div>
               </form>
             </div>
