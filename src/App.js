@@ -1,7 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { StateContext } from "./stateContext";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
@@ -20,18 +21,25 @@ import MyStudentProfile from "./pages/MyStudentProfile";
 import StudentProfile from "./pages/StudentProfile";
 import PrivateRoute from "./components/main/PrivateRoute";
 
+import Blog from "./pages/Blog";
+
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const { user, setUser } = useContext(StateContext);
+
+  console.log("user in app.js", user);
 
   useEffect(() => {
     const validateToken = async () => {
       try {
         setLoading(true);
-        const user = await getUser(token);
-        setUser(user);
+        const res = await getUser(user._id);
+        // setUser(user);
+        console.log("resssssssssss", res);
         setIsAuthenticated(true);
       } catch (error) {
         console.error(error.message);
@@ -49,6 +57,8 @@ function App() {
     }
   }, [token]);
 
+  console.log("uuuuuuuuuuuser", user);
+
   /*  const logOut = () => {
     localStorage.removeItem("token");
     setToken(null);
@@ -64,6 +74,8 @@ function App() {
         <Route path="events" element={<Events />} />
         <Route path="download" element={<Download />} />
         <Route path="contact" element={<Contact />} />
+
+        <Route path="blog" element={<Blog />} />
 
         <Route path="faq" element={<Faq />} />
         <Route

@@ -5,10 +5,10 @@ import logo from "../../img/heyDaisy1.png";
 
 export default function Footer() {
   return (
-    <div>
-      <footer className="footer p-10 bg-base-300 text-base-content">
+    <div className=" bottom-0 ">
+      <footer className=" footer p-10 bg-base-300" >
         <div className="flex-1 ">
-          <Link to="/home">
+          <Link to="/">
             <img
               className="logoflex self-start  pl-2  h-35 w-full m-left-4px  min-w-[6rem]   max-w-[12rem]   duration-150 ease-in-out hover:scale-110"
               src={logo}
@@ -24,7 +24,7 @@ export default function Footer() {
           <Link to="/contact" className="link link-hover hover:scale-110">
             Contact
           </Link>
-          <Link to="/register" className="link link-hover hover:scale-110">
+          <Link to="/blog" className="link link-hover hover:scale-110">
             Blog
           </Link>
         </div>
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
         <div>
           <span className="footer-title">User</span>
-          <Link to="/register" className="link link-hover hover:scale-110">
+          <Link to="/register" target="_blank" className="link link-hover hover:scale-110">
             Register
           </Link>
           <Link to="/login" className="link link-hover hover:scale-110">
