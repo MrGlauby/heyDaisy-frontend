@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 
 import logo from "../../img/heyDaisy1.png";
 
+// const [isLogout, setisLogout] = useState (false);
+
+// const handlelogin = (() => {
+
+// })
+
 export default function Navbar() {
   return (
     <div>
@@ -18,8 +24,19 @@ export default function Navbar() {
           </Link>
         </div>
 
+        <div>
+          <ul></ul>
+        </div>
+
         <div className="flex-none ">
           <ul className="menu menu-horizontal">
+            {/* logout button  */}
+            <li className="p-5 text-lg">
+              <Link to="/" className="btn btn-primary text-lg">
+                Logout
+              </Link>
+            </li>
+
             <li className="p-5 text-lg ">
               <Link to="/register" target="_blank">
                 <button className="btn btn-primary text-lg">Register</button>
