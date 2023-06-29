@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import Sidebar from "../components/main/Sidebar";
 import Navbar from "../components/main/Navbar";
-import getUser from "../utils/authUtils";
+// import getUser from "../utils/authUtils";
 
 // import profilepic from "../img/randomUserReview4.jpg";
 import { StateContext } from "../stateContext";
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 export default function MyStudentProfile() {
-  const { user, users } = useContext(StateContext);
-  console.log("MyStudentProfile", users);
-  const { id } = useParams();
-  // const user = users.find((user) => user.id === id);
-
-  console.log("MyStudentProfile - current user", user);
+  const { user, users, updatedUserData, setUpdatedUserData } =
+    useContext(StateContext);
 
   const [activeTab, setActiveTab] = useState("personalDetails");
   const [isEditing, setIsEditing] = useState(false);
@@ -28,6 +24,8 @@ export default function MyStudentProfile() {
   const [spokenLanguage, setSpokenLanguage] = useState("");
   const [learnLanguage, setLearnLanguage] = useState("");
 
+  console.log("AGE", age);
+
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
@@ -36,12 +34,25 @@ export default function MyStudentProfile() {
     setIsEditing(!isEditing);
   };
 
-  const handleSaveChanges = () => {
+  const handleSaveChanges = async () => {
     // Perform database update here with the updated values
+    setUpdatedUserData({
+      age,
+      email,
+      nationality,
+      livingLocation,
+      motherLanguage,
+      spokenLanguage,
+      learnLanguage,
+    });
+
+    //axios.put(localhost:5001/users/${user._id}, updatedUserData, headers:{authtoken: token})
     setIsEditing(false);
   };
 
-  return (
+  console.log("updated User data", updatedUserData);
+
+  return user && user._id ? (
     <div>
       <Navbar />
       <Sidebar />
@@ -109,7 +120,7 @@ export default function MyStudentProfile() {
                   onChange={(e) => setAge(e.target.value)}
                 />
               ) : (
-                <span>{age}</span>
+                <span>{user.age}</span>
               )}
             </div>
             <div>
@@ -209,5 +220,7 @@ export default function MyStudentProfile() {
         </div>
       </div>
     </div>
+  ) : (
+    "..loading"
   );
 }
