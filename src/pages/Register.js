@@ -92,7 +92,7 @@ export default function Register({
     e.preventDefault();
 
     try {
-      if (!email || !password || !language || !userImageUrl) {
+      if (!email || !password || !language ) {
         return "Please fill out all the fields";
       }
       // getImage(userImageUrl && userImageUrl);

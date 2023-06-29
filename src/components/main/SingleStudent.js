@@ -8,7 +8,7 @@ export default function SingleStudent({ user }) {
         className="m-8 card card-compact w-96 bg-base-100 shadow-xl"
         key={user._id}
       >
-        <figure>
+        <figure className="h-80">
           {user?.profilePicture && (
             <img alt={"userimage"} src={user?.profilePicture} />
           )}

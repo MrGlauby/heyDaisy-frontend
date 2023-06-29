@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useContext, useState } from "react";
-
+import Navbar from "../components/main/Navbar";
+import Footer from "../components/main/Footer";
 import Sidebar from "../components/main/Sidebar";
 import { StateContext } from "../stateContext";
 
@@ -19,6 +21,7 @@ function StudentProfile() {
   if (!users || users.length === 0) {
     return (
       <div>
+        <Navbar />
         <Sidebar />
         <div className="flex justify-center m-8">
           <h2 className="m-2">Loading</h2>
@@ -34,6 +37,7 @@ function StudentProfile() {
   if (!user) {
     return (
       <div>
+        <Navbar />
         <Sidebar />
         <div className="flex justify-center">
           <h2>User not found!</h2>
@@ -43,6 +47,7 @@ function StudentProfile() {
   }
   return (
     <div>
+      <Navbar />
       <Sidebar />
 
       <div className="flex justify-center">
@@ -93,7 +98,7 @@ function StudentProfile() {
           <div className="tab-content text-center">
             <div>
               <span className="font-bold">Age:</span>
-              <span> {user.age} </span>
+              <span> {user.age}</span>
             </div>
             <div>
               <span className="font-bold">Gender:</span>
@@ -123,8 +128,12 @@ function StudentProfile() {
               <span className="font-bold">I want to learn:</span>
               <span> {user.language}</span>
             </div>
+            <button className="btn-primary">Test</button>
+
           </div>
+          
         )}
+
       </div>
 
       <div className="flex justify-center text-justify">
@@ -135,6 +144,7 @@ function StudentProfile() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
