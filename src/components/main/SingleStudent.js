@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function SingleStudent({ user }) {
-  console.log("imageInSingleStudent", user.profilePicture);
+  console.log("imageInSingleStudent", user?.profilePicture);
   return (
     <div>
       <div
@@ -9,8 +9,8 @@ export default function SingleStudent({ user }) {
         key={user._id}
       >
         <figure>
-          {user.profilePicture && (
-            <img alt={"userimage"} src={`http://${user.profilePicture}`} />
+          {user?.profilePicture && (
+            <img alt={"userimage"} src={user?.profilePicture} />
           )}
         </figure>
         <div className="card-body">

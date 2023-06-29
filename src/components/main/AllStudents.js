@@ -19,7 +19,7 @@ function AllStudents() {
 
   const handleSearch = (event) => {
     event.preventDefault();
-  
+
     const filteredResults = users.filter((user) => {
       const motherLanguage = (user.motherLanguage || "").toLowerCase();
       const desiredLanguage = (user.language || "").toLowerCase();
@@ -30,7 +30,6 @@ function AllStudents() {
     });
     setFilteredLanguage(filteredResults);
   };
-  
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);

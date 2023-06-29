@@ -6,7 +6,11 @@ export const StateContext = createContext({});
 
 const StateContextProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
+  const [user, setUser] = useState(localStorage.getItem("user"));
   const [imageUrl, setImageUrl] = useState("");
+  //insert token state here:
+
+  useEffect(() => {}, []);
 
   useEffect(() => {
     const getUsers = async () => {
@@ -29,6 +33,8 @@ const StateContextProvider = ({ children }) => {
   return (
     <StateContext.Provider
       value={{
+        user,
+        setUser,
         users,
         setUsers,
         imageUrl,
