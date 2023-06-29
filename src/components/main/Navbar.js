@@ -1,8 +1,14 @@
 import React from "react";
-
+import  { useState } from 'react';
 import { Link } from "react-router-dom";
 
 import logo from "../../img/heyDaisy1.png";
+
+// const [isLogout, setisLogout] = useState (false);
+
+// const handlelogin = (() => {
+
+// })
 
 export default function Navbar() {
   return (
@@ -18,8 +24,23 @@ export default function Navbar() {
           </Link>
         </div>
 
+        <div>
+          <ul>
+           
+          </ul>
+        </div>
+
+
         <div className="flex-none  ">
           <ul className="menu menu-horizontal">
+
+{/* logout button  */}
+          <li className="p-5 text-lg">
+              <Link to="/" className="shadow-xl bg-indigo-100 ">
+                Logout
+              </Link>
+            </li>
+
             <li className="p-5   text-lg ">
               <Link
                 to="/register"
