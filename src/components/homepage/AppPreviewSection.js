@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
 
-import GoogleMeet from "../../img/googleMeet.jpg"
-import Chat from "../../img/chat.png"
-import Event from "../../img/event.png"
+import GoogleMeet from "../../img/googleMeet.png";
+import Chat from "../../img/chat.png";
+import Event from "../../img/event.png";
 
 function AppPreviewSection() {
   // State to keep track of the active tab
@@ -20,46 +20,40 @@ function AppPreviewSection() {
     switch (activeTab) {
       case 1:
         return (
-          <div className="text-content">
-            <h3 className="my-3 font-semibold text-2xl">Video</h3>
-            <p>
+          <div className="text-content w-auto">
+            <h3 className=" my-10 font-semibold text-2xl">Video</h3>
+            <p className="text-justify">
               "Get ready to level up your connections with our cutting-edge
               video call feature! Say goodbye to boring, one-dimensional
               conversations and embrace the power of face-to-face interaction,
-              no matter where you are. Engage in dynamic discussions, share your
-              screen, and build genuine relationships that go beyond words. It's
-              time to take your conversations to the next level!"
+              no matter where you are. It's time to take your conversations to
+              the next level!"
             </p>
           </div>
         );
       case 2:
         return (
-          <div className="text-content">
-            <h3 className="my-3 font-semibold text-2xl">Chat</h3>
-            <p>
+          <div className="text-justify">
+            <h3 className="my-10  font-semibold text-2xl">Chat</h3>
+            <p className="text-content">
               "Unleash the power of words with our chat feature that's designed
               to ignite instant connections and foster meaningful conversations.
-              Whether you're seeking language exchange partners, language
-              enthusiasts, or cultural enthusiasts, our chat feature brings you
-              a vibrant community at your fingertips. Share your language
-              journey, exchange tips, and make lifelong friendships on the go.
-              Get ready to dive into a world of limitless linguistic
-              possibilities!"
+              . Share your language journey, exchange tips, and make lifelong
+              friendships on the go. Get ready to dive into a world of limitless
+              linguistic possibilities!"
             </p>
           </div>
         );
       case 3:
         return (
           <div className="text-content">
-            <h3 className="my-3 font-semibold text-2xl">Events</h3>
-            <p>
+            <h3 className="my-10  font-semibold text-2xl">Events</h3>
+            <p className="text-justify">
               "Experience the thrill of cultural immersion with our exciting
               events feature! From virtual language workshops and global
               language festivals to interactive language challenges, our events
-              are a gateway to a world of diverse cultures and languages.
-              Connect with like-minded language enthusiasts, expand your
-              horizons, and embrace the joy of learning together. With our
-              events, every day is a celebration of languages, cultures, and
+              are a gateway to a world of diverse cultures and languages. With
+              our events, every day is a celebration of languages, cultures, and
               unforgettable experiences!"
             </p>
           </div>
@@ -75,29 +69,19 @@ function AppPreviewSection() {
       case 1:
         return (
           <div className="image-content max-w-[60rem]">
-            <img
-              src={GoogleMeet}
-              alt="Video Placeholder"
-            />
+            <img src={GoogleMeet} alt="Video Placeholder" />
           </div>
         );
       case 2:
         return (
-          <div className="image-content max-w-[16rem]" >
-           
-            <img
-              src={Chat}
-              alt="Chat Placeholder"
-            />
+          <div className="image-content max-w-[16rem]">
+            <img src={Chat} alt="Chat Placeholder" />
           </div>
         );
       case 3:
         return (
           <div className="image-content">
-            <img
-              src={Event}
-              alt="Events Placeholder"
-            />
+            <img src={Event} alt="Events Placeholder" />
           </div>
         );
       default:
