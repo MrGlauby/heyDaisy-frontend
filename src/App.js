@@ -18,12 +18,8 @@ import UilReact from "@iconscout/react-unicons/icons/uil-react";
 import { getUser } from "./utils/authUtils";
 import MyStudentProfile from "./pages/MyStudentProfile";
 import StudentProfile from "./pages/StudentProfile";
+import PrivateRoute from "./components/main/PrivateRoute";
 
-// //Pedro Tech Start
-import io from "socket.io-client";
-
-const socket = io.connect("http://localhost:3000");
-// //Pedro Tech End
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -68,7 +64,7 @@ function App() {
         <Route path="events" element={<Events />} />
         <Route path="download" element={<Download />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="chat" element={<Chat />} />
+
         <Route path="faq" element={<Faq />} />
         <Route
           path="login"
@@ -90,10 +86,15 @@ function App() {
             />
           }
         />
-        {/* <Route path="videocall" element={<VideoCalls />} /> */}
-        <Route path="students" element={<StudentGallery />} />
-        <Route path="student/:_id" element={<StudentProfile />} />
-        <Route path="myprofile" element={<MyStudentProfile />} />
+        {/* <Route
+          path="protected"
+          element={<PrivateRoute loggedIn={isAuthenticated} />}
+        > */}
+        <Route path="chat" element={<Chat token={token} />} />
+        <Route path="students" element={<StudentGallery token={token} />} />
+        <Route path="student/:_id" element={<StudentProfile token={token} />} />
+        <Route path="myprofile" element={<MyStudentProfile token={token} />} />
+        {/* </Route> */}
       </Routes>
     </>
   );
