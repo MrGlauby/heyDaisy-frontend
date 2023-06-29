@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../components/main/Sidebar";
+import Navbar from "../components/main/Navbar";
 import getUser from "../utils/authUtils";
 
 // import profilepic from "../img/randomUserReview4.jpg";
@@ -42,6 +43,7 @@ export default function MyStudentProfile() {
 
   return (
     <div>
+      <Navbar />
       <Sidebar />
       <div className="card-actions justify-end">
         <div className="p-4">
@@ -61,7 +63,7 @@ export default function MyStudentProfile() {
           <div className="p-4">
             <div className="avatar">
               <div className="w-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                {/* <img src={imageUrl} alt="profilpic" /> */}
+                <img src={user.profilePicture} alt="profilpic" />
               </div>
             </div>
           </div>
@@ -119,7 +121,7 @@ export default function MyStudentProfile() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               ) : (
-                <span>{email}</span>
+                <span>{user.email}</span>
               )}
             </div>
             <div>

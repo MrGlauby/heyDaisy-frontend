@@ -8,6 +8,7 @@ const StateContextProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState(localStorage.getItem("user"));
   const [imageUrl, setImageUrl] = useState("");
+  console.log("user - stateContext", user);
   //insert token state here:
 
   useEffect(() => {}, []);
