@@ -1,5 +1,4 @@
 import React from "react";
-
 import BackIMG from "../img/team.jpg";
 import Team from "../img/randomUserReview2.jpg";
 
