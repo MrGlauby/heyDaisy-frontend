@@ -56,13 +56,17 @@ function StudentProfile() {
           </div>
           <div className="p-4">
             <h2 className="text-2xl">
-              {user.firstName} {user.lastName}
-              <span className="badge badge-lg">@username</span>
+              <p>
+                {user.firstName} {user.lastName}
+              </p>
+
+              <span className="badge badge-lg">
+                @{user.firstName.toLowerCase()}
+                {user.lastName.toLowerCase()}
+              </span>
             </h2>
           </div>
-          <div>
-            <span>{user.email} </span>
-          </div>
+
           <div></div>
 
           <div className="p-4">
@@ -115,10 +119,7 @@ function StudentProfile() {
               <span className="font-bold">Mother language:</span>
               <span> {user.motherLanguage}</span>
             </div>
-            <div>
-              <span className="font-bold">I also speak:</span>
-              <span> </span>
-            </div>
+
             <div>
               <span className="font-bold">I want to learn:</span>
               <span> {user.language}</span>
@@ -127,7 +128,7 @@ function StudentProfile() {
         )}
       </div>
 
-      <div className="flex justify-center text-justify gap-4">
+      <div className="flex justify-center text-justify gap-4 m-8">
         <div className="flex m-4 card w-3/4 bg-base-100 shadow-xl ">
           <div className="card-body">
             <div className="card-actions justify-end "></div>
@@ -140,6 +141,7 @@ function StudentProfile() {
           <Link to="{user.videoLink}">
           <button className="btn btn-primary text-lg">Give {user.firstName} a call</button>
           </Link>
+
           </div>
         </div>
       </div>
