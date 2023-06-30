@@ -1,10 +1,9 @@
-
 import { Link } from "react-router-dom";
-
 
 import RandomUserOne from "../../img/randomUserReview1.jpg";
 import RandomUserFive from "../../img/randomUserReview5.jpg";
 import RandomUserSix from "../../img/randomUserReview6.jpg";
+import RandomUserTwo from "../../img/randomUserReview2.jpg";
 
 export default function EventsSection() {
   return (
@@ -16,38 +15,37 @@ export default function EventsSection() {
         <table className="table">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="bg-base-200">
               <th></th>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Language</th>
+              <th className="text-base">Name</th>
+              <th className="text-base">Description</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
-            <tr>
+            <tr className="border-b border-gray-300">
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                       <img src={RandomUserOne} alt="User Events" />
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold">Hart Hagerty</div>
+                    <div className="font-bold text-base">Hart Hagerty</div>
                     <div className="text-sm opacity-50">United States</div>
                   </div>
                 </div>
               </td>
-              <td>
+              <td className="text-base">
                 Let's talk about soccer!
                 <br />
                 <span className="badge badge-ghost badge-sm">
                   advanced level
                 </span>
               </td>
-              <td>Spanish</td>
+              <td className="text-base">Spanish</td>
               <th>
                 <a href="events" className="btn btn-primary btn-xs">
                   details{" "}
@@ -55,26 +53,26 @@ export default function EventsSection() {
               </th>
             </tr>
             {/* row 2 */}
-            <tr>
+            <tr className="border-b border-gray-300">
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                       <img src={RandomUserFive} alt="User Events" />
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold">Brice Swyre</div>
+                    <div className="font-bold text-base">Brice Swyre</div>
                     <div className="text-sm opacity-50">China</div>
                   </div>
                 </div>
               </td>
-              <td>
+              <td className="text-base">
                 I want to talk about traveling :)
                 <br />
                 <span className="badge badge-ghost badge-sm">basic level</span>
               </td>
-              <td>Italian</td>
+              <td className="text-base">Italian</td>
               <th>
                 <a href="events" className="btn btn-primary btn-xs">
                   details{" "}
@@ -82,33 +80,63 @@ export default function EventsSection() {
               </th>
             </tr>
             {/* row 3 */}
-            <tr>
+            <tr className="border-b border-gray-300">
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                       <img src={RandomUserSix} alt="User Events" />
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold">Marjy Ferencz</div>
+                    <div className="font-bold text-base">Marjy Ferencz</div>
                     <div className="text-sm opacity-50">Russia</div>
                   </div>
                 </div>
               </td>
-              <td>
+              <td className="text-base">
                 Let's cook a Portuguese dish together!
                 <br />
                 <span className="badge badge-ghost badge-sm">
                   advanced level
                 </span>
               </td>
-              <td>Portuguese</td>
+              <td className="text-base">Portuguese</td>
               <th>
-              <Link to="events" className="btn btn-primary btn-xs" >details </Link>
+                <Link to="events" className="btn btn-primary btn-xs">
+                  details{" "}
+                </Link>
               </th>
             </tr>
             {/* row 4 */}
+            <tr>
+              <td>
+                <div className="flex items-center space-x-3">
+                  <div className="avatar">
+                    <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                      <img src={RandomUserTwo} alt="User Events" />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-bold text-base">Ethan Anderson</div>
+                    <div className="text-sm opacity-50">Australia</div>
+                  </div>
+                </div>
+              </td>
+              <td className="text-base">
+                I want to practice my Italian, want to join me?
+                <br />
+                <span className="badge badge-ghost badge-sm">
+                  advanced level
+                </span>
+              </td>
+              <td className="text-base">Italian</td>
+              <th>
+                <Link to="events" className="btn btn-primary btn-xs">
+                  details{" "}
+                </Link>
+              </th>
+            </tr>
           </tbody>
         </table>
       </div>
