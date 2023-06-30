@@ -20,6 +20,7 @@ import { getUser } from "./utils/authUtils";
 import MyStudentProfile from "./pages/MyStudentProfile";
 import StudentProfile from "./pages/StudentProfile";
 import PrivateRoute from "./components/main/PrivateRoute";
+import Navbar from "./components/main/Navbar";
 
 import Blog from "./pages/Blog";
 
@@ -59,15 +60,16 @@ function App() {
 
   console.log("uuuuuuuuuuuser", user);
 
-  /*  const logOut = () => {
+  const logOut = () => {
     localStorage.removeItem("token");
     setToken(null);
     setUser(null);
     setIsAuthenticated(false);
   };
-*/
+
   return (
     <>
+      <Navbar isAuthenticated={isAuthenticated} user={user} logOut={logOut} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
