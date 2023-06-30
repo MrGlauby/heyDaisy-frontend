@@ -143,7 +143,7 @@ export default function Register({
 
   console.log("userImage", userImage);
 
-  if (!isAuthenticated) return <Navigate to="/login" />;
+  if (isAuthenticated) return <Navigate to="/login" />;
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
