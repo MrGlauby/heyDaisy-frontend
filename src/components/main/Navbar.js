@@ -13,7 +13,7 @@ import logo from "../../img/heyDaisy1.png";
 export default function Navbar() {
   return (
     <div>
-      <div className="navbar bg-violet-100 p-5 ">
+      <div className="navbar bg-violet-100 p-5">
         <div className="flex-1 ">
           <Link to="/">
             <img
@@ -30,10 +30,9 @@ export default function Navbar() {
 
         <div className="flex-none ">
           <ul className="menu menu-horizontal">
-            {/* logout button  */}
-            <li className="p-5 text-lg">
-              <Link to="/" className="btn btn-primary text-lg">
-                Logout
+            <li className="p-5 text-lg ">
+              <Link to="/register" target="_blank">
+                <button className="btn btn-primary text-lg">Logout</button>
               </Link>
             </li>
 

@@ -155,13 +155,9 @@ export default function Register({
         <div className="hero-content flex-wrap w-2/4 text-center">
           <div className="text-center">
             <h1 className="text-5xl font-bold">Signup now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            <p className="m-8 text-lg">1. Choose your photo and upload it</p>
           </div>
-          <div className="avatar m-10 p-4">
+          <div className="avatar m-8 p-4">
             <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 relative">
               <div className="flex justify-center items-center m-4 cursor-pointer">
                 <UilImageUpload size={62} />
@@ -184,7 +180,10 @@ export default function Register({
           <button className="btn btn-primary" onClick={uploadFile}>
             Upload image
           </button>
-
+          <p className="m-8 text-lg">
+            2. Register with your email address, a password and choose the
+            language you want to learn
+          </p>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
               <form>
