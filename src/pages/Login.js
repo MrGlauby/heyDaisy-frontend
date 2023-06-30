@@ -50,7 +50,7 @@ export default function Login({
     }
   };
 
-  if (isAuthenticated) return <Navigate to="/" />;
+  if (isAuthenticated) return <Navigate to="/myprofile" />;
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -94,7 +94,11 @@ export default function Login({
                     onChange={handleChange}
                   />
                 </div>
-                <button className="btn btn-primary" type="submit">
+                <button
+                  className="btn btn-primary form-control mt-6"
+                  type="submit"
+                >
+
                   Login
                 </button>
               </form>
