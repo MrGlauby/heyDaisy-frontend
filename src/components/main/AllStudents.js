@@ -38,17 +38,19 @@ function AllStudents() {
 
   return (
     <>
-      <Searchbar
-        inputValue={inputValue}
-        onInputChange={handleInputChange}
-        onSearch={handleSearch}
-      />
+      <div className="flex flex-col">
+        <Searchbar
+          inputValue={inputValue}
+          onInputChange={handleInputChange}
+          onSearch={handleSearch}
+        />
 
-      <div className="flex flex-wrap justify-around">
-        {filteredLanguage.length &&
-          filteredLanguage.map((user) => (
-            <SingleStudent user={user} key={user._id} />
-          ))}
+        <div className="flex flex-wrap justify-around">
+          {filteredLanguage.length &&
+            filteredLanguage.map((user) => (
+              <SingleStudent user={user} key={user._id} />
+            ))}
+        </div>
       </div>
     </>
   );
