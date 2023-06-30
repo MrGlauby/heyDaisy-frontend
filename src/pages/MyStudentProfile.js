@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Sidebar from "../components/main/Sidebar";
-import Navbar from "../components/main/Navbar";
 // import getUser from "../utils/authUtils";
 
 // import profilepic from "../img/randomUserReview4.jpg";
@@ -54,7 +53,6 @@ export default function MyStudentProfile() {
 
   return user && user._id ? (
     <div>
-      <Navbar />
       <Sidebar />
       <div className="card-actions justify-end">
         <div className="p-4">

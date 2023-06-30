@@ -1,11 +1,8 @@
 import React from "react";
-import Navbar from "../components/main/Navbar";
-import Footer from "../components/main/Footer";
 
 export default function Contact() {
   return (
     <div className="flex flex-col justify-between min-h-screen">
-      <Navbar />
       {/* ------------Formular */}
       <div className="max-w-lg mx-auto py-20">
         <h2 className="text-2xl font-bold mb-20">
@@ -65,7 +62,6 @@ export default function Contact() {
         </form>
       </div>
       {/* ----------- */}
-      <Footer />
     </div>
   );
 }

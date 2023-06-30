@@ -12,7 +12,6 @@ import Chat from "./pages/Chat";
 import Faq from "./pages/Faq";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import VideoCalls from "./pages/VideoCalls";
 import StudentGallery from "./pages/StudentGallery";
 import SingleStudent from "./components/main/SingleStudent";
 import UilReact from "@iconscout/react-unicons/icons/uil-react";
@@ -20,6 +19,8 @@ import { getUser } from "./utils/authUtils";
 import MyStudentProfile from "./pages/MyStudentProfile";
 import StudentProfile from "./pages/StudentProfile";
 import PrivateRoute from "./components/main/PrivateRoute";
+import Navbar from "./components/main/Navbar";
+import Footer from "./components/main/Footer";
 
 import Blog from "./pages/Blog";
 
@@ -59,15 +60,16 @@ function App() {
 
   console.log("uuuuuuuuuuuser", user);
 
-  /*  const logOut = () => {
+  const logOut = () => {
     localStorage.removeItem("token");
     setToken(null);
     setUser(null);
     setIsAuthenticated(false);
   };
-*/
+
   return (
     <>
+      <Navbar isAuthenticated={isAuthenticated} user={user} logOut={logOut} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
@@ -108,6 +110,7 @@ function App() {
         <Route path="myprofile" element={<MyStudentProfile token={token} />} />
         {/* </Route> */}
       </Routes>
+      <Footer />
     </>
   );
 }
