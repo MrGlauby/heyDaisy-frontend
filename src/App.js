@@ -12,7 +12,6 @@ import Chat from "./pages/Chat";
 import Faq from "./pages/Faq";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import VideoCalls from "./pages/VideoCalls";
 import StudentGallery from "./pages/StudentGallery";
 import SingleStudent from "./components/main/SingleStudent";
 import UilReact from "@iconscout/react-unicons/icons/uil-react";
@@ -21,6 +20,7 @@ import MyStudentProfile from "./pages/MyStudentProfile";
 import StudentProfile from "./pages/StudentProfile";
 import PrivateRoute from "./components/main/PrivateRoute";
 import Navbar from "./components/main/Navbar";
+import Footer from "./components/main/Footer";
 
 import Blog from "./pages/Blog";
 
@@ -110,6 +110,7 @@ function App() {
         <Route path="myprofile" element={<MyStudentProfile token={token} />} />
         {/* </Route> */}
       </Routes>
+      <Footer />
     </>
   );
 }

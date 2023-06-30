@@ -6,9 +6,7 @@ import AllStudents from "../components/main/AllStudents";
 function StudentGallery() {
   return (
     <>
-      <Navbar />
       <AllStudents />
-      <Footer />
     </>
   );
 }
