@@ -135,16 +135,13 @@ function StudentProfile() {
             <p>{user.description}</p>
           </div>
           <div className="flex justify-center text-justify gap-5 m-5">
-            <Link to="/chat">
-              <button className="btn btn-primary text-lg">
-                Chat with {user.firstName}
-              </button>
-            </Link>
-            <Link to="/videocall">
-              <button className="btn btn-primary text-lg">
-                Give {user.firstName} a call
-              </button>
-            </Link>
+          <Link to="/chat">
+          <button className="btn btn-primary text-lg">Chat with {user.firstName}</button>
+          </Link>
+          <Link to="{user.videoLink}">
+          <button className="btn btn-primary text-lg">Give {user.firstName} a call</button>
+          </Link>
+
           </div>
         </div>
       </div>

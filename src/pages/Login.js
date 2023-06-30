@@ -51,6 +51,7 @@ export default function Login({
   };
 
   if (isAuthenticated) return <Navigate to="/myprofile" />;
+  if (isAuthenticated) return <Navigate to="/myprofile" />;
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">

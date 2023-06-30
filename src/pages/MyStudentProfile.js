@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../components/main/Sidebar";
+import { Link } from "react-router-dom";
 // import getUser from "../utils/authUtils";
 
 // import profilepic from "../img/randomUserReview4.jpg";
@@ -148,7 +149,8 @@ export default function MyStudentProfile() {
                   onChange={(e) => setNationality(e.target.value)}
                 />
               ) : (
-                <span> {user.nationality}</span>
+                <span>{user.nationality}</span>
+
               )}
             </div>
             <div>
@@ -160,7 +162,8 @@ export default function MyStudentProfile() {
                   onChange={(e) => setLivingLocation(e.target.value)}
                 />
               ) : (
-                <span> {user.country}</span>
+                <span>{user.livingLocation}</span>
+
               )}
             </div>
           </div>
@@ -172,10 +175,11 @@ export default function MyStudentProfile() {
               {isEditing ? (
                 <input
                   type="text"
-                  value={motherLanguage}
+                  value={user.motherLanguage}
                   onChange={(e) => setMotherLanguage(e.target.value)}
                 />
               ) : (
+
                 <span> {user.motherLanguage}</span>
               )}
             </div>
@@ -185,10 +189,11 @@ export default function MyStudentProfile() {
               {isEditing ? (
                 <input
                   type="text"
-                  value={learnLanguage}
+                  value={user.learnLanguage}
                   onChange={(e) => setLearnLanguage(e.target.value)}
                 />
               ) : (
+
                 <span> {user.language}</span>
               )}
             </div>
@@ -200,6 +205,11 @@ export default function MyStudentProfile() {
           <div className="card-body">
             <div className="card-actions justify-end"></div>
             <p>{user.description}</p>
+          </div>
+          <div className="flex justify-center text-justify gap-5 m-5">
+          <Link to="/chat">
+          <button className="btn btn-primary text-lg m-5">Enter Chatrooms</button>
+          </Link>
           </div>
         </div>
       </div>
