@@ -87,8 +87,8 @@ export default function MyStudentProfile() {
                 </p>
 
                 <span className="badge badge-lg">
-                  @{user.firstName.toLowerCase()}
-                  {user.lastName.toLowerCase()}
+                  @{user?.firstName.toLowerCase()}
+                  {user?.lastName.toLowerCase()}
                 </span>
               </h2>
             </div>

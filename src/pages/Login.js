@@ -3,7 +3,6 @@ import { useState, useContext } from "react";
 import { Navigate } from "react-router-dom";
 //import Loader from ".Loader";
 import { loginUser } from "../utils/authUtils";
-import { Link } from "react-router-dom";
 import { StateContext } from "../stateContext";
 
 export default function Login({

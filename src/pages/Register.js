@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Navigate, Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { UilImageUpload } from "@iconscout/react-unicons";
 import { ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
@@ -90,7 +90,7 @@ export default function Register({
 
     try {
       if (!email || !password || !language || !userImageUrl) {
-        return "Please fill out all the fields";
+        alert("Please fill out all the fields");
       }
       // getImage(userImageUrl && userImageUrl);
       // btn handel/reigster submiting the user data
