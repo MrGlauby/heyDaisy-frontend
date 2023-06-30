@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useContext, useState } from "react";
-
+import { Link } from "react-router-dom";
 import Sidebar from "../components/main/Sidebar";
 import { StateContext } from "../stateContext";
 
@@ -127,11 +127,19 @@ function StudentProfile() {
         )}
       </div>
 
-      <div className="flex justify-center text-justify">
+      <div className="flex justify-center text-justify gap-4">
         <div className="flex m-4 card w-3/4 bg-base-100 shadow-xl ">
           <div className="card-body">
             <div className="card-actions justify-end "></div>
             <p>{user.description}</p>
+          </div>
+          <div className="flex justify-center text-justify gap-5 m-5">
+          <Link to="/chat">
+          <button className="btn btn-primary text-lg">Chat with {user.firstName}</button>
+          </Link>
+          <Link to="/videocall">
+          <button className="btn btn-primary text-lg">Give {user.firstName} a call</button>
+          </Link>
           </div>
         </div>
       </div>

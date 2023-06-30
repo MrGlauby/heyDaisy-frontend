@@ -16,7 +16,7 @@ function AboutUsSection() {
           <p className="py-1 m-1 w-auto">
             Speaking a new language is an unparalleled tool for personal growth.
             <br></br>
-            <br></br>
+
             Unlike traditional apps out there, heyDaisy wants you to be brave
             and actually speak the language since this is the most effective way
             to boost your skills! Connect with like-minded learners and share
