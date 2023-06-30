@@ -1,4 +1,7 @@
 import axios from "axios";
+import { StateContext } from "../../stateContext";
+import { useContext } from "react";
+import Sidebar from "../main/Sidebar";
 
 const AuthPage = (props) => {
   const onSubmit = (e) => {
@@ -9,22 +12,29 @@ const AuthPage = (props) => {
       .then((r) => props.onAuth({ ...r.data, secret: value }))
       .catch((e) => console.log("Auth Error", e));
   };
+  const { user, users } =
+    useContext(StateContext);
+
+
 
   return (
-    <div className = "flex justify-center bg-base-200 rounded-md max-w-400 m-4 my-24">
+    <>
+    <Sidebar />
+    <div className = "flex justify-center rounded-md max-w-400 m-4 my-24">
       <form onSubmit={onSubmit} className="">
-        <div className="">Be brave and start chatting with likeminded learners around the world! 👋</div>
+        <div className="m-5 text-xl">Be brave and start chatting with likeminded learners around the world!</div>
         <br></br>
-        <div className="">Set a username to get started</div>
+        {/* <div className="">Set a username to get started</div> */}
 
-        <div className="flex items-center">
-          <input className="border-2 rounded-md mr-5 my-10" name="username" placeholder="Type in username..." />
-          <button className="btn btn-primary" type="submit">
+        <div className="flex items-center justify-center">
+          <input className="border-2 rounded-md mr-5 my-10 text-xl" name="username" placeholder="Type in username..." value={user.firstName}/>
+          <button className="btn btn-primary text-lg" type="submit">
             Enter
           </button>
         </div>
       </form>
     </div>
+    </>
   );
 };
 
