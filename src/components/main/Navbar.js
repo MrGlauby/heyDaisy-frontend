@@ -1,5 +1,5 @@
 import React from "react";
-import  { useState } from 'react';
+
 import { Link } from "react-router-dom";
 
 import logo from "../../img/heyDaisy1.png";
@@ -13,11 +13,11 @@ import logo from "../../img/heyDaisy1.png";
 export default function Navbar() {
   return (
     <div>
-      <div className="navbar   bg-indigo-200 p-5 ">
+      <div className="navbar bg-violet-100 p-5">
         <div className="flex-1 ">
           <Link to="/">
             <img
-              className="logoflex self-start  pl-2  h-35 w-full m-left-4px  min-w-[6rem]   max-w-[12rem]   duration-150 ease-in-out hover:scale-110"
+              className="logoflex self-start pl-2 h-35 w-full m-left-4px  min-w-[6rem] max-w-[12rem] duration-150 ease-in-out"
               src={logo}
               alt="logo"
             />
@@ -25,39 +25,30 @@ export default function Navbar() {
         </div>
 
         <div>
-          <ul>
-           
-          </ul>
+          <ul></ul>
         </div>
 
-
-        <div className="flex-none  ">
+        <div className="flex-none ">
           <ul className="menu menu-horizontal">
-
-{/* logout button  */}
-          <li className="p-5 text-lg">
-              <Link to="/" className="shadow-xl bg-indigo-100 ">
-                Logout
+            <li className="p-5 text-lg ">
+              <Link to="/register" target="_blank">
+                <button className="btn btn-primary text-lg">Logout</button>
               </Link>
             </li>
 
-            <li className="p-5   text-lg ">
-              <Link
-                to="/register"
-                target="_blank"
-                className="shadow-xl bg-indigo-100"
-              >
-                Register
+            <li className="p-5 text-lg ">
+              <Link to="/register" target="_blank">
+                <button className="btn btn-primary text-lg">Register</button>
               </Link>
             </li>
             <li className="p-5 text-lg">
-              <Link to="/login" className="shadow-xl bg-indigo-100 ">
-                Login
+              <Link to="/login">
+                <button className="btn btn-primary text-lg"> Login </button>
               </Link>
             </li>
             <li className="p-5 text-lg">
-              <Link to="/about" className="shadow-xl bg-indigo-100 ">
-                About Us
+              <Link to="/about">
+                <button className="btn btn-primary text-lg"> About Us</button>
               </Link>
             </li>
           </ul>
