@@ -3,7 +3,6 @@ import { useState, useContext } from "react";
 import { Navigate } from "react-router-dom";
 //import Loader from ".Loader";
 import { loginUser } from "../utils/authUtils";
-import { Link } from "react-router-dom";
 import { StateContext } from "../stateContext";
 
 export default function Login({
@@ -94,14 +93,8 @@ export default function Login({
                     onChange={handleChange}
                   />
                 </div>
-                <button className="form-control mt-6">
-                  <Link
-                    to={"/myprofile"}
-                    className="btn btn-primary"
-                    type="submit"
-                  >
-                    Login
-                  </Link>
+                <button className="btn btn-primary" type="submit">
+                  Login
                 </button>
               </form>
             </div>

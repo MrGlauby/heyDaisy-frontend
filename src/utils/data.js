@@ -11,7 +11,6 @@ export const fetchUsers = async () => {
   }
 };
 
-
 export const fetchImageUrl = async (imageRef) => {
   try {
     console.log("imageRef", imageRef);
@@ -24,13 +23,14 @@ export const fetchImageUrl = async (imageRef) => {
   }
 };
 
-
-export const fetchUser = async () => {
+export const fetchUser = async (id) => {
   try {
-    const users = await axios.get(`${process.env.REACT_APP_API}/users`);
-    return users;
+    console.log("user_id", id);
+    const user = await axios.get(`${process.env.REACT_APP_API}/users/${id}`);
+    console.log("another user", user);
+    return user.data;
   } catch (err) {
-    console.error("Error fetching users:", err);
-    throw err; // Rethrow the error to handle it at a higher level if needed
+    console.error("Error fetching user:", err);
+    throw err;
   }
 };
