@@ -9,7 +9,6 @@ import Footer from "../components/main/Footer";
 
 export default function About() {
   return <div className="relative">
-    <Navbar/>
     
     <div className="hero mt-20">
   <div className="hero-content">
@@ -79,6 +78,5 @@ Together, we are a force to be reckoned with, ready to overcome obstacles and ma
   
   
 
-  <Footer />
     </div>;
 }
