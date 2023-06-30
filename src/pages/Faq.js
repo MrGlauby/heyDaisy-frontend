@@ -1,13 +1,9 @@
 import React from "react";
 
-import Navbar from "../components/main/Navbar";
-import Footer from "../components/main/Footer";
-
 export default function Faq() {
   return (
-    <div>
-      <Navbar />
-      <div className="min-h-screen">
+    <div className="flex flex-col min-h-screen justify-between">
+      <div className="">
         <div className="collapse collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" checked="checked" />
           <div className="collapse-title text-xl font-medium">
@@ -36,7 +32,6 @@ export default function Faq() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
