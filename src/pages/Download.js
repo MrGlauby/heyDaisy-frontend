@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../components/main/Navbar";
-import Footer from "../components/main/Footer";
 import Germany from "../img/germany.svg";
 import Italy from "../img/italy.svg";
 import Spain from "../img/spain.svg";
@@ -10,7 +8,6 @@ import MapPainting from "../img/map-painting.png";
 function Download() {
   return (
     <>
-      <Navbar />
       <div className="hero min-h-fit bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src={MapPainting} alt="" />
@@ -194,7 +191,6 @@ function Download() {
           {/* foot */}
         </table>
       </div>
-      <Footer />
     </>
   );
 }

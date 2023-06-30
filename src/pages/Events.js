@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../components/main/Navbar";
-import Footer from "../components/main/Footer";
 
 import RandomUserOne from "../img/randomUserReview1.jpg";
 import RandomUserTwo from "../img/randomUserReview2.jpg";
@@ -16,7 +14,6 @@ import RandomUserSeven from "../img/randomUserReview7.jpg";
 export default function Events() {
   return (
     <div>
-      <Navbar />
       {/* search */}
       <div>
         <form>
@@ -269,7 +266,6 @@ export default function Events() {
             </tbody>
           </table>
         </div>
-        <Footer />
       </div>
     </div>
   );
