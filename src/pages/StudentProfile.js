@@ -137,7 +137,7 @@ function StudentProfile() {
           <Link to="/chat">
           <button className="btn btn-primary text-lg">Chat with {user.firstName}</button>
           </Link>
-          <Link to="/videocall">
+          <Link to="{user.videoLink}">
           <button className="btn btn-primary text-lg">Give {user.firstName} a call</button>
           </Link>
           </div>
