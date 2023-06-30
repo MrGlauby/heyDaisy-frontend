@@ -148,7 +148,7 @@ export default function Register({
     <div>
       <div className="hero min-h-screen bg-base-200">
         {/* {userImage && <img alt={"userimage"} src={userImage} />} */}
-        <div className="hero-content flex-wrap w-2/4 text-center">
+        <div className="hero-content m-2 flex-col w-2/4 text-center">
           <div className="text-center">
             <h1 className="text-5xl font-bold">Signup now!</h1>
             <p className="m-8 text-lg">1. Choose your photo and upload it</p>
