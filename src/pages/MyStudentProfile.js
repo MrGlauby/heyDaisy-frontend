@@ -78,8 +78,14 @@ export default function MyStudentProfile() {
           </div>
           <div className="p-4">
             <h2 className="text-2xl">
-              Amanda Feliz
-              <span className="badge badge-lg">@amandafeliz</span>
+              <p>
+                {user.firstName} {user.lastName}
+              </p>
+
+              <span className="badge badge-lg">
+                @{user.firstName.toLowerCase()}
+                {user.lastName.toLowerCase()}
+              </span>
             </h2>
           </div>
 
@@ -118,7 +124,7 @@ export default function MyStudentProfile() {
                   onChange={(e) => setAge(e.target.value)}
                 />
               ) : (
-                <span>{user.age}</span>
+                <span> {user.age}</span>
               )}
             </div>
             <div>
@@ -130,7 +136,7 @@ export default function MyStudentProfile() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               ) : (
-                <span>{user.email}</span>
+                <span> {user.email}</span>
               )}
             </div>
             <div>
@@ -142,7 +148,7 @@ export default function MyStudentProfile() {
                   onChange={(e) => setNationality(e.target.value)}
                 />
               ) : (
-                <span>{nationality}</span>
+                <span> {user.nationality}</span>
               )}
             </div>
             <div>
@@ -154,7 +160,7 @@ export default function MyStudentProfile() {
                   onChange={(e) => setLivingLocation(e.target.value)}
                 />
               ) : (
-                <span>{livingLocation}</span>
+                <span> {user.country}</span>
               )}
             </div>
           </div>
@@ -170,21 +176,10 @@ export default function MyStudentProfile() {
                   onChange={(e) => setMotherLanguage(e.target.value)}
                 />
               ) : (
-                <span>{motherLanguage}</span>
+                <span> {user.motherLanguage}</span>
               )}
             </div>
-            <div>
-              <span className="font-bold">I want also speak:</span>
-              {isEditing ? (
-                <input
-                  type="text"
-                  value={spokenLanguage}
-                  onChange={(e) => setSpokenLanguage(e.target.value)}
-                />
-              ) : (
-                <span>{spokenLanguage}</span>
-              )}
-            </div>
+
             <div>
               <span className="font-bold">I want to learn:</span>
               {isEditing ? (
@@ -194,26 +189,17 @@ export default function MyStudentProfile() {
                   onChange={(e) => setLearnLanguage(e.target.value)}
                 />
               ) : (
-                <span>{learnLanguage}</span>
+                <span> {user.language}</span>
               )}
             </div>
           </div>
         )}
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center text-justify m-8">
         <div className="flex m-4 card w-3/4 bg-base-100 shadow-xl ">
           <div className="card-body">
-            <p>
-              "Hi! I'm Amanda, a passionate tennis, music and dance lover. I
-              love getting lost in the rhythms and letting myself get carried
-              away by the music, whether dancing with friends or enjoying live
-              concerts. In addition, I have a great interest in learning and
-              practicing Spanish. I would love to immerse myself in the Hispanic
-              culture, meet new people and improve my language skills. I am
-              excited for the journey ahead as I combine my passions and
-              continue to enrich my life through tennis, music, dance and
-              learning Spanish."
-            </p>
+            <div className="card-actions justify-end"></div>
+            <p>{user.description}</p>
           </div>
         </div>
       </div>
