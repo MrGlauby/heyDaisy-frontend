@@ -8,9 +8,6 @@ import { registerUser } from "../utils/authUtils";
 
 import { StateContext } from "../stateContext";
 
-import Navbar from "../components/main/Navbar";
-import Footer from "../components/main/Footer";
-
 export default function Register({
   isAuthenticated,
   setIsAuthenticated,
@@ -149,10 +146,9 @@ export default function Register({
   if (isAuthenticated) return <Navigate to="/login" />;
   return (
     <div>
-      <Navbar />
       <div className="hero min-h-screen bg-base-200">
         {/* {userImage && <img alt={"userimage"} src={userImage} />} */}
-        <div className="hero-content flex-wrap w-2/4 text-center">
+        <div className="hero-content m-2 flex-col w-2/4 text-center">
           <div className="text-center">
             <h1 className="text-5xl font-bold">Signup now!</h1>
             <p className="m-8 text-lg">1. Choose your photo and upload it</p>
@@ -241,7 +237,6 @@ export default function Register({
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
