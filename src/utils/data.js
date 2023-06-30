@@ -23,7 +23,9 @@ export const fetchImageUrl = async (imageRef) => {
   }
 };
 
-export const fetchUser = async (id) => {
+
+export const fetchUser = async ({id}) => {
+
   try {
     console.log("user_id", id);
     const user = await axios.get(`${process.env.REACT_APP_API}/users/${id}`);
