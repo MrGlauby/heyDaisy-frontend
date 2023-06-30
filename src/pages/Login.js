@@ -4,10 +4,6 @@ import { Navigate } from "react-router-dom";
 //import Loader from ".Loader";
 import { loginUser } from "../utils/authUtils";
 import { Link } from "react-router-dom";
-
-import Navbar from "../components/main/Navbar";
-import Footer from "../components/main/Footer";
-
 import { StateContext } from "../stateContext";
 
 export default function Login({
@@ -57,7 +53,6 @@ export default function Login({
   if (isAuthenticated) return <Navigate to="/" />;
   return (
     <div>
-      <Navbar />
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-wrap w-2/4 text-center">
           <div className="text-center">
@@ -113,7 +108,6 @@ export default function Login({
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

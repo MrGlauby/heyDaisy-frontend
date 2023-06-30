@@ -1,5 +1,4 @@
 import React from "react";
-
 import party from "../img/party.jpg";
 import work from "../img/work.jpg";
 import community from "../img/comunity.jpg";
