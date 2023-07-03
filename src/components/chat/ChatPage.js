@@ -3,7 +3,6 @@ import {
   MultiChatWindow,
   useMultiChatLogic,
 } from "react-chat-engine-advanced";
-import Sidebar from "../main/Sidebar";
 
 const ChatPage = (props) => {
   const chatProps = useMultiChatLogic(
