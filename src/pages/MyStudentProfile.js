@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import Sidebar from "../components/main/Sidebar";
 import { Link } from "react-router-dom";
 // import getUser from "../utils/authUtils";
-
-// import profilepic from "../img/randomUserReview4.jpg";
 import { StateContext } from "../stateContext";
 import { useContext } from "react";
-// import { useParams } from "react-router-dom";
 import { UilCommentSearch } from "@iconscout/react-unicons";
+import { axios } from "axios";
 
 export default function MyStudentProfile() {
   const { user, users, updatedUserData, setUpdatedUserData } =
@@ -227,4 +225,3 @@ export default function MyStudentProfile() {
     "..loading"
   );
 }
-/*className="flex justify-center text-2xl text-primary mt-12"*/
