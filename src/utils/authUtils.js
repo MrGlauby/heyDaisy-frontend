@@ -36,22 +36,3 @@ export const loginUser = async (formData) => {
     console.log(err);
   }
 };
-
-/* export const updateUser = async (id, token, updatedUserData) => {
-  try {
-    const response = await axios.put(
-      `${process.env.REACT_APP_API}/users/${id}`,
-      updatedUserData,
-      {
-        headers: { Authorization: token },
-      }
-    );
-
-    console.log("Updated user data:", response.data);
-
-    return response.data;
-  } catch (error) {
-    console.log("Error updating user:", error.message);
-    throw error;
-  }
-}; */

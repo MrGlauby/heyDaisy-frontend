@@ -18,7 +18,7 @@ export default function MyStudentProfile() {
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [nationality, setNationality] = useState("");
-  const [livingLocation, setLivingLocation] = useState("");
+  const [country, setCountry] = useState("");
   const [motherLanguage, setMotherLanguage] = useState("");
   const [spokenLanguage, setSpokenLanguage] = useState("");
   const [learnLanguage, setLearnLanguage] = useState("");
@@ -39,7 +39,7 @@ export default function MyStudentProfile() {
       age,
       email,
       nationality,
-      livingLocation,
+      country,
       motherLanguage,
       spokenLanguage,
       learnLanguage,
@@ -52,30 +52,28 @@ export default function MyStudentProfile() {
   console.log("updated User data", updatedUserData);
 
   return user && user._id ? (
-    <div className="flex min-full-screen justify-between">
-      <div className="flex flex-col">
+    <div className="lg:grid lg:grid-cols-[0.5fr,2fr,2fr] lg:min-full-screen mt-16 mb-16 sm:flex sm:flex-wrap">
+      <div className="card-actions flex">
         <Sidebar />
-        <div className="card-actions">
-          <div className="p-4">
-            {isEditing ? (
-              <button
-                className="btn btn-outline btn-primary"
-                onClick={handleSaveChanges}
-              >
-                Save changes
-              </button>
-            ) : (
-              <button
-                className="btn btn-outline btn-primary"
-                onClick={handleEditClick}
-              >
-                Edit your Profile
-              </button>
-            )}
-          </div>
-        </div>
+        {isEditing ? (
+          <button
+            className="btn btn-outline btn-primary ml-2"
+            onClick={handleSaveChanges}
+          >
+            Save changes
+          </button>
+        ) : (
+          <button
+            className="btn btn-outline btn-primary ml-2"
+            onClick={handleEditClick}
+          >
+            Edit your Profile
+          </button>
+        )}
       </div>
-      <div>
+
+      {/* Profile Picture, Tabs, and Personal Details/Languages */}
+      <div className="col-span-1 ">
         <div className="flex justify-center">
           <div className="flex flex-col text-center mt-8">
             <div className="p-4">
@@ -98,8 +96,8 @@ export default function MyStudentProfile() {
               </h2>
             </div>
 
-            <div className="p-4">
-              <div className="tabs tabs-boxed">
+            <div className="p-4 ">
+              <div className="tabs tabs-boxed justify-center">
                 <button
                   className={`tab ${
                     activeTab === "personalDetails" ? "tab-active" : ""
@@ -120,7 +118,7 @@ export default function MyStudentProfile() {
             </div>
           </div>
         </div>
-        <div className="content flex justify-center p-4">
+        <div className="content flex justify-center p-8">
           {activeTab === "personalDetails" && (
             <div className="tab-content text-center">
               <div>
@@ -156,7 +154,7 @@ export default function MyStudentProfile() {
                     onChange={(e) => setNationality(e.target.value)}
                   />
                 ) : (
-                  <span>{user.nationality}</span>
+                  <span> {user.nationality}</span>
                 )}
               </div>
               <div>
@@ -164,11 +162,11 @@ export default function MyStudentProfile() {
                 {isEditing ? (
                   <input
                     type="text"
-                    value={livingLocation}
-                    onChange={(e) => setLivingLocation(e.target.value)}
+                    value={country}
+                    onChange={(e) => setCountry(e.target.value)}
                   />
                 ) : (
-                  <span>{user.livingLocation}</span>
+                  <span> {user.country}</span>
                 )}
               </div>
             </div>
@@ -203,19 +201,25 @@ export default function MyStudentProfile() {
             </div>
           )}
         </div>
-        <div className="flex justify-center text-justify mb-16">
-          <div className="flex m-4 card w-3/4 bg-base-100 shadow-xl ">
+        <div className="flex justify-center text-justify gap-5 m-5">
+          <Link to="/chat">
+            <button className="btn btn-primary md:btn-md lg:btn-md">
+              Enter Chatrooms <UilCommentSearch className="mb-2" />
+            </button>
+          </Link>
+        </div>
+      </div>
+
+      {/* Description */}
+      <div className="col-span-1 m-2 flex justify-center">
+        <div className="flex text-justify mb-8">
+          <div className="flex m-4 card w-full bg-base-100 shadow-xl ">
             <div className="card-body">
-              <div className="badge badge-primary text-lg p-4">About me</div>
+              <div className="badge badge-primary text-lg p-4 mb-8">
+                About me
+              </div>
               <div className="card-actions justify-end"></div>
               <p>{user.description}</p>
-            </div>
-            <div className="flex justify-center text-justify gap-5 m-5">
-              <Link to="/chat">
-                <button className="btn btn-primary md:btn-md lg:btn-lg">
-                  Enter Chatrooms <UilCommentSearch className="mb-2" />
-                </button>
-              </Link>
             </div>
           </div>
         </div>
