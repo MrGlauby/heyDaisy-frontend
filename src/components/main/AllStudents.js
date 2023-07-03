@@ -36,6 +36,20 @@ function AllStudents() {
   };
   console.log("inAllStudents");
 
+  if (!users || users.length === 0) {
+    return (
+      <div>
+        <div className="flex justify-end m-8">
+          <h2 className="m-2">Loading</h2>
+          <span className="loading loading-dots loading-xs"></span>
+          <span className="loading loading-dots loading-sm"></span>
+          <span className="loading loading-dots loading-md"></span>
+          <span className="loading loading-dots loading-lg"></span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="flex flex-col">
@@ -46,10 +60,13 @@ function AllStudents() {
         />
 
         <div className="flex flex-wrap justify-around">
-          {filteredLanguage.length &&
+          {filteredLanguage.length ? (
             filteredLanguage.map((user) => (
               <SingleStudent user={user} key={user._id} />
-            ))}
+            ))
+          ) : (
+            <p>No students found.</p>
+          )}
         </div>
       </div>
     </>

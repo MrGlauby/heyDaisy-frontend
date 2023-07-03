@@ -22,6 +22,9 @@ import PrivateRoute from "./components/main/PrivateRoute";
 import Navbar from "./components/main/Navbar";
 import Footer from "./components/main/Footer";
 
+// scroll
+import { useLocation } from "react-router-dom";
+
 import Blog from "./pages/Blog";
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   // const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  // SCROLL
+  const { pathname } = useLocation();
 
   const { user, setUser } = useContext(StateContext);
 
@@ -67,11 +73,19 @@ function App() {
     setIsAuthenticated(false);
   };
 
+  // page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  //
   return (
     <>
       <Navbar isAuthenticated={isAuthenticated} user={user} logOut={logOut} />
+
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="about" element={<About />} />
         <Route path="events" element={<Events />} />
         <Route path="download" element={<Download />} />
@@ -110,6 +124,7 @@ function App() {
         <Route path="myprofile" element={<MyStudentProfile token={token} />} />
         {/* </Route> */}
       </Routes>
+
       <Footer />
     </>
   );
