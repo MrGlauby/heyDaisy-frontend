@@ -84,7 +84,7 @@ export default function ReviewsSection() {
             />
             <br></br>
             <q className="text-black  justify-center w-64">
-              Accessible anytime, anywhere The language
+              Accessible anytime, anywhere. The language
               learning platform allows you to practice on the go, making the
               most of your time.
             </q>

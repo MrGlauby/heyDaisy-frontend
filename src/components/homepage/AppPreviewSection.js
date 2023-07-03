@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "../../App.css";
 
 import GoogleMeet from "../../img/googleMeet.png";
-import Chat from "../../img/chat.png";
-import Event from "../../img/event.png";
+import Chatfunction from "../../img/Chatfunction.png";
+import Eventssection from "../../img/Eventssection.png"
 
 function AppPreviewSection() {
   // State to keep track of the active tab
@@ -37,8 +37,8 @@ function AppPreviewSection() {
             <h3 className="my-10  font-semibold text-2xl">Chat</h3>
             <p className="text-content">
               "Unleash the power of words with our chat feature that's designed
-              to ignite instant connections and foster meaningful conversations.
-              . Share your language journey, exchange tips, and make lifelong
+              to ignite instant connections and foster meaningful conversations. 
+              Share your language journey, exchange tips, and make lifelong
               friendships on the go. Get ready to dive into a world of limitless
               linguistic possibilities!"
             </p>
@@ -74,14 +74,14 @@ function AppPreviewSection() {
         );
       case 2:
         return (
-          <div className="image-content max-w-[16rem]">
-            <img src={Chat} alt="Chat Placeholder" />
+          <div className="image-content max-w-[24rem]">
+            <img src={Chatfunction} alt="Chat Placeholder" />
           </div>
         );
       case 3:
         return (
           <div className="image-content">
-            <img src={Event} alt="Events Placeholder" />
+            <img src={Eventssection} alt="Events Placeholder" />
           </div>
         );
       default:
