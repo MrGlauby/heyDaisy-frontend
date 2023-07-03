@@ -22,6 +22,7 @@ const ChatPage = (props) => {
         <MultiChatWindow {...chatProps} />
       </div>
       </div>
+
     </div>
   );
 };
