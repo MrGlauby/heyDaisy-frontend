@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import heroVideo from "../../img/hero.mp4";
 
 export default function HeroSection() {
   return (
     <div>
-      <div className="hero min-h-screen bg-violet-100">
-        <div className="hero-content text-center">
-          <div className="max-w-md">
-            <h1 className="text-7xl font-bold">Hola Hello Olá Ciao</h1>
-            <p className="py-6  text-2xl">
-              Explore, grow, and unlock your linguistic potential in a
-              supportive, diverse community. Join us and experience the joy of
-              learning languages together!
+      <header class="relative flex items-center justify-center h-screen pb-16 overflow-hidden">
+        <div class="flex justify-center relative z-30 p-5 text-2xl text-white">
+          <div className="flex flex-col justify-center items-center max-w-7xl">
+            <h1 className="text-9xl font-bold text-primary w-auto">
+              Hola Hello Olá Ciao
+            </h1>
+            <p className=" max-w-3xl py-6 text-5xl text-primary font-bold">
+              The only language app you will ever need
             </p>
             <Link
               to="register"
@@ -22,7 +23,15 @@ export default function HeroSection() {
             </Link>
           </div>
         </div>
-      </div>
+        <video
+          autoPlay
+          loop
+          muted
+          class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+      </header>
     </div>
   );
 }
