@@ -146,7 +146,7 @@ export default function Register({
   if (isAuthenticated) return <Navigate to="/login" />;
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200 p-8">
+      <div className="hero min-h-screen bg-base-200 p-20">
         {/* {userImage && <img alt={"userimage"} src={userImage} />} */}
         <div className="hero-content flex-col w-2/4 text-center m-10">
           <div className="text-center">
