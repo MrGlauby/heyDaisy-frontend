@@ -2,6 +2,21 @@ import { Link } from "react-router-dom";
 
 export default function SingleStudent({ user }) {
   console.log("imageInSingleStudent", user?.profilePicture);
+
+  if (!user || user.length === 0) {
+    return (
+      <div className="flex justify-center ">
+        <div className="m-8">
+          <h2 className="m-2">Loading</h2>
+          <span className="loading loading-dots loading-xs"></span>
+          <span className="loading loading-dots loading-sm"></span>
+          <span className="loading loading-dots loading-md"></span>
+          <span className="loading loading-dots loading-lg"></span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div
