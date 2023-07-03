@@ -59,10 +59,11 @@ export default function Login({
           <div className="text-center">
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            Whether you're a beginner or an advanced learner, we give you the ideal platform to connect with likeminded individuals to achieve your language goals!</p> <br></br>
+            <br></br>
+            <div className="flex justify-around">
+            <p className="font-bold">Let's go!  |  ¡Vamos!  |  Andiamo!  |  Los geht's!</p>
+            </div>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
