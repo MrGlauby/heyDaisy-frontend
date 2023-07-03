@@ -39,13 +39,13 @@ export default function EventsSection() {
                 </div>
               </td>
               <td className="text-base">
-                Let's talk about soccer!
+                Let's talk about football!
                 <br />
                 <span className="badge badge-ghost badge-sm">
-                  advanced level
+                  beginner level
                 </span>
               </td>
-              <td className="text-base">Spanish</td>
+              <td className="text-base">Any</td>
               <th>
                 <a href="events" className="btn btn-primary btn-xs">
                   details{" "}
@@ -68,11 +68,11 @@ export default function EventsSection() {
                 </div>
               </td>
               <td className="text-base">
-                I want to talk about traveling :)
+                Being at a Spanish bodega
                 <br />
                 <span className="badge badge-ghost badge-sm">basic level</span>
               </td>
-              <td className="text-base">Italian</td>
+              <td className="text-base">Spanish</td>
               <th>
                 <a href="events" className="btn btn-primary btn-xs">
                   details{" "}
@@ -95,13 +95,13 @@ export default function EventsSection() {
                 </div>
               </td>
               <td className="text-base">
-                Let's cook a Portuguese dish together!
+                Meet up with your partner's Italian family
                 <br />
                 <span className="badge badge-ghost badge-sm">
                   advanced level
                 </span>
               </td>
-              <td className="text-base">Portuguese</td>
+              <td className="text-base">Italian</td>
               <th>
                 <Link to="events" className="btn btn-primary btn-xs">
                   details{" "}
@@ -124,13 +124,13 @@ export default function EventsSection() {
                 </div>
               </td>
               <td className="text-base">
-                I want to practice my Italian, want to join me?
+                Being at a Bavarian Biergarten
                 <br />
                 <span className="badge badge-ghost badge-sm">
                   advanced level
                 </span>
               </td>
-              <td className="text-base">Italian</td>
+              <td className="text-base">German</td>
               <th>
                 <Link to="events" className="btn btn-primary btn-xs">
                   details{" "}
