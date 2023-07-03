@@ -21,7 +21,6 @@ import StudentProfile from "./pages/StudentProfile";
 import PrivateRoute from "./components/main/PrivateRoute";
 import Navbar from "./components/main/Navbar";
 import Footer from "./components/main/Footer";
-
 import Blog from "./pages/Blog";
 
 function App() {
@@ -70,8 +69,10 @@ function App() {
   return (
     <>
       <Navbar isAuthenticated={isAuthenticated} user={user} logOut={logOut} />
+
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="about" element={<About />} />
         <Route path="events" element={<Events />} />
         <Route path="download" element={<Download />} />
@@ -110,6 +111,7 @@ function App() {
         <Route path="myprofile" element={<MyStudentProfile token={token} />} />
         {/* </Route> */}
       </Routes>
+
       <Footer />
     </>
   );
