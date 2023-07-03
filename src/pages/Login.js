@@ -93,12 +93,11 @@ export default function Login({
                     onChange={handleChange}
                   />
                 </div>
-                <button
-                  className="btn btn-primary form-control mt-6"
-                  type="submit"
-                >
-                  Login
-                </button>
+                <div className="form-control mt-6">
+                  <button className="btn btn-primary" type="submit">
+                    Login
+                  </button>
+                </div>
               </form>
             </div>
           </div>
