@@ -23,7 +23,7 @@ import Navbar from "./components/main/Navbar";
 import Footer from "./components/main/Footer";
 
 // scroll
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 import Blog from "./pages/Blog";
 
@@ -73,17 +73,19 @@ function App() {
     setIsAuthenticated(false);
   };
 
-// page 
+  // page
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-// 
+  //
   return (
     <>
       <Navbar isAuthenticated={isAuthenticated} user={user} logOut={logOut} />
+
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="about" element={<About />} />
         <Route path="events" element={<Events />} />
         <Route path="download" element={<Download />} />
@@ -122,6 +124,7 @@ function App() {
         <Route path="myprofile" element={<MyStudentProfile token={token} />} />
         {/* </Route> */}
       </Routes>
+
       <Footer />
     </>
   );
