@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Navigate, Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { UilImageUpload } from "@iconscout/react-unicons";
 import { ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
@@ -90,7 +90,7 @@ export default function Register({
 
     try {
       if (!email || !password || !language || !userImageUrl) {
-        return "Please fill out all the fields";
+        alert("Please fill out all the fields");
       }
       // getImage(userImageUrl && userImageUrl);
       // btn handel/reigster submiting the user data
@@ -146,9 +146,9 @@ export default function Register({
   if (isAuthenticated) return <Navigate to="/login" />;
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-base-200 p-8">
         {/* {userImage && <img alt={"userimage"} src={userImage} />} */}
-        <div className="hero-content m-2 flex-col w-2/4 text-center">
+        <div className="hero-content flex-col w-2/4 text-center m-10">
           <div className="text-center">
             <h1 className="text-5xl font-bold">Signup now!</h1>
             <p className="m-8 text-lg">1. Choose your photo and upload it</p>

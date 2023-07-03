@@ -55,9 +55,8 @@ export default function ReviewsSection() {
             />
             <br></br>
             <q className="text-black  justify-center w-64">
-              Interactive and fun! The platform offers interactive exercises and
-              games that make learning enjoyable and keep you motivated
-              throughout your language journey.
+              Interactive and fun platform that offers interactive exercises to keep you motivated
+              throughout your journey.
             </q>
             <br></br>
             <h4 className="text-black  font-bold">Ahmad, 29, from Egypt</h4>
@@ -71,8 +70,8 @@ export default function ReviewsSection() {
             <br></br>
             <q className="text-black  justify-center w-64">
               Flexible and personalized learning. The platform adapts to your
-              skill level and learning pace, providing customized lessons that
-              cater to your specific needs.
+              skill and learning pace, providing customized members that
+              cater to your  needs.
             </q>
             <br></br>
             <h4 className="text-black  font-bold">Olivia, 28, from Norway</h4>
@@ -85,7 +84,7 @@ export default function ReviewsSection() {
             />
             <br></br>
             <q className="text-black  justify-center w-64">
-              Accessible anytime, anywhere. With its mobile app, the language
+              Accessible anytime, anywhere The language
               learning platform allows you to practice on the go, making the
               most of your time.
             </q>

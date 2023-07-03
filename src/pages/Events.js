@@ -1,270 +1,269 @@
 import React from "react";
+import Sidebar from "../components/main/Sidebar";
+import { StateContext } from "../stateContext";
+import { useContext } from "react";
 
-import RandomUserOne from "../img/randomUserReview1.jpg";
-import RandomUserTwo from "../img/randomUserReview2.jpg";
-import RandomUserThree from "../img/randomUserReview3.jpg";
-import RandomUserFour from "../img/randomUserReview4.jpg";
-import RandomUserFive from "../img/randomUserReview5.jpg";
-import RandomUserSix from "../img/randomUserReview6.jpg";
-import RandomUserSeven from "../img/randomUserReview7.jpg";
 
-// import RandomUserFive from "../../img/randomUserReview5.jpg";
-// import RandomUserSix from "../../img/randomUserReview6.jpg";
+import Tapas from "../img/tapasbar.jpg";
+import CityOffice from "../img/buergeramt.jpg";
+import ItalianDinner from "../img/italiandinner.jpg";
+import Football from "../img/football.jpg";
+import Lost from "../img/lost.jpg"
+import Biergarten from "../img/biergarten.jpg"
 
 export default function Events() {
+
+  const { users, user } = useContext(StateContext);
+
   return (
-    <div>
-      {/* search */}
-      <div>
-        <form>
-          <div className="flex items-center pl-40 p-14">
-            <input
-              className="w-64 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              type="text"
-              placeholder="Search Language..."
-            />
-            <button
-              className="ml-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-              type="submit"
-            >
-              Search Event
-            </button>
+    <div className="flex">
+      <Sidebar />
+      <div className="flex ">
+        <div className="flex flex-wrap justify-center">
+          <div className="m-10 card card-compact w-96 bg-base-100 shadow-xl">
+            <figure className="h-80">
+              <img alt={""} src={Tapas} />
+            </figure>
+            <div className="card-body">
+              <h2 className="self-center card-title">Event</h2>
+              <div className="tab-content text-center">
+                <div>
+                  <span className="font-bold">
+                    Being at a Spanish restaurant
+                  </span>
+                  <br />
+                  <span>
+                    You want to see how you would be in an authentic tapas bar
+                    or just want to order some vinho tintos? Vamos!
+                  </span>
+                </div>
+                <br />
+                <div>
+                  <span className="font-bold">When: tomorrow</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Language: Spanish</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Level: Beginner</span>
+                  <span> {}</span>
+                </div>
+              </div>
+              <div className="flex justify-center">
+              <a href={user.videoLink}>
+              <button className="btn btn-primary text-lg">
+                Enter Event
+              </button>
+            </a>
+            </div>
+            </div>
           </div>
-        </form>
-        {/*  */}
 
-        <div className="overflow-x-auto  pl-32">
-          <table className="table">
-            {/* head */}
-            <thead>
-              <tr>
-                <th className="text-lg">Event Leader </th>
-                <th className="text-lg">Event</th>
-                <th className="text-lg">Event Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* row 1 */}
-              <tr>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img
-                          src={RandomUserOne}
-                          alt="User Review 1"
-                          className="rounded-box w-64"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="font-bold">Hart Hagerty</div>
-                      <div className="text-sm opacity-50">United States</div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  Zemlak, Daniel and Leannon
-                  {/* -- */}
-                  <br />
-                  {/* -- */}
-                  <span className="badge badge-ghost badge-sm">
-                    Desktop Support Technician
-                  </span>
-                </td>
-                <th>
-                  <button className="btn btn-ghost btn-xs">details</button>
-                </th>
-              </tr>
-              {/* row 2 */}
-              <tr>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img
-                          src={RandomUserTwo}
-                          alt="User Review 1"
-                          className="rounded-box w-64"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="font-bold">Brice Swyre</div>
-                      <div className="text-sm opacity-50">China</div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  Carroll Group
-                  {/* -- */}
-                  <br />
-                  {/* -- */}
-                  <span className="badge badge-ghost badge-sm">
-                    Tax Accountant
-                  </span>
-                </td>
-                <th>
-                  <button className="btn btn-ghost btn-xs">details</button>
-                </th>
-              </tr>
-              {/* row 3 */}
-              <tr>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img
-                          src={RandomUserThree}
-                          alt="User Review 2"
-                          className="rounded-box w-64"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="font-bold">Marjy Ferencz</div>
-                      <div className="text-sm opacity-50">Russia</div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  {/* -- */}
-                  <br />
-                  {/* -- */}
+          {/* Repeat the above event card code two more times for a total of three cards */}
 
-                  <span className="badge badge-ghost badge-sm">
-                    Office Assistant I
+          <div className="m-10 card card-compact w-96 bg-base-100 shadow-xl">
+            <figure className="h-80">
+              <img alt={"CityOffice"} src={CityOffice} />
+            </figure>
+            <div className="card-body">
+              <h2 className="self-center card-title">Event</h2>
+              <div className="tab-content text-center">
+                <div>
+                  <span className="font-bold">
+                    Being at a German city office
                   </span>
-                </td>
-                <th>
-                  <button className="btn btn-ghost btn-xs">details</button>
-                </th>
-              </tr>
-              {/* row 4 */}
-              <tr>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        {" "}
-                        <img
-                          src={RandomUserFour}
-                          alt="User Review 2"
-                          className="rounded-box w-64"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="font-bold">Yancy Tear</div>
-                      <div className="text-sm opacity-50">Brazil</div>
-                    </div>
-                  </div>
-                </td>
-                <td>
                   <br />
-                  <span className="badge badge-ghost badge-sm">
-                    Community Restaurant
+                  <span>
+                  Wanna have the ultimate German experience? Go get paper work or important documents and learn how to behave in such a situation.
                   </span>
-                </td>
-                <th>
-                  <button className="btn btn-ghost btn-xs">details</button>
-                </th>
-              </tr>
+                </div>
+                <br />
+                <div>
+                  <span className="font-bold">When: in 1 week</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Language: German</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Level: Advanced</span>
+                  <span> {}</span>
+                </div>
+              </div>
+              <div className="text-lg flex justify-center">
+              <a href={user.videoLink}>
+              <button className="btn btn-primary text-lg">
+                Enter Event
+              </button>
+            </a>
+            </div>
+            </div>
+          </div>
 
-              {/* row 5 */}
-              <tr>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        {" "}
-                        <img
-                          src={RandomUserFive}
-                          alt="User Review 2"
-                          className="rounded-box w-64"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="font-bold">Yancy Tear</div>
-                      <div className="text-sm opacity-50">Brazil</div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <br />
-                  <span className="badge badge-ghost badge-sm">
-                    Community Restaurant
-                  </span>
-                </td>
-                <th>
-                  <button className="btn btn-ghost btn-xs">details</button>
-                </th>
-              </tr>
+          {/* Repeat the above event card code two more times for a total of six cards */}
 
-              {/* row 6 */}
-              <tr>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        {" "}
-                        <img
-                          src={RandomUserSix}
-                          alt="User Review 2"
-                          className="rounded-box w-64"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="font-bold">Yancy Tear</div>
-                      <div className="text-sm opacity-50">Brazil</div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <br />
-                  <span className="badge badge-ghost badge-sm">
-                    Community Restaurant
+          <div className="m-10 card card-compact w-96 bg-base-100 shadow-xl">
+            <figure className="h-80">
+              <img alt={""} src={ItalianDinner} />
+            </figure>
+            <div className="card-body">
+              <h2 className="self-center card-title">Event</h2>
+              <div className="tab-content text-center">
+                <div>
+                  <span className="font-bold">
+                    Meet up with your partner's Italian family
                   </span>
-                </td>
-                <th>
-                  <button className="btn btn-ghost btn-xs">details</button>
-                </th>
-              </tr>
+                  <br />
+                  <span>
+                    Learn how to impress your partner's family with cheesy Italian phrases and learn the do's and dont's!
+                  </span>
+                </div>
+                <br />
+                <div>
+                  <span className="font-bold">When: in 10 days</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Language: Italian</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Level: Beginner</span>
+                  <span> {}</span>
+                </div>
+              </div>
+              <div className="text-lg flex justify-center">
+              <a href={user.videoLink}>
+              <button className="btn btn-primary text-lg">
+                Enter Event
+              </button>
+            </a>
+            </div>
+            </div>
+          </div>
 
-              {/* row 7 */}
-              <tr>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        {" "}
-                        <img
-                          src={RandomUserSeven}
-                          alt="User Review 2"
-                          className="rounded-box w-64"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="font-bold">Yancy Tear</div>
-                      <div className="text-sm opacity-50">Brazil</div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <br />
-                  <span className="badge badge-ghost badge-sm">
-                    Community Restaurant
+          <div className="m-10 card card-compact w-96 bg-base-100 shadow-xl">
+            <figure className="h-80">
+              <img alt={"Football Match"} src={Football} />
+            </figure>
+            <div className="card-body">
+              <h2 className="self-center card-title">Event</h2>
+              <div className="tab-content text-center">
+                <div>
+                  <span className="font-bold">
+                    Watching a football match with an mixed crowd
                   </span>
-                </td>
-                <th>
-                  <button className="btn btn-ghost btn-xs">details</button>
-                </th>
-              </tr>
-            </tbody>
-          </table>
+                  <br />
+                  <span>
+                    Learn the different chants to cheer up your team. See what the essentials for sounding like a true football fan are (and which team has the best fans)!
+                  </span>
+                </div>
+                <br />
+                <div>
+                  <span className="font-bold">When: in 2 weeks</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Language: Any</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Level: Beginner</span>
+                  <span> {}</span>
+                </div>
+              </div>
+              <div className="text-lg flex justify-center">
+              <a href={user.videoLink}>
+              <button className="btn btn-primary text-lg">
+                Enter Event
+              </button>
+            </a>
+            </div>
+            </div>
+          </div>
+
+          <div className="m-10 card card-compact w-96 bg-base-100 shadow-xl">
+            <figure className="h-80">
+              <img alt={"Biergarten"} src={Biergarten} />
+            </figure>
+            <div className="card-body">
+              <h2 className="self-center card-title">Event</h2>
+              <div className="tab-content text-center">
+                <div>
+                  <span className="font-bold">
+                    Being at a Bavarian Biergarten
+                  </span>
+                  <br />
+                  <span>
+                    You are only a true German when you know how to follow these rules in a German Biergarten. But do not worry: the more beer, the better your German will be.
+                  </span>
+                </div>
+                <br />
+                <div>
+                  <span className="font-bold">When: in 3 weeks</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Language: German</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Level: Beginner</span>
+                  <span> {}</span>
+                </div>
+              </div>
+              <div className="text-lg flex justify-center">
+              <a href={user.videoLink}>
+              <button className="btn btn-primary text-lg">
+                Enter Event
+              </button>
+            </a>
+            </div>
+            </div>
+          </div>
+
+          <div className="m-10 card card-compact w-96 bg-base-100 shadow-xl">
+            <figure className="h-80">
+              <img alt={"lost in south america"} src={Lost} />
+            </figure>
+            <div className="card-body">
+              <h2 className="self-center card-title">Event</h2>
+              <div className="tab-content text-center">
+                <div>
+                  <span className="font-bold">
+                    Being lost in the middle of nowhere in the South American outskirts              
+                     </span>
+                  <br />
+                  <span>
+                    Your phone's out of battery and you can't find your way home? Here is what to say in case you get lost. You will come home the best way possible.
+                  </span>
+                </div>
+                <br />
+                <div>
+                  <span className="font-bold">When: in 4 weeks</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Language: Spanish/Portuguese</span>
+                  <span> {}</span>
+                </div>
+                <div>
+                  <span className="font-bold">Level: Beginner</span>
+                  <span> {}</span>
+                </div>
+              </div>
+              <div className="text-lg flex justify-center">
+              <a href={user.videoLink}>
+              <button className="btn btn-primary text-lg">
+                Enter Event
+              </button>
+            </a>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,8 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../components/main/Sidebar";
 import { StateContext } from "../stateContext";
+import { UilHipchat } from "@iconscout/react-unicons";
+import { UilVideo } from "@iconscout/react-unicons";
 
 function StudentProfile() {
   const { users } = useContext(StateContext);
@@ -46,7 +48,7 @@ function StudentProfile() {
       <Sidebar />
 
       <div className="flex justify-center">
-        <div className="flex flex-col text-center mt-8">
+        <div className="flex flex-col text-center">
           <div className="p-4">
             <div className="avatar">
               <div className="w-36 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -61,8 +63,8 @@ function StudentProfile() {
               </p>
 
               <span className="badge badge-lg">
-                @{user.firstName.toLowerCase()}
-                {user.lastName.toLowerCase()}
+                @hey{user?.firstName}
+                {user?.lastName}
               </span>
             </h2>
           </div>
@@ -136,16 +138,16 @@ function StudentProfile() {
           </div>
           <div className="flex justify-center text-justify gap-5 m-5">
             <Link to="/chat">
-              <button className="btn btn-primary text-lg">
+              <button className="btn btn-primary md:btn-md lg:btn-lg">
                 Chat with {user.firstName}
+                <UilHipchat className="mb-1" />
               </button>
             </Link>
-
-            <a href={user.videoLink}>
-              <button className="btn btn-primary text-lg">
-                Give {user.firstName} a call
+            <Link to="{user.videoLink}">
+              <button className="btn btn-primary md:btn-md lg:btn-lg">
+                Give {user.firstName} a call <UilVideo className="mb-1" />
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

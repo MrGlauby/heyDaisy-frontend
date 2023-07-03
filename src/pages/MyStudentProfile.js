@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { StateContext } from "../stateContext";
 import { useContext } from "react";
 // import { useParams } from "react-router-dom";
+import { UilCommentSearch } from "@iconscout/react-unicons";
 
 export default function MyStudentProfile() {
   const { user, users, updatedUserData, setUpdatedUserData } =
@@ -59,11 +60,17 @@ export default function MyStudentProfile() {
         <div className="card-actions">
           <div className="p-4">
             {isEditing ? (
-              <button className="btn btn-secondary" onClick={handleSaveChanges}>
+              <button
+                className="btn btn-outline btn-primary"
+                onClick={handleSaveChanges}
+              >
                 Save changes
               </button>
             ) : (
-              <button className="btn btn-secondary" onClick={handleEditClick}>
+              <button
+                className="btn btn-outline btn-primary"
+                onClick={handleEditClick}
+              >
                 Edit your Profile
               </button>
             )}
@@ -87,8 +94,8 @@ export default function MyStudentProfile() {
                 </p>
 
                 <span className="badge badge-lg">
-                  @{user.firstName.toLowerCase()}
-                  {user.lastName.toLowerCase()}
+                  @hey{user?.firstName}
+                  {user?.lastName}
                 </span>
               </h2>
             </div>
@@ -115,7 +122,6 @@ export default function MyStudentProfile() {
             </div>
           </div>
         </div>
-
         <div className="content flex justify-center p-4">
           {activeTab === "personalDetails" && (
             <div className="tab-content text-center">
@@ -199,19 +205,17 @@ export default function MyStudentProfile() {
             </div>
           )}
         </div>
-        <h2 className="flex justify-center text-2xl text-primary mt-12">
-          About me
-        </h2>
         <div className="flex justify-center text-justify mb-16">
           <div className="flex m-4 card w-3/4 bg-base-100 shadow-xl ">
             <div className="card-body">
+              <div className="badge badge-primary text-lg p-4">About me</div>
               <div className="card-actions justify-end"></div>
               <p>{user.description}</p>
             </div>
             <div className="flex justify-center text-justify gap-5 m-5">
               <Link to="/chat">
-                <button className="btn btn-primary text-lg m-5">
-                  Enter Chatrooms
+                <button className="btn btn-primary md:btn-md lg:btn-lg">
+                  Enter Chatrooms <UilCommentSearch className="mb-2" />
                 </button>
               </Link>
             </div>
@@ -223,3 +227,4 @@ export default function MyStudentProfile() {
     "..loading"
   );
 }
+/*className="flex justify-center text-2xl text-primary mt-12"*/
