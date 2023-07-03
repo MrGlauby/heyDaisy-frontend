@@ -53,7 +53,7 @@ export default function MyStudentProfile() {
 
   return user && user._id ? (
     <div className="lg:grid lg:grid-cols-[0.5fr,2fr,2fr] lg:min-full-screen mt-16 mb-16 sm:flex sm:flex-wrap">
-      <div className="card-actions flex">
+      <div className="card-actions flex content-start">
         <Sidebar />
         {isEditing ? (
           <button
