@@ -14,8 +14,8 @@ import Footer from "../components/main/Footer";
 
 function About() {
   return (
-    <div className="relative">
-      <div className="hero mt-20">
+    <div className="relative p-8">
+      <div className="hero mt-20 sm:flex sm:flex-wrap">
         <div className="hero-content">
           <div>
             <h1 className="text-5xl font-bold">Our heyDaisy Team</h1>
@@ -65,7 +65,7 @@ function About() {
       </div> */}
 
       <div className="hero bg-base-200 p-5">
-        <div className="hero-content lg:flex-row-reverse">
+        <div className="hero-content lg:flex-row-reverse sm:flex sm:flex-wrap">
           <img src={dude} className="max-w-xs rounded-lg shadow-xl" />
           <img src={dudett} className="max-w-xs rounded-lg shadow-xl" />
           <img src={dudett} className="max-w-xs rounded-lg shadow-xl" />
@@ -78,7 +78,7 @@ function About() {
       {/* Motivation */}
 
       <div className="hero p-20">
-        <div className="hero-content">
+        <div className="hero-content text-justify sm:flex sm:flex-wrap">
           <img src={motivation} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">Motivation for our Project</h1>
@@ -121,7 +121,7 @@ function About() {
 
       {/* Behind the Screen */}
       <div className="hero bg-base-200 p-20">
-        <div className="hero-content lg:flex-row-reverse">
+        <div className="hero-content lg:flex-row-reverse sm:flex sm:flex-wrap">
           <div className="flex flex-col">
             <img
               src={behindTheScenes}
