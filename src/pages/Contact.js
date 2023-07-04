@@ -1,6 +1,7 @@
 import React from "react";
+import transition from "../transition";
 
-export default function Contact() {
+function Contact() {
   return (
     <div className="flex flex-col justify-between min-h-screen">
       {/* ------------Formular */}
@@ -65,3 +66,4 @@ export default function Contact() {
     </div>
   );
 }
+export default transition(Contact);

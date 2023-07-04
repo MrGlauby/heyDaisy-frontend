@@ -120,11 +120,11 @@ function StudentProfile() {
                   <UilHipchat className="mb-1" />
                 </button>
               </Link>
-              <Link to="{user.videoLink}">
-                <button className="btn btn-primary md:btn-md lg:btn-md">
-                  Give {user.firstName} a call <UilVideo className="mb-1" />
+              <a href={user.videoLink}>
+                <button className="btn btn-primary text-lg">
+                  Give {user.firstName} a call
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
