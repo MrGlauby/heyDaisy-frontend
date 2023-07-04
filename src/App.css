@@ -10,8 +10,90 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #d1c1d7;
+  transform-origin: bottom;
+}
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #d1c1d7;
+  transform-origin: top;
+}
 
 /* chat page */
+
+#ce-message-form {
+  background-color: rgba(198, 192, 192, 0.4);
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+#msg-textarea {
+  border-radius: 0.3rem;
+}
+
+.ce-attachment-input {
+  top: 2px !important;
+}
+.ce-attachment-icon {
+  background-color: rgba(225, 223, 223, 0.4) !important;
+  border: none !important;
+}
+
+#ce-send-message-button {
+  background-color: #c2acc9 !important;
+  bottom: 0 !important;
+  top: 1.5px;
+}
+
+.ce-active-chat-card {
+  background-color: #c2acc973 !important;
+}
+
+.ce-hovered-chat-card {
+  background-color: #c2acc973 !important;
+}
+
+.ce-chat-feed-column {
+  border-right: none !important;
+  border-left: none !important;
+}
+
+.ce-default-button {
+  color: #c2acc9be !important;
+  border: 1px solid #c2acc9be !important;
+  border-radius: 50px !important;
+}
+.ce-chat-form-button {
+  height: auto !important;
+}
+
+.ce-chat-header {
+  color: black !important;
+}
+.ce-my-message-body {
+  background-color: #6fadc7d7 !important;
+}
+
+.ce-message-date-text {
+  visibility: hidden !important;
+}
+
+.ce-chat-feed-column {
+}
+
+.ce-chat-list {
+  padding: 0.8rem;
+}
+
 /* body {
   background-repeat: no-repeat;
   background-size: cover;

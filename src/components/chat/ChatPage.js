@@ -1,3 +1,5 @@
+import "../../App.css";
+
 import {
   MultiChatSocket,
   MultiChatWindow,
@@ -15,14 +17,14 @@ const ChatPage = (props) => {
 
   return (
     <div className="flex">
-        <Sidebar />
-    <div className="justify-center m-8 w-screen h-screen grid grid-cols-1">
-      <div className="h-[48rem] m-8" >
-        <MultiChatSocket {...chatProps} />
-        <MultiChatWindow  {...chatProps}/>
-      </div>
-      </div>
 
+      <Sidebar />
+      <div className="justify-center m-1 w-screen h-[48rem] grid grid-cols-1 ">
+        <div className="h-[44rem] m-6 border-1 p-px border-slate-200 rounded-lg bg-slate-200/50">
+          <MultiChatSocket {...chatProps} />
+          <MultiChatWindow {...chatProps} />
+        </div>
+      </div>
     </div>
   );
 };

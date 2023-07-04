@@ -75,6 +75,7 @@ export default function About() {
       </div>
 
       {/* Motivation */}
+      {/* Motivation */}
 
       <div className="hero p-20">
         <div className="hero-content">
@@ -166,3 +167,4 @@ export default function About() {
     </div>
   );
 }
+export default transition(About);
