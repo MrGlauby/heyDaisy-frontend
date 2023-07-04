@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 //import Loader from ".Loader";
 import { loginUser } from "../utils/authUtils";
 import { StateContext } from "../stateContext";
-import Transition from "../animation/Transition";
+// import Transition from "../animation/Transition";
 
 function Login({
   isAuthenticated,
@@ -111,4 +111,4 @@ function Login({
     </div>
   );
 }
-export default Transition(Login);
+export default Login;
