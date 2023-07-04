@@ -50,7 +50,9 @@ export default function SingleStudent({ user }) {
           </div>
           <div className="flex justify-center card-actions">
             <Link to={`/student/${user._id}`}>
-              <button className="btn btn-primary">See Profile</button>
+              <button className="btn btn-neutral opacity-90">
+                See Profile
+              </button>
             </Link>
           </div>
         </div>

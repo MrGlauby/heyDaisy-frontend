@@ -198,7 +198,7 @@ export default function MyStudentProfile() {
         </div>
         <div className="flex justify-center text-justify gap-5 m-5">
           <Link to="/chat">
-            <button className="btn btn-primary md:btn-md lg:btn-md">
+            <button className="btn btn-neutral opacity-90 md:btn-md lg:btn-md">
               Enter Chatrooms <UilCommentSearch className="mb-2" />
             </button>
           </Link>
