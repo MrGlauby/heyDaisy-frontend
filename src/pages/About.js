@@ -11,10 +11,6 @@ import dude3 from "../img/dude3.jpg"
 import behind3 from "../img/behind3.jpg"
 
 
-
-import Navbar from "../components/main/Navbar";
-import Footer from "../components/main/Footer";
-
 export default function About() {
   return <div className="relative">
     
@@ -23,7 +19,7 @@ export default function About() {
     
 
     <div>
-      <h1 className="text-5xl font-bold">Our heyDaisy Team</h1>
+      <h1 className="text-5xl font-bold bg-base-100">Our heyDaisy Team</h1>
       <p className="py-6 text-justify "> Introducing Our Dynamic Team
 
 Welcome to our dynamic team, a collective of talented individuals working together towards a common goal. We believe in the power of collaboration and diversity, leveraging our combined expertise to achieve extraordinary results.
@@ -39,7 +35,7 @@ Together, we are a force to be reckoned with, ready to overcome obstacles and ma
 </div>
 
 {/*TEAM Section */}
-<div className="hero mt-20 p-5">
+<div className="hero mt-100 p-5 bg-base-200">
   <div className="hero-content">
     <img src={dude2} className="max-w-sm rounded-lg shadow-2xl" />
     <img src={dude3} className="max-w-sm rounded-lg shadow-2xl" />
@@ -62,12 +58,12 @@ Together, we are a force to be reckoned with, ready to overcome obstacles and ma
 
 {/* Motivation */}
 
-<div className="hero p-20">
-  <div className="hero-content">
+<div className="hero p-100 p-10">
+  <div className="hero-content p-10">
     <img src={motivation} className="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 className="text-5xl font-bold">Motivation for our Project</h1>
-      <p className="py-6">PUnleash Your Linguistic Potential with Our Languages App!
+      <p className="py-6 text-justify">PUnleash Your Linguistic Potential with Our Languages App!
 
 Are you ready to embark on an extraordinary journey of language learning and cultural exploration? Look no further! Our innovative language app is here to revolutionize the way you learn, connect, and communicate with the world.
 
@@ -96,7 +92,7 @@ Join our languages app today and embark on an incredible journey of self-discove
   </div>
     
     <div>
-      <h1 className="text-2xl font-bold">  Behind The Screen</h1>
+    <h1 className="text-5xl font-bold">Behind the Screen</h1>
       <p className="py-2 text-justify  ">  Welcome to a glimpse behind the curtain, where the magic happens and dreams become reality. Join us on a journey through the captivating story of how our groundbreaking language app came to life.
 
 It all began with a vision, a shared passion for languages, and a burning desire to bridge the communication gaps that separate us. Our dedicated team embarked on an ambitious mission to develop an app that would empower individuals to learn languages effortlessly, connect with diverse cultures, and expand their horizons.
