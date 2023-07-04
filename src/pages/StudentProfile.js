@@ -114,13 +114,13 @@ function StudentProfile() {
             </div>
             <div className="flex justify-center text-justify gap-5 m-5">
               <Link to="/chat">
-                <button className="btn btn-primary md:btn-md lg:btn-md">
+                <button className="btn btn-neutral opacity-90 md:btn-md lg:btn-md">
                   Chat with {user.firstName}
                   <UilHipchat className="mb-1" />
                 </button>
               </Link>
               <a href={user.videoLink}>
-                <button className="btn btn-primary text-lg">
+                <button className="btn btn-neutral opacity-90 text-lg">
                   Give {user.firstName} a call
                 </button>
               </a>
