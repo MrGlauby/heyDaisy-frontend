@@ -3,47 +3,58 @@ import party from "../img/party.jpg";
 import work from "../img/work.jpg";
 import community from "../img/comunity.jpg";
 import social from "../img/social.jpg";
+import Transition from "../animation/Transition";
 
-export default function Blog() {
+function Blog() {
   return (
     <div>
       {/* blog1 */}
 
       <div className="hero p-10 bg-base-200">
-  <div className="p-10">
-    <div className="max-w-4xl ">
-      <h1 className="text-5xl font-bold  ">Welcome to our blog page!</h1>
-      <p className="py-6 text-justify">
-  Here, you will find a wealth of information, news, specials, and so much more. We are dedicated to bringing you the latest updates and insights on a wide range of topics. Whether you are seeking industry news, tips and tricks, or in-depth analysis, our blog has got you covered.
-  <br></br>
-<br></br>
-
-Stay informed with our carefully curated articles written by experts in their respective fields. We aim to provide you with valuable content that is both informative and engaging. From technology trends to lifestyle tips, there's something for everyone.
-
-Discover exclusive specials and promotions that are tailored just for you. We believe in rewarding our loyal readers, and you'll find exciting offers and discounts that you won't want to miss.
-<br></br>
-<br></br>
-
-Join our vibrant community of readers who share a passion for knowledge and learning. Engage with us through comments, feedback, and social media channels to be part of the conversation. We value your input and encourage open discussions.
-
-Make sure to bookmark our blog page and check back regularly as we update it with fresh content. We are committed to delivering high-quality articles that will enrich your experience and keep you coming back for more.
-
-Thank you for visiting our blog page. Get ready to explore, discover, and stay connected with the latest news, specials, and more. 
-<br></br>
-<br></br>
-
-Happy reading!</p>
-    </div>
-  </div>
-</div>
-
+        <div className="p-10">
+          <div className="max-w-4xl ">
+            <h1 className="text-5xl font-bold  ">Welcome to our blog page!</h1>
+            <p className="py-6 text-justify">
+              Here, you will find a wealth of information, news, specials, and
+              so much more. We are dedicated to bringing you the latest updates
+              and insights on a wide range of topics. Whether you are seeking
+              industry news, tips and tricks, or in-depth analysis, our blog has
+              got you covered.
+              <br></br>
+              <br></br>
+              Stay informed with our carefully curated articles written by
+              experts in their respective fields. We aim to provide you with
+              valuable content that is both informative and engaging. From
+              technology trends to lifestyle tips, there's something for
+              everyone. Discover exclusive specials and promotions that are
+              tailored just for you. We believe in rewarding our loyal readers,
+              and you'll find exciting offers and discounts that you won't want
+              to miss.
+              <br></br>
+              <br></br>
+              Join our vibrant community of readers who share a passion for
+              knowledge and learning. Engage with us through comments, feedback,
+              and social media channels to be part of the conversation. We value
+              your input and encourage open discussions. Make sure to bookmark
+              our blog page and check back regularly as we update it with fresh
+              content. We are committed to delivering high-quality articles that
+              will enrich your experience and keep you coming back for more.
+              Thank you for visiting our blog page. Get ready to explore,
+              discover, and stay connected with the latest news, specials, and
+              more.
+              <br></br>
+              <br></br>
+              Happy reading!
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div className="hero min-h-screen">
         <div className="hero-content">
           <img src={party} className="rounded-lg shadow-2xl w-1/2 mb-20 " />
           <div>
-
-          <h2 className="text-2xl font-bold">Welcome</h2>
+            <h2 className="text-2xl font-bold">Welcome</h2>
 
             <h1 className="text-2xl font-bold">
               29.7.23 - Welcome to heyDaisy !
@@ -197,3 +208,4 @@ Happy reading!</p>
     </div>
   );
 }
+export default Transition(Blog);

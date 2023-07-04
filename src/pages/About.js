@@ -1,5 +1,5 @@
 import React from "react";
-
+import Transition from "../animation/Transition";
 import Team from "../img/randomUserReview2.jpg";
 import motivation from "../img/motivation.jpg";
 import behind from "../img/behind.jpg";
@@ -12,7 +12,7 @@ import behindTheScenes from "../img/behindthescenes2.png";
 import Navbar from "../components/main/Navbar";
 import Footer from "../components/main/Footer";
 
-export default function About() {
+function About() {
   return (
     <div className="relative">
       <div className="hero mt-20">
@@ -167,4 +167,4 @@ export default function About() {
     </div>
   );
 }
-export default transition(About);
+export default Transition(About);

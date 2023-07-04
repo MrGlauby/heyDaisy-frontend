@@ -7,12 +7,9 @@ import { storage } from "../utils/firebase";
 import { registerUser } from "../utils/authUtils";
 
 import { StateContext } from "../stateContext";
+import Transition from "../animation/Transition";
 
-export default function Register({
-  isAuthenticated,
-  setIsAuthenticated,
-  setToken,
-}) {
+function Register({ isAuthenticated, setIsAuthenticated, setToken }) {
   const [formState, setFormState] = useState({
     email: "",
     password: "",
@@ -55,7 +52,6 @@ export default function Register({
     const imageRef = ref(storage, `images/${imageName}`);
     uploadBytes(imageRef, imageUpload)
       .then((snapshot) => {
-        console.log(snapshot);
         setUserImageUrl(snapshot?.ref._location.path_);
       })
       .then(() => {
@@ -96,7 +92,7 @@ export default function Register({
       // btn handel/reigster submiting the user data
 
       // start Register user in MongoDB
-      console.log(userImage);
+
       const formData = {
         email,
         password,
@@ -106,7 +102,6 @@ export default function Register({
       };
       // end Register user in MongoDB
       const response = await registerUser(formData);
-      console.log("MongoDB response", response?.profilePicture);
 
       // start Handle authentication and token storage
       const { token } = response.data;
@@ -136,12 +131,9 @@ export default function Register({
 
   useEffect(() => {
     if (userImageUrl !== "") {
-      console.log(userImageUrl);
       getImage(userImageUrl);
     }
   }, [userImageUrl]);
-
-  console.log("userImage", userImage);
 
   if (isAuthenticated) return <Navigate to="/login" />;
   return (
@@ -244,3 +236,4 @@ export default function Register({
     </div>
   );
 }
+export default Transition(Register);

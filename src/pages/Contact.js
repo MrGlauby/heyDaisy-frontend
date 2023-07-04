@@ -1,5 +1,5 @@
 import React from "react";
-import transition from "../transition";
+import Transition from "../animation/Transition";
 
 function Contact() {
   return (
@@ -66,4 +66,4 @@ function Contact() {
     </div>
   );
 }
-export default transition(Contact);
+export default Transition(Contact);

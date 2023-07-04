@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "../components/main/Sidebar";
 import { StateContext } from "../stateContext";
 import { useContext } from "react";
+import Transition from "../animation/Transition";
 
 import Germany from "../img/germany.svg";
 import Italy from "../img/italy.svg";
@@ -15,7 +16,7 @@ import Football from "../img/football.jpg";
 import Lost from "../img/lost.jpg";
 import Biergarten from "../img/biergarten.jpg";
 
-export default function Events() {
+function Events() {
   const { user } = useContext(StateContext);
 
   return (
@@ -342,3 +343,4 @@ export default function Events() {
     </div>
   );
 }
+export default Transition(Events);
