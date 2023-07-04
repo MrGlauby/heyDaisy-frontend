@@ -7,7 +7,10 @@ import dudett from "../img/dudett.jpg";
 import dude from "../img/dude.jpg";
 import dude2 from "../img/dude2.jpg";
 import dude3 from "../img/dude3.jpg";
-import behind3 from "../img/behind3.jpg";
+import behindTheScenes from "../img/behindthescenes2.png";
+
+import Navbar from "../components/main/Navbar";
+import Footer from "../components/main/Footer";
 
 function About() {
   return (
@@ -15,19 +18,15 @@ function About() {
       <div className="hero mt-20">
         <div className="hero-content">
           <div>
-            <h1 className="text-5xl font-bold bg-base-100">
-              Our heyDaisy Team
-            </h1>
+            <h1 className="text-5xl font-bold">Our heyDaisy Team</h1>
             <p className="py-6 text-justify ">
-              {" "}
-              Introducing Our Dynamic Team Welcome to our dynamic team, a
-              collective of talented individuals working together towards a
-              common goal. We believe in the power of collaboration and
-              diversity, leveraging our combined expertise to achieve
-              extraordinary results. Each team member brings a unique set of
-              skills and perspectives, allowing us to tackle challenges from
-              multiple angles. We thrive on innovation and continuous learning,
-              constantly pushing the boundaries of what is possible.
+              Welcome to our dynamic team, a collective of talented individuals
+              working together towards a common goal. We believe in the power of
+              collaboration and diversity, leveraging our combined expertise to
+              achieve extraordinary results. Each team member brings a unique
+              set of skills and perspectives, allowing us to tackle challenges
+              from multiple angles. We thrive on innovation and continuous
+              learning, constantly pushing the boundaries of what is possible.
               <br></br>
               <br></br>
               Our team values open communication, mutual respect, and a
@@ -44,42 +43,50 @@ function About() {
       </div>
 
       {/*TEAM Section */}
-      <div className="hero mt-100 p-5 bg-base-200">
+      {/* <div className="hero mt-20 p-5">
         <div className="hero-content">
           <img src={dude2} className="max-w-sm rounded-lg shadow-2xl" />
           <img src={dude3} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">Our Team</h1>
             <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Welcome to our tech startup team! We are a group of passionate
+              individuals driven by innovation and a shared vision for
+              transforming the digital landscape. Together, we embark on a
+              journey to create cutting-edge solutions that disrupt industries
+              and push boundaries. With a diverse range of expertise and a
+              collaborative mindset, we thrive on tackling complex challenges
+              and delivering impactful results. Join us as we build the future
+              of technology and make a difference in the world. Together, we are
+              unstoppable!
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="hero bg-base-200 p-5">
         <div className="hero-content lg:flex-row-reverse">
-          <img src={dude} className="max-w-sm rounded-lg shadow-xl" />
-          <img src={dudett} className="max-w-sm rounded-lg shadow-xl" />
+          <img src={dude} className="max-w-xs rounded-lg shadow-xl" />
+          <img src={dudett} className="max-w-xs rounded-lg shadow-xl" />
+          <img src={dudett} className="max-w-xs rounded-lg shadow-xl" />
+          <img src={dudett} className="max-w-xs rounded-lg shadow-xl" />
           <div></div>
         </div>
       </div>
 
       {/* Motivation */}
+      {/* Motivation */}
 
-      <div className="hero p-100 p-10">
-        <div className="hero-content p-10">
+      <div className="hero p-20">
+        <div className="hero-content">
           <img src={motivation} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">Motivation for our Project</h1>
-            <p className="py-6 text-justify">
-              PUnleash Your Linguistic Potential with Our Languages App! Are you
-              ready to embark on an extraordinary journey of language learning
-              and cultural exploration? Look no further! Our innovative language
-              app is here to revolutionize the way you learn, connect, and
-              communicate with the world. Imagine a world where language
+            <p className="py-6">
+              Are you ready to embark on an extraordinary journey of language
+              learning and cultural exploration? Look no further! Our innovative
+              language app is here to revolutionize the way you learn, connect,
+              and communicate with the world. Imagine a world where language
               barriers become a thing of the past, where you can effortlessly
               converse with people from different corners of the globe, and
               where you can confidently navigate new cultures and experiences.
@@ -102,14 +109,6 @@ function About() {
               understanding and friendship thrive.
               <br></br>
               <br></br>
-              Don't let language barriers hold you back from reaching your full
-              potential. With our app, you'll unlock a world of opportunities,
-              whether it's for travel, career advancement, or simply enriching
-              your life with new perspectives. Embrace the joy of learning
-              languages, and watch as doors open, connections deepen, and your
-              confidence soars.
-              <br></br>
-              <br></br>
               Join our languages app today and embark on an incredible journey
               of self-discovery, cultural immersion, and linguistic mastery. The
               world is waiting for you, and we're here to guide you every step
@@ -124,13 +123,16 @@ function About() {
       <div className="hero bg-base-200 p-20">
         <div className="hero-content lg:flex-row-reverse">
           <div className="flex flex-col">
-            <img src={behind} className="max-w-lg rounded-lg shadow-2xl mb-4" />
-            <img src={behind3} className="max-w-lg rounded-lg shadow-2xl " />
+            <img
+              src={behindTheScenes}
+              className="max-w-sm rounded-lg shadow-2xl mb-4"
+            />
           </div>
 
           <div>
-            <h1 className="text-5xl font-bold">Behind the Screen</h1>
-            <p className="py-2 text-justify  ">
+            <h1 className="text-2xl font-bold"> Behind The Screen</h1>
+            <br></br>
+            <p className="py-2 text-justify  mr-12">
               {" "}
               Welcome to a glimpse behind the curtain, where the magic happens
               and dreams become reality. Join us on a journey through the
@@ -147,34 +149,17 @@ function About() {
               planning laid the foundation for our app's creation. We left no
               stone unturned, meticulously designing each feature and crafting
               an intuitive user experience that would captivate learners of all
-              levels. Our talented developers brought the app to life, weaving
-              together complex algorithms and cutting-edge technologies to
-              deliver a seamless learning platform. They embraced challenges
-              with unwavering determination, crafting an app that adapts to
+              levels.
+              <br></br>
+              <br></br>
+              Our talented developers brought the app to life, weaving together
+              complex algorithms and cutting-edge technologies to deliver a
+              seamless learning platform. They embraced challenges with
+              unwavering determination, crafting an app that adapts to
               individual learning styles, tracks progress, and offers
               personalized recommendations for optimized growth.
               <br></br>
               <br></br>
-              Behind every successful app is a team of passionate linguists and
-              language enthusiasts. Our content creators and language experts
-              meticulously crafted comprehensive lessons, engaging exercises,
-              and authentic cultural content to provide a truly immersive
-              learning experience. They poured their hearts and souls into each
-              word, ensuring that our learners would embark on an unforgettable
-              journey of language discovery. But our journey doesn't end here.
-              We remain committed to continuous improvement, innovation, and
-              expanding the frontiers of language education. We are driven by
-              the smiles on the faces of our learners, the stories of triumph
-              over language barriers, and the connections made across cultures.
-              <br></br>
-              <br></br>
-              So, join us as we continue to push boundaries, break barriers, and
-              empower individuals to unlock the world through language.
-              Together, we'll shape the future of language learning and create a
-              global community united by the power of communication. Welcome to
-              the extraordinary journey behind the scenes of our language app.
-              We invite you to join us as we change the way the world learns
-              languages, one word at a time.{" "}
             </p>
           </div>
         </div>
