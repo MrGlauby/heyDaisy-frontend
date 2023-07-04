@@ -1,138 +1,130 @@
 import React from "react";
+import {useState} from "react";
+
+
+
 
 export default function Faq() {
+
+const [IsActive, setIsActive] = useState(false);
+const [ TwoActive, setTwoActive] = useState(false);
+const [ ThreeActive, setThreeActive] = useState(false);
+const [ FourthActive, setFourthActive] = useState(false);
+const [ FifthActive, setFifthActive] = useState(false);
+const [ SixthActive, setSixthActive] = useState(false);
+const [ SeventhActive, setSeventhActive] = useState(false);
+
+
   return (
-    //  max-w-7xl  p-10
-    <div>
 
-    
+  <div className="">
+{/*  */}
 
-      <div className="flex justify-center items-center        p-10">
-        <div className="join join-vertical w-full">
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" checked="checked" />
-            <div className="collapse-title text-xl font-medium">
-            How do I create an account?
-            </div>
-            <div className="collapse-content">
-              <p>To create an account, click on the "Sign Up" button on the homepage and fill out the required information in the registration form. Once completed, you will receive an email verification link to activate your account.</p>
-            </div>
-          </div>
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
-            Can I change my password?            </div>
-            <div className="collapse-content">
-              <p>Yes, you can change your password by navigating to the "Account Settings" section in your profile. Click on the "Change Password" option, enter your current password, and then provide a new password. Remember to save the changes.</p>
-            </div>
-          </div>
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
-            How can I upgrade my subscription plan?
-            </div>
-            <div className="collapse-content">
-              <p>To upgrade your subscription plan, go to the "Subscription" section in your account settings. Select the desired plan and proceed to the payment process. Once the payment is confirmed, your subscription will be upgraded accordingly.</p>
-            </div>
-          </div>
-        </div>
+
+
+ <div className="accordion   flex justify-center collapse collapse-plus collapse-title text-xl">
+  <div className="accordion-item p-5">
+    <div
+      className={`accordion-title font-medium pb-10 cursor-pointer ${IsActive ? "active" : ""}`}
+      onClick={() => setIsActive(!IsActive)}
+    >
+      <div className="text-2xl flex justify-center border-solid border-black">
+        1. How can I get started with the language app? {IsActive ? "-" : "+"}
       </div>
-
-
-
-      <div className="flex justify-center items-center        p-10">
-        <div className="join join-vertical w-full bg-base-200">
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" checked="checked" />
-            <div className="collapse-title text-xl font-medium">
-            What languages are available on the platform?
-            </div>
-            <div className="collapse-content">
-              <p>Our language app currently offers a wide range of languages, including English, Spanish, French, German, Italian, Chinese, Japanese, and more. You can explore the full list of available languages in the app's language selection menu.</p>
-            </div>
-          </div>
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
-            Can I use the app offline?            </div>
-            <div className="collapse-content">
-              <p> Yes, our app provides offline functionality for certain features. You can download lessons, vocabulary lists, and practice exercises to access them without an internet connection. However, some interactive features may require an internet connection to function fully.</p>
-            </div>
-          </div>
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
-              Click to open this one and close others
-            </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
-        </div>
+     
+    </div>
+    {IsActive && (
+      <div className="accordion-content rounded-lg shadow-xl bg-indigo-100 p-6">
+        To get started, download the app from the app store, create an account, and choose the language you want to learn
       </div>
+    )}
+  </div>
+</div> 
 
 
 
-      <div className="flex justify-center items-center        p-10">
-        <div className="join join-vertical w-full ">
-          <div className="collapse collapse-arrow join-item border border-base-300  ">
-            <input type="radio" name="my-accordion-4" checked="checked" />
-            <div className="collapse-title text-xl font-medium">
-            How can I contact customer support?            </div>
-            <div className="collapse-content">
-              <p>: If you have any questions or need assistance, you can reach out to our customer support team through the "Contact Us" page on our website. Alternatively, you can send an email to support@example.com, and our team will respond to your inquiry as soon as possible.</p>
-            </div>
-          </div>
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
-              Click to open this one and close others
-            </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
-              Click to open this one and close others
-            </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
+
+{/* second one */}
+<div className="accordion    flex justify-center  collapse collapse-plus bg-base-200 collapse-title text-xl  "> 
+      <div className="accordion-item p-5 ">
+        <div className="accordion-title font-medium pb-10 cursor-pointer" 
+             onClick={() =>  setTwoActive(!TwoActive)}
+          >
+            <div className=" text-2xl flex justify-center ">2. Are the language courses suitable for beginners? {TwoActive ? '-' : '+' }</div>
+          
         </div>
+        {TwoActive && <div className="accordion-content rounded-lg shadow-xl bg-indigo-100 p-6" >Yes, our language courses cater to learners of all levels, including beginners. We provide comprehensive lessons that cover the basics and gradually progress to more advanced topics.</div>}
       </div>
+    </div> 
 
-      <div className="flex justify-center items-center       p-10">
-        <div className="join join-vertical w-full bg-base-200 ">
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" checked="checked" />
-            <div className="collapse-title text-xl font-medium">
-              Click to open this one and close others
-            </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
-            Can I use the app on multiple devices?            </div>
-            <div className="collapse-content">
-              <p>Answer: Absolutely! You can access our app on multiple devices, including smartphones, tablets, and computers. Simply log in with your account credentials, and your progress and settings will be synchronized across all your devices.</p>
-            </div>
-          </div>
-          <div className="collapse collapse-arrow join-item border border-base-300">
-            <input type="radio" name="my-accordion-4" />
-            <div className="collapse-title text-xl font-medium">
-            Is there a free trial available?            </div>
-            <div className="collapse-content">
-              <p>Answer: Yes, we offer a free trial period for new users. During this trial period, you can explore a selection of our lessons and features to get a feel for the app. If you find it beneficial, you can choose to upgrade to a premium subscription for unlimited access to all content.</p>
-            </div>
-          </div>
+{/* third one */}
+<div className="accordion    flex justify-center  collapse collapse-plus  collapse-title text-xl  "> 
+      <div className="accordion-item p-5 ">
+        <div className="accordion-title font-medium pb-10 cursor-pointer" 
+             onClick={() =>  setThreeActive(!ThreeActive)}
+          >
+            <div className=" text-2xl flex justify-center ">3. Can I learn multiple languages at the same time? {ThreeActive ? '-' : '+' }</div>
+          
         </div>
+        {ThreeActive && <div className="accordion-content rounded-lg shadow-xl bg-indigo-100 p-6" >Yes, you can learn multiple languages simultaneously. Our platform allows you to choose and study multiple languages based on your preferences and learning goals.</div>}
       </div>
+    </div> 
+
+{/* fourthActive one */}
+<div className="accordion    flex justify-center  collapse collapse-plus bg-base-200 collapse-title text-xl  "> 
+      <div className="accordion-item p-5 ">
+        <div className="accordion-title font-medium pb-10 cursor-pointer" 
+             onClick={() =>  setFourthActive(!FourthActive)}
+          >
+            <div className=" text-2xl flex justify-center ">4. Are the language lessons interactive? {FourthActive ? '-' : '+' }</div>
+          
+        </div>
+        {FourthActive && <div className="accordion-content rounded-lg shadow-xl bg-indigo-100 p-6" >Absolutely! Our language lessons are designed to be interactive and engaging. You'll have access to multimedia resources, interactive exercises, and opportunities to practice speaking and writing.</div>}
+      </div>
+    </div> 
+      
+
+
+{/* fifthActive one */}
+<div className="accordion    flex justify-center  collapse collapse-plus  collapse-title text-xl  "> 
+      <div className="accordion-item p-5 ">
+        <div className="accordion-title font-medium pb-10 cursor-pointer" 
+             onClick={() =>  setFifthActive(!FifthActive)}
+          >
+            <div className=" text-2xl flex justify-center ">5. Can I track my progress and performance? {FifthActive ? '-' : '+' }</div>
+          
+        </div>
+        {FifthActive && <div className="accordion-content rounded-lg shadow-xl bg-indigo-100 p-6" >Yes, our platform includes progress tracking features. You can monitor your learning progress, track completed lessons, and assess your performance through quizzes and assessments.</div>}
+      </div>
+    </div> 
+
+
+{/* sixthActive one */}
+<div className="accordion  bg-base-200   flex justify-center  collapse collapse-plus  collapse-title text-xl  "> 
+      <div className="accordion-item p-5 ">
+        <div className="accordion-title font-medium pb-10 cursor-pointer" 
+             onClick={() =>  setSixthActive(!SixthActive)}
+          >
+            <div className=" text-2xl flex justify-center ">6.  Are there native speakers or tutors available for practice and guidance? {SixthActive ? '-' : '+' }</div>
+          
+        </div>
+        {SixthActive && <div className="accordion-content rounded-lg shadow-xl bg-indigo-100 p-5" >Yes, we offer opportunities to practice with native speakers or qualified tutors. You can participate in conversation practice sessions or schedule one-on-one tutoring sessions to receive personalized guidance.</div>}
+      </div>
+    </div> 
+
+
+      {/* fifthActive one */}
+<div className="accordion    flex justify-center  collapse collapse-plus  collapse-title text-xl  "> 
+      <div className="accordion-item p-5 ">
+        <div className="accordion-title font-medium pb-10 cursor-pointer " 
+             onClick={() =>  setSeventhActive(!SeventhActive)}
+          >
+            <div className=" text-2xl flex justify-center  ">7. Can I access the learning materials offline? {SeventhActive ? '  -   ' : '  + ' }</div>
+          
+        </div>
+        {SeventhActive && <div className="accordion-content rounded-lg shadow-xl bg-indigo-100 p-5" >Our platform provides options for offline learning. You can download lessons, audio recordings, and other study materials to access them without an internet connection.</div>}
+      </div>
+    </div> 
 
     </div>
   );
