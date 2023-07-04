@@ -22,18 +22,21 @@ const AuthPage = (props) => {
     <div className="flex">
       <Sidebar />
       <div className="flex justify-center rounded-md max-w-400 pt-4 m-auto">
-        <form onSubmit={onSubmit} className="bg-slate-100/50 p-4 m-8 rounded-lg">
+        <form
+          onSubmit={onSubmit}
+          className="bg-slate-100/50 p-4 m-8 rounded-lg"
+        >
           <div className="m-5 text-5xl font-bold max-w-4xl items-center text-center">
             Let's go! | ¡Vamos! | Andiamo! | Los geht's!
           </div>
           <br></br>
-          <div className="m-5 text-3xl  font-bold max-w-4xl items-center text-center">
-          </div>
+          <div className="m-5 text-3xl  font-bold max-w-4xl items-center text-center"></div>
           <br></br>
-          <div className="m-5 text-3xl text-primary font-bold max-w-4xl items-center text-center">
-            Set a username to get started
+          <div className="chat chat-start">
+            <div className="chat-bubble bg-primary ml-10 text-2xl">
+              Set a username to get started :)
+            </div>
           </div>
-
           <div className="flex items-center justify-center">
             <input
               className="border-2 rounded-md mr-5 my-10 text-2xl p-2"
@@ -47,7 +50,6 @@ const AuthPage = (props) => {
             </button>
           </div>
           <br></br>
-
         </form>
       </div>
     </div>
