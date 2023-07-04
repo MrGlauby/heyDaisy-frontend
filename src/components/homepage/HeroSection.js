@@ -3,12 +3,26 @@ import { Link } from "react-router-dom";
 import heroVideo from "../../img/hero.mp4";
 
 export default function HeroSection() {
+  const heroHeight = window.innerHeight - 160;
+
+  console.log("gesamte höhe window", window.innerHeight);
+
+  console.log("berechnete höhe hero element", heroHeight);
+
+  console.log(
+    "resultat - muss gleich sein mit window height",
+    heroHeight + 160
+  );
+
   return (
     <div>
-      <header class="relative flex items-center justify-center h-screen pb-16 overflow-hidden">
-        <div class="flex justify-center relative z-30 p-5 text-2xl text-white">
-          <div className="flex flex-col justify-center items-center font-bold max-w-7xl mt-4 mb-4">
-            <h1 className="lg:text-9xl lg:leading-tight text-8xl md:text-8xl text-primary w-auto">
+      <div
+        class="relative flex items-center justify-center pb-16 overflow-hidden"
+        style={{ height: heroHeight }}
+      >
+        <div class="flex justify-center z-30 p-5 text-2xl text-white">
+          <div className="flex flex-col justify-center items-center max-w-7xl">
+            <h1 className="text-9xl font-bold text-primary w-auto">
               Hola Hello Olá Ciao
             </h1>
             <div className=" max-w-3xl py-6 lg:text-5xl sm:text-4xl text-primary font-bold">
@@ -31,7 +45,7 @@ export default function HeroSection() {
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
-      </header>
+      </div>
     </div>
   );
 }

@@ -18,9 +18,10 @@ import UilReact from "@iconscout/react-unicons/icons/uil-react";
 import { getUser } from "./utils/authUtils";
 import MyStudentProfile from "./pages/MyStudentProfile";
 import StudentProfile from "./pages/StudentProfile";
-import PrivateRoute from "./components/main/PrivateRoute";
+// import PrivateRoute from "./components/main/PrivateRoute";
 import Navbar from "./components/main/Navbar";
 import Footer from "./components/main/Footer";
+import { AnimatePresence } from "framer-motion";
 
 // scroll
 import { useLocation } from "react-router-dom";
@@ -35,7 +36,7 @@ function App() {
 
   // SCROLL
   const { pathname } = useLocation();
-
+  const location = useLocation();
   const { user, setUser } = useContext(StateContext);
 
   console.log("user in app.js", user);
@@ -82,49 +83,54 @@ function App() {
   return (
     <>
       <Navbar isAuthenticated={isAuthenticated} user={user} logOut={logOut} />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="events" element={<Events />} />
+          <Route path="download" element={<Download />} />
+          <Route path="contact" element={<Contact />} />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
+          <Route path="blog" element={<Blog />} />
 
-        <Route path="about" element={<About />} />
-        <Route path="events" element={<Events />} />
-        <Route path="download" element={<Download />} />
-        <Route path="contact" element={<Contact />} />
-
-        <Route path="blog" element={<Blog />} />
-
-        <Route path="faq" element={<Faq />} />
-        <Route
-          path="login"
-          element={
-            <Login
-              isAuthenticated={isAuthenticated}
-              setIsAuthenticated={setIsAuthenticated}
-              setToken={setToken}
-            />
-          }
-        />
-        <Route
-          path="register"
-          element={
-            <Register
-              isAuthenticated={isAuthenticated}
-              setIsAuthenticated={setIsAuthenticated}
-              setToken={setToken}
-            />
-          }
-        />
-        {/* <Route
+          <Route path="faq" element={<Faq />} />
+          <Route
+            path="login"
+            element={
+              <Login
+                isAuthenticated={isAuthenticated}
+                setIsAuthenticated={setIsAuthenticated}
+                setToken={setToken}
+              />
+            }
+          />
+          <Route
+            path="register"
+            element={
+              <Register
+                isAuthenticated={isAuthenticated}
+                setIsAuthenticated={setIsAuthenticated}
+                setToken={setToken}
+              />
+            }
+          />
+          {/* <Route
           path="protected"
           element={<PrivateRoute loggedIn={isAuthenticated} />}
         > */}
-        <Route path="chat" element={<Chat token={token} />} />
-        <Route path="students" element={<StudentGallery token={token} />} />
-        <Route path="student/:_id" element={<StudentProfile token={token} />} />
-        <Route path="myprofile" element={<MyStudentProfile token={token} />} />
-        {/* </Route> */}
-      </Routes>
-
+          <Route path="chat" element={<Chat token={token} />} />
+          <Route path="students" element={<StudentGallery token={token} />} />
+          <Route
+            path="student/:_id"
+            element={<StudentProfile token={token} />}
+          />
+          <Route
+            path="myprofile"
+            element={<MyStudentProfile token={token} />}
+          />
+          {/* </Route> */}
+        </Routes>
+      </AnimatePresence>
       <Footer />
     </>
   );
