@@ -7,9 +7,6 @@ import Searchbar from "./Searchbar";
 function AllStudents() {
   const { users } = useContext(StateContext);
 
-  console.log("userImage", users.profilePicture);
-  console.log("users", users);
-
   const [inputValue, setInputValue] = useState("");
   const [filteredLanguage, setFilteredLanguage] = useState([]);
 
@@ -34,7 +31,6 @@ function AllStudents() {
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
-  console.log("inAllStudents");
 
   if (!users || users.length === 0) {
     return (

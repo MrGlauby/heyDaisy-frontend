@@ -21,7 +21,6 @@ function Login({
   const { email, password } = formState;
 
   const { user, setUser } = useContext(StateContext);
-  console.log("one single user", user);
 
   const handleChange = (e) => {
     setFormState((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -37,7 +36,6 @@ function Login({
       const res = await loginUser({ email, password });
 
       localStorage.setItem("token", res.token);
-      console.log("another one", res.token);
       setToken(res.token);
       setIsAuthenticated(true);
       setUser(res.user);
@@ -45,7 +43,6 @@ function Login({
       //setLoading(false);
     } catch (error) {
       //setLoading(false);
-      console.log("fehler");
       return error.message;
     }
   };

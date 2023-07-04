@@ -9,7 +9,6 @@ import { UilVideo } from "@iconscout/react-unicons";
 
 function StudentProfile() {
   const { users } = useContext(StateContext);
-  console.log("users", users);
   const { _id } = useParams();
   const [activeTab, setActiveTab] = useState("personalDetails");
   const handleTabClick = (tab) => {

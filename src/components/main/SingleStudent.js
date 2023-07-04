@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function SingleStudent({ user }) {
-  console.log("imageInSingleStudent", user?.profilePicture);
-
   if (!user || user.length === 0) {
     return (
       <div className="flex justify-center ">

@@ -52,7 +52,6 @@ function Register({ isAuthenticated, setIsAuthenticated, setToken }) {
     const imageRef = ref(storage, `images/${imageName}`);
     uploadBytes(imageRef, imageUpload)
       .then((snapshot) => {
-        console.log(snapshot);
         setUserImageUrl(snapshot?.ref._location.path_);
       })
       .then(() => {
@@ -93,7 +92,7 @@ function Register({ isAuthenticated, setIsAuthenticated, setToken }) {
       // btn handel/reigster submiting the user data
 
       // start Register user in MongoDB
-      console.log(userImage);
+
       const formData = {
         email,
         password,
@@ -103,7 +102,6 @@ function Register({ isAuthenticated, setIsAuthenticated, setToken }) {
       };
       // end Register user in MongoDB
       const response = await registerUser(formData);
-      console.log("MongoDB response", response?.profilePicture);
 
       // start Handle authentication and token storage
       const { token } = response.data;
@@ -133,12 +131,9 @@ function Register({ isAuthenticated, setIsAuthenticated, setToken }) {
 
   useEffect(() => {
     if (userImageUrl !== "") {
-      console.log(userImageUrl);
       getImage(userImageUrl);
     }
   }, [userImageUrl]);
-
-  console.log("userImage", userImage);
 
   if (isAuthenticated) return <Navigate to="/login" />;
   return (

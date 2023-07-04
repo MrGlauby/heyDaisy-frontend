@@ -22,8 +22,6 @@ export default function MyStudentProfile() {
   const [spokenLanguage, setSpokenLanguage] = useState("");
   const [learnLanguage, setLearnLanguage] = useState("");
 
-  console.log("AGE", age);
-
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
@@ -47,8 +45,6 @@ export default function MyStudentProfile() {
     //axios.put(localhost:5001/users/${user._id}, updatedUserData, headers:{authtoken: token})
     setIsEditing(false);
   };
-
-  console.log("updated User data", updatedUserData);
 
   return user && user._id ? (
     <div className="lg:grid lg:grid-cols-[0.5fr,2fr,2fr] lg:min-full-screen mt-16 mb-16 sm:flex sm:flex-wrap">

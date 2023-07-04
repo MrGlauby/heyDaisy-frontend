@@ -39,15 +39,13 @@ function App() {
   const location = useLocation();
   const { user, setUser } = useContext(StateContext);
 
-  console.log("user in app.js", user);
-
   useEffect(() => {
     const validateToken = async () => {
       try {
         setLoading(true);
         const res = await getUser(user._id);
         // setUser(user);
-        console.log("resssssssssss", res);
+
         setIsAuthenticated(true);
       } catch (error) {
         console.error(error.message);
@@ -64,8 +62,6 @@ function App() {
       validateToken();
     }
   }, [token]);
-
-  console.log("uuuuuuuuuuuser", user);
 
   const logOut = () => {
     localStorage.removeItem("token");

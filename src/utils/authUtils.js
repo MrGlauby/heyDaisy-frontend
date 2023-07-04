@@ -8,10 +8,8 @@ export const getUser = async (id, token) => {
         // headers: { Authorization: token },
       }
     );
-    console.log("data in getUser authUtils for App.js", data);
     return data;
   } catch (err) {
-    console.log("oops");
     console.log(err.message);
   }
 };

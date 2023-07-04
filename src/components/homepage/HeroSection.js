@@ -27,7 +27,7 @@ export default function HeroSection() {
           autoPlay
           loop
           muted
-          class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+          className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
