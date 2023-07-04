@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { StateContext } from "../stateContext";
 import { useContext } from "react";
 import { UilCommentSearch } from "@iconscout/react-unicons";
-import { axios } from "axios";
 
 export default function MyStudentProfile() {
   const { user, users, updatedUserData, setUpdatedUserData } =

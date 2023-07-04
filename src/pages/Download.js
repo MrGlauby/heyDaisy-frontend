@@ -9,6 +9,7 @@ import Italian from "../pdf/italian.pdf";
 import German from "../pdf/german.pdf";
 import Spanish from "../pdf/spanish.pdf";
 import Portuguese from "../pdf/portuguese.pdf";
+import Transition from "../animation/Transition";
 
 // import
 
@@ -61,7 +62,7 @@ function Download() {
               </td>
               <td>1 MB</td>
               <th>
-              <a href={Italian} download="Italian">
+                <a href={Italian} download="Italian">
                   <button className="btn">
                     Download
                     <svg
@@ -143,23 +144,24 @@ function Download() {
               <td>1 MB</td>
               <th>
                 <a href={Spanish} download="Spanish">
-                   <button className="btn">
-                  Download
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </button></a>
+                  <button className="btn">
+                    Download
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      />
+                    </svg>
+                  </button>
+                </a>
               </th>
             </tr>
             {/* row 4 */}
@@ -183,22 +185,22 @@ function Download() {
               <th>
                 <a href={Portuguese} download="Portuguese">
                   <button className="btn">
-                  Download
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </button>
+                    Download
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      />
+                    </svg>
+                  </button>
                 </a>
               </th>
             </tr>
@@ -210,4 +212,4 @@ function Download() {
   );
 }
 
-export default Download;
+export default Transition(Download);

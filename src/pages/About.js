@@ -1,5 +1,5 @@
 import React from "react";
-import transition from "../transition";
+import Transition from "../animation/Transition";
 import Team from "../img/randomUserReview2.jpg";
 import motivation from "../img/motivation.jpg";
 import behind from "../img/behind.jpg";
@@ -182,4 +182,4 @@ function About() {
     </div>
   );
 }
-export default transition(About);
+export default Transition(About);
