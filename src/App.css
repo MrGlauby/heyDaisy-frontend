@@ -29,6 +29,10 @@
   transform-origin: top;
 }
 
+.ce-message-bubble {
+  background-color: red !important;
+}
+
 /* chat page */
 /* body {
   background-repeat: no-repeat;

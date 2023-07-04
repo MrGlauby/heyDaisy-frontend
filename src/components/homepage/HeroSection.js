@@ -17,12 +17,12 @@ export default function HeroSection() {
   return (
     <div>
       <div
-        class="relative flex items-center justify-center pb-16 overflow-hidden"
-        style={{ height: heroHeight }}
+        class="relative flex items-center justify-center pb-16 overflow-hidden h-[calc(100vh-160px)]"
+        // style={{ height: heroHeight }}
       >
         <div class="flex justify-center z-30 p-5 text-2xl text-white">
           <div className="flex flex-col justify-center items-center max-w-7xl">
-            <h1 className="text-9xl font-bold text-primary w-auto">
+            <h1 className="lg:text-9xl md:text-5xl sm:text-4xl font-bold text-primary w-auto">
               Hola Hello Olá Ciao
             </h1>
             <div className=" max-w-3xl py-6 lg:text-5xl sm:text-4xl text-primary font-bold">
