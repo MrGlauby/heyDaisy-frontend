@@ -5,7 +5,7 @@ import logo from "../../img/heyDaisy1.png";
 export default function Navbar({ isAuthenticated, user, logOut }) {
   return (
     <div>
-      <div className="navbar bg-violet-100 p-5">
+      <div className="navbar bg-violet-100 p-5 z-50">
         <div className="flex-1 ">
           <Link to="/">
             <img

@@ -16,7 +16,7 @@ const StateContextProvider = ({ children }) => {
     const getUser = async () => {
       try {
         // if (user) {
-        console.log("yes try");
+
         const res = await fetchUser(user._id);
 
         // localStorage.setItem("user", JSON.stringify(res));
