@@ -12,7 +12,7 @@ function Searchbar({ inputValue, onInputChange, onSearch }) {
       <form>
         <div className="flex justify-end m-5 space-x-2">
           <input
-            className="text-gray-800 rounded-sm p-1 text-lg"
+            className="text-gray-800 rounded-sm p-3 text-lg"
             type="text"
             placeholder="Search language..."
             value={inputValue}
