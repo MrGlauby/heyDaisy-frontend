@@ -19,7 +19,7 @@ const ChatPage = (props) => {
     <div className="justify-center m-8 w-screen h-screen grid grid-cols-1">
       <div className="h-[48rem] m-8" >
         <MultiChatSocket {...chatProps} />
-        <MultiChatWindow {...chatProps} />
+        <MultiChatWindow  {...chatProps}/>
       </div>
       </div>
 
