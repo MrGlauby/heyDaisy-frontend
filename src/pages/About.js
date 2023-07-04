@@ -167,4 +167,4 @@ export default function About() {
     </div>
   );
 }
-export default transition(About);
+// export default transition(About);
