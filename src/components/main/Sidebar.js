@@ -10,10 +10,10 @@ export default function Sidebar() {
             <Link to="/myprofile">My Profile</Link>
           </li>
           <li>
-            <Link to="/students">User Gallery</Link>
+            <Link to="/students">Other Students</Link>
           </li>
           <li>
-            <Link to="/chat">Chat</Link>
+            <Link to="/chat">Chatrooms</Link>
           </li>
           <li>
             <Link to="/events">Upcoming Events</Link>
