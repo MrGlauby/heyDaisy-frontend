@@ -45,7 +45,7 @@ export default function EventsSection() {
                   Beginner Level
                 </span>
               </td>
-              <td className=" grid grid-cols-2 gap-0">
+              <td className="grid grid-cols-2 gap-0">
                 <div className="avatar">
                   <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                     <img src={Germany} alt="User Events" />
