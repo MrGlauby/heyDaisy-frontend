@@ -15,14 +15,13 @@ const ChatPage = (props) => {
 
   return (
     <div className="flex">
-        <Sidebar />
-    <div className="justify-center m-8 w-screen h-screen grid grid-cols-1">
-      <div className="h-[48rem] m-8" >
-        <MultiChatSocket {...chatProps} />
-        <MultiChatWindow {...chatProps} />
+      <Sidebar />
+      <div className="justify-center m-1 w-screen h-[48rem] grid grid-cols-1 ">
+        <div className="h-[44rem] m-8 border-2 p-2 border-slate-200 rounded-lg bg-slate-200/50">
+          <MultiChatSocket {...chatProps} />
+          <MultiChatWindow {...chatProps} />
+        </div>
       </div>
-      </div>
-
     </div>
   );
 };

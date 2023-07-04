@@ -5,6 +5,13 @@ import Spain from "../img/spain.svg";
 import Portugal from "../img/portugal.svg";
 import MapPainting from "../img/map-painting.png";
 
+import Italian from "../pdf/italian.pdf";
+import German from "../pdf/german.pdf";
+import Spanish from "../pdf/spanish.pdf";
+import Portuguese from "../pdf/portuguese.pdf";
+
+// import
+
 function Download() {
   return (
     <>
@@ -54,23 +61,25 @@ function Download() {
               </td>
               <td>1 MB</td>
               <th>
-                <button className="btn">
-                  Download
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </button>
+              <a href={Italian} download="Italian">
+                  <button className="btn">
+                    Download
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      />
+                    </svg>
+                  </button>
+                </a>
               </th>
             </tr>
             {/* row 2 */}
@@ -92,23 +101,26 @@ function Download() {
               </td>
               <td>1 MB</td>
               <th>
-                <button className="btn">
-                  Download
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </button>
+                {/* german */}
+                <a href={German} download="German">
+                  <button className="btn">
+                    Download
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      />
+                    </svg>
+                  </button>
+                </a>
               </th>
             </tr>
             {/* row 3 */}
@@ -130,7 +142,8 @@ function Download() {
               </td>
               <td>1 MB</td>
               <th>
-                <button className="btn">
+                <a href={Spanish} download="Spanish">
+                   <button className="btn">
                   Download
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +159,7 @@ function Download() {
                       d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                     />
                   </svg>
-                </button>
+                </button></a>
               </th>
             </tr>
             {/* row 4 */}
@@ -168,7 +181,8 @@ function Download() {
               </td>
               <td>1 MB</td>
               <th>
-                <button className="btn">
+                <a href={Portuguese} download="Portuguese">
+                  <button className="btn">
                   Download
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -185,6 +199,7 @@ function Download() {
                     />
                   </svg>
                 </button>
+                </a>
               </th>
             </tr>
           </tbody>
