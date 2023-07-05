@@ -29,15 +29,38 @@ export default function Navbar({ isAuthenticated, user, logOut }) {
             </li>
             {isAuthenticated ? (
               <>
-                <li className="p-5 text-lg ">
-                  <Link to="/">
-                    <button
-                      className="btn btn-primary text-lg"
-                      onClick={logOut}
+                <li className="p-5 text-lg">
+                  <div className="dropdown dropdown-end">
+                    <label
+                      tabIndex={0}
+                      className="btn btn-primary btn-circle avatar"
                     >
-                      Logout
-                    </button>
-                  </Link>
+                      <div className="w-10 rounded-full">
+                        <img src={user.profilePicture} />
+                      </div>
+                    </label>
+                    <ul
+                      tabIndex={0}
+                      className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                    >
+                      <h3 className="text-lg mb-3 text-primary-focus">
+                        My Settings
+                      </h3>
+                      <li>
+                        <Link to="/myprofile">
+                          <p className="justify-between">My Profile</p>
+                        </Link>
+                      </li>
+
+                      <li className="text-lg ">
+                        <Link to="/">
+                          <p className="text-lg" onClick={logOut}>
+                            Logout
+                          </p>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
               </>
             ) : (
@@ -51,7 +74,7 @@ export default function Navbar({ isAuthenticated, user, logOut }) {
                 </li>
                 <li className="p-5 text-lg">
                   <Link to="/login">
-                    <button className="btn btn-primary text-lg"> Login </button>
+                    <button className="btn btn-primary text-lg">Login</button>
                   </Link>
                 </li>
               </>
