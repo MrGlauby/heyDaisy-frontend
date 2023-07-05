@@ -36,7 +36,7 @@
 /* chat page */
 
 #ce-message-form {
-  background-color: rgba(198, 192, 192, 0.4);
+  background-color: rgba(120, 120, 120, 0.296);
   padding: 2rem 1rem 1rem 1rem;
 }
 
@@ -84,7 +84,7 @@
   color: black !important;
 }
 .ce-my-message-body {
-  background-color: #6fadc7d7 !important;
+  background-color: #6fadc7fb !important;
 }
 
 .ce-message-date-text {
@@ -98,6 +98,12 @@
   padding: 0.8rem;
 }
 
+.ce-chat-avatar-1 {
+  background-color: rgb(196, 233, 196) !important;
+}
+.ce-avatar.undefined {
+  background-color: rgb(196, 233, 196) !important;
+}
 /* body {
   background-repeat: no-repeat;
   background-size: cover;
@@ -190,4 +196,3 @@
 .ce-my-message-body {
   color: black;
 }
-              

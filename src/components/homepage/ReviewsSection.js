@@ -5,7 +5,6 @@ import RandomUserThree from "../../img/randomUserReview3.jpg";
 import RandomUserFour from "../../img/randomUserReview4.jpg";
 import RandomUserFive from "../../img/randomUserReview5.jpg";
 import RandomUserSix from "../../img/randomUserReview6.jpg";
-import RandomUserSeven from "../../img/randomUserReview7.jpg";
 
 export default function ReviewsSection() {
   return (
@@ -13,10 +12,10 @@ export default function ReviewsSection() {
       <div className="flex flex-col justify-center">
         <div className="m-14">
           <h2 className="flex justify-center text-5xl font-bold">
-            User Stories
+            What others think about our platform:
           </h2>
         </div>
-        <div className="carousel carousel-center w-full p-4 space-x-4 bg-violet-100 rounded-box">
+        <div className="carousel carousel-center w-full pt-6 px-6 pb-10 space-x-4 bg-slate-100 rounded-box">
           <div className="carousel-item flex-col justify-center">
             <img
               src={RandomUserOne}
@@ -100,12 +99,12 @@ export default function ReviewsSection() {
             <br></br>
             <q className="text-black  justify-center w-64">
               Engaging community support. The platform offers a vibrant
-              community of learners and native speakers.
+              community of learners and native speakers from around the world.
             </q>
             <br></br>
             <h4 className="text-black font-bold">Jason, 31, from Canada</h4>
           </div>
-          <div
+          {/* <div
             className="carousel-item flex-col"
             styles="display: flex; flex-direction: column"
           >
@@ -121,7 +120,7 @@ export default function ReviewsSection() {
             </q>
             <br></br>
             <h4 className="text-black font-bold">Tobi, 24, from Germany</h4>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

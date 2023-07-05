@@ -12,7 +12,7 @@ function Blog() {
 
       <div className="hero p-10 bg-base-200">
         <div className="p-10">
-          <div className="max-w-4xl ">
+          <div className="max-w-4xl">
             <h1 className="text-5xl font-bold  ">Welcome to our blog page!</h1>
             <p className="py-6 text-justify">
               Here, you will find a wealth of information, news, specials, and
@@ -51,16 +51,17 @@ function Blog() {
       </div>
 
       <div className="hero min-h-screen">
-        <div className="hero-content">
-          <img src={party} className="rounded-lg shadow-2xl w-1/2 mb-20 " />
-          <div>
-            <h2 className="text-2xl font-bold">Welcome</h2>
-
-            <h1 className="text-2xl font-bold">
-              29.7.23 - Welcome to heyDaisy !
+        <div className="hero-content p-10 flex flex-col lg:flex-row">
+          <img
+            src={party}
+            className="rounded-lg shadow-2xl w-full lg:w-1/2 mb-10 lg:mb-0"
+            alt=""
+          />
+          <div className="lg:w-1/2">
+            <h1 className="text-2xl font-bold p-4">
+              29.7.23 - Welcome to heyDaisy!
             </h1>
-            <p className="py-2 text-justify">
-              {" "}
+            <p className="p-4 text-justify">
               Hello, dear language learners, We are thrilled to welcome you to
               our new language learning app! With this app, we aim to support
               you in improving your language skills in a simple and enjoyable
@@ -68,8 +69,8 @@ function Blog() {
               offers a variety of features and exercises to strengthen your
               abilities. In our first blog post, we would like to give you an
               overview of the main features of the app:
-              <br></br>
-              <br></br>
+              <br />
+              <br />
               Dear Community, We are delighted to extend a warm welcome to all
               language enthusiasts, learners, and passionate individuals who
               have joined our vibrant community. It is with great pleasure that
@@ -83,23 +84,27 @@ function Blog() {
               Engage in meaningful conversations, exchange cultural insights,
               and forge friendships with fellow learners who share your
               curiosity and love for languages. Happy learning! See you soon,
-              <br></br>
-              <br></br>
+              <br />
+              <br />
               heyDaisy Team
             </p>
           </div>
         </div>
       </div>
+
       {/* lg:flex-row-reverse */}
 
       {/* blog 2 */}
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content lg:flex-row-reverse">
-          <img src={work} className="rounded-lg shadow-2xl w-1/2 mb-20 " />
+        <div className="hero-content lg:flex-row-reverse flex-col p-10">
+          <img
+            src={work}
+            className="rounded-lg shadow-2xl w-1/2 mb-20 lg:mb-0"
+            alt=""
+          />
           <div>
-            <h1 className="text-2xl font-bold"> 30.06.23 - Roadmap!</h1>
-            <p className="py-2 text-justify  ">
-              {" "}
+            <h1 className="text-2xl font-bold p-4">30.06.23 - Roadmap!</h1>
+            <p className="text-justify p-4">
               Welcome to our language app! Discover our exciting Features
               Roadmap designed to enhance your learning journey: Intelligent
               Language Assessment: Personalized learning based on your
@@ -119,8 +124,8 @@ function Blog() {
               app is here to empower you, guide you, and make your language
               learning experience enjoyable and effective. Say hello to a world
               of possibilities and embrace the joy of learning languages.
-              <br></br>
-              <br></br>
+              <br />
+              <br />
               heyDaisy Team
             </p>
           </div>
@@ -130,20 +135,23 @@ function Blog() {
       {/* blog 3 */}
 
       <div className="hero min-h-screen">
-        <div className="hero-content">
-          <img src={community} className="rounded-lg shadow-2xl w-1/2 mb-20 " />
-          <div>
-            <h1 className="text-2xl font-bold"> 1.06.23 - Team Spirit!</h1>
-            <p className="py-2 text-justify">
-              {" "}
+        <div className="hero-content p-10 flex flex-col md:flex-row">
+          <img
+            src={community}
+            className="rounded-lg shadow-2xl w-1/2 mb-20 md:mb-0"
+            alt=""
+          />
+          <div className="md:w-1/2">
+            <h1 className="text-2xl font-bold p-4"> 1.06.23 - Team Spirit!</h1>
+            <p className="text-justify p-4">
               Hello, dear language learners, Team spirit is the secret
               ingredient behind extraordinary achievements. It fuels
               collaboration, builds trust, and boosts motivation. When
               individuals come together with a shared purpose and a supportive
               environment, magic happens. Let's explore the significance of team
               spirit and how it drives success.
-              <br></br>
-              <br></br>
+              <br />
+              <br />
               Team spirit breeds collaboration, merging diverse talents and
               perspectives to generate innovative solutions. It nurtures trust,
               enabling open communication and effective decision-making.
@@ -158,8 +166,8 @@ function Blog() {
               individuals into a harmonious and inspired force. Embrace the
               power of team spirit and unlock extraordinary achievements
               together. Celebrate team spirit, achieve greatness!
-              <br></br>
-              <br></br>
+              <br />
+              <br />
               heyDaisy Team
             </p>
           </div>
@@ -168,15 +176,17 @@ function Blog() {
 
       {/* blog 4 */}
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content lg:flex-row-reverse">
-          <img src={social} className="rounded-lg shadow-2xl w-1/2 mb-20 " />
-          <div>
-            <h1 className="text-2xl font-bold">
-              {" "}
-              1.05.23 - Our Social Media Partners !
+        <div className="hero-content lg:flex-row-reverse flex-col-reverse">
+          <img
+            src={social}
+            className="rounded-lg shadow-2xl w-1/2 mb-20 lg:mb-0"
+            alt=""
+          />
+          <div className="lg:w-1/2">
+            <h1 className="text-2xl font-bold p-4">
+              1.05.23 - Our Social Media Partners!
             </h1>
-            <p className="py-2 text-justify">
-              {" "}
+            <p className="text-justify p-4">
               Hello, dear language learners, To make sure you don't miss out on
               any of the exciting content and updates, be sure to follow us and
               our Social Media Partners on platforms like Instagram, Facebook,
@@ -197,9 +207,9 @@ function Blog() {
               will redefine what it means to learn and connect in the digital
               age. Don't miss out on any of the incredible content that awaits
               you. Follow us now, and let's embark on this exciting journey
-              together! Stay connected, stay inspired. Follow us now!
-              <br></br>
-              <br></br>
+              together! Stay connected, stay inspired.
+              <br />
+              <br />
               heyDaisy Team
             </p>
           </div>

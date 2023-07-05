@@ -47,7 +47,7 @@ export default function MyStudentProfile() {
   };
 
   return user && user._id ? (
-    <div className="lg:grid lg:grid-cols-[0.5fr,2fr,2fr] lg:min-full-screen mt-16 mb-16 sm:flex sm:flex-wrap">
+    <div className="lg:grid lg:grid-cols-[0.5fr,2fr,2fr] lg:min-full-screen mt-16 mb-16 sm:flex sm:flex-row">
       <div className="card-actions flex content-start">
         <Sidebar />
         {isEditing ? (
@@ -198,7 +198,7 @@ export default function MyStudentProfile() {
         </div>
         <div className="flex justify-center text-justify gap-5 m-5">
           <Link to="/chat">
-            <button className="btn btn-primary md:btn-md lg:btn-md">
+            <button className="btn btn-neutral opacity-90 md:btn-md lg:btn-md">
               Enter Chatrooms <UilCommentSearch className="mb-2" />
             </button>
           </Link>

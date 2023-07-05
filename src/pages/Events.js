@@ -63,7 +63,7 @@ function Events() {
               <br></br>
               <div className="flex justify-center">
                 <a href={user.videoLink}>
-                  <button className="btn btn-primary text-lg">
+                  <button className="btn btn-neutral opacity-90 text-lg">
                     Enter Event
                   </button>
                 </a>
@@ -115,7 +115,7 @@ function Events() {
 
               <div className="text-lg flex justify-center">
                 <a href={user.videoLink}>
-                  <button className="btn btn-primary text-lg">
+                  <button className="btn btn-neutral opacity-90 text-lg">
                     Enter Event
                   </button>
                 </a>
@@ -165,7 +165,7 @@ function Events() {
 
               <div className="text-lg flex justify-center">
                 <a href={user.videoLink}>
-                  <button className="btn btn-primary text-lg">
+                  <button className="btn btn-neutral opacity-90 text-lg">
                     Enter Event
                   </button>
                 </a>
@@ -225,7 +225,7 @@ function Events() {
 
               <div className="text-lg flex justify-center">
                 <a href={user.videoLink}>
-                  <button className="btn btn-primary text-lg">
+                  <button className="btn btn-neutral opacity-90 text-lg">
                     Enter Event
                   </button>
                 </a>
@@ -275,7 +275,7 @@ function Events() {
 
               <div className="text-lg flex justify-center">
                 <a href={user.videoLink}>
-                  <button className="btn btn-primary text-lg">
+                  <button className="btn btn-neutral opacity-90 text-lg">
                     Enter Event
                   </button>
                 </a>
@@ -331,7 +331,7 @@ function Events() {
 
               <div className="text-lg flex justify-center">
                 <a href={user.videoLink}>
-                  <button className="btn btn-primary text-lg">
+                  <button className="btn btn-neutral opacity-90 text-lg">
                     Enter Event
                   </button>
                 </a>
