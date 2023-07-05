@@ -84,7 +84,7 @@
   color: black !important;
 }
 .ce-my-message-body {
-  background-color: #6fadc7f3 !important;
+  background-color: #6fadc7fb !important;
 }
 
 .ce-message-date-text {
@@ -96,6 +96,13 @@
 
 .ce-chat-list {
   padding: 0.8rem;
+}
+.ce-chat-avatar-1 {
+  background-color: #9cca99fb !important;
+}
+
+.ce-avatar.undefined {
+  background-color: #9cca99fb !important;
 }
 
 /* body {
