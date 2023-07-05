@@ -4,7 +4,7 @@ import "../../App.css";
 
 import GoogleMeet from "../../img/googleMeet.png";
 import Chatfunction from "../../img/Chatfunction.png";
-import Eventssection from "../../img/Eventssection.png"
+import Eventssection from "../../img/Eventssection.png";
 
 function AppPreviewSection() {
   // State to keep track of the active tab
@@ -37,7 +37,7 @@ function AppPreviewSection() {
             <h3 className="my-10  font-semibold text-2xl">Chat</h3>
             <p className="text-content">
               "Unleash the power of words with our chat feature that's designed
-              to ignite instant connections and foster meaningful conversations. 
+              to ignite instant connections and foster meaningful conversations.
               Share your language journey, exchange tips, and make lifelong
               friendships on the go. Get ready to dive into a world of limitless
               linguistic possibilities!"
@@ -74,7 +74,7 @@ function AppPreviewSection() {
         );
       case 2:
         return (
-          <div className="image-content max-w-[24rem]">
+          <div className="image-content mt-8">
             <img src={Chatfunction} alt="Chat Placeholder" />
           </div>
         );

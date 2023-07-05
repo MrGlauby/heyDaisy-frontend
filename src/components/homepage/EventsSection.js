@@ -31,15 +31,15 @@ export default function EventsSection() {
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="w-20 ml-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div className="w-20 ml-8 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
                       <img src={Football} alt="User Events" />
                     </div>
                   </div>
-
                 </div>
               </td>
               <td className="text-base">
-                Let's talk about football and discover the chants from your country!
+                Let's talk about football and discover the chants from your
+                country!
                 <br />
                 <span className="badge badge-ghost badge-sm">
                   Beginner Level
@@ -47,28 +47,28 @@ export default function EventsSection() {
               </td>
               <td className="grid grid-cols-2 gap-0">
                 <div className="avatar">
-                  <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                  <div className="w-10 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
                     <img src={Germany} alt="User Events" />
                   </div>
                 </div>
                 <div className="avatar">
-                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      <img src={Portugal} alt="User Events" />
-                    </div>
+                  <div className="w-10 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
+                    <img src={Portugal} alt="User Events" />
                   </div>
-                  <div className="avatar">
-                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      <img src={Spain} alt="User Events" />
-                    </div>
+                </div>
+                <div className="avatar">
+                  <div className="w-10 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
+                    <img src={Spain} alt="User Events" />
                   </div>
-                  <div className="avatar">
-                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      <img src={Italy} alt="User Events" />
-                    </div>
+                </div>
+                <div className="avatar">
+                  <div className="w-10 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
+                    <img src={Italy} alt="User Events" />
                   </div>
+                </div>
               </td>
               <th>
-                <a href="events" className="btn btn-primary btn-md">
+                <a href="events" className="btn btn-neutral opacity-80 btn-md">
                   details{" "}
                 </a>
               </th>
@@ -78,7 +78,7 @@ export default function EventsSection() {
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="w-20 ml-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div className="w-20 ml-8 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
                       <img src={Tapas} alt="User Events" />
                     </div>
                   </div>
@@ -87,18 +87,20 @@ export default function EventsSection() {
               <td className="text-base">
                 Being at a Spanish bodega and learn to order some amazing tapas!
                 <br />
-                <span className="badge badge-ghost badge-sm">Beginner Level</span>
+                <span className="badge badge-ghost badge-sm">
+                  Beginner Level
+                </span>
               </td>
               <td>
                 {" "}
                 <div className="avatar">
-                  <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                  <div className="w-20 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
                     <img src={Spain} alt="User Events" />
                   </div>
                 </div>
               </td>
               <th>
-                <a href="events" className="btn btn-primary btn-md">
+                <a href="events" className="btn btn-neutral opacity-80 btn-md">
                   details{" "}
                 </a>
               </th>
@@ -108,14 +110,15 @@ export default function EventsSection() {
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="w-20 ml-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div className="w-20 ml-8 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
                       <img src={ItalianDinner} alt="User Events" />
                     </div>
                   </div>
                 </div>
               </td>
               <td className="text-base">
-                Meet up with your partner's Italian family and impress them with your skills!
+                Meet up with your partner's Italian family and impress them with
+                your skills!
                 <br />
                 <span className="badge badge-ghost badge-sm">
                   Advanced Level
@@ -124,13 +127,13 @@ export default function EventsSection() {
               <td>
                 {" "}
                 <div className="avatar">
-                  <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                  <div className="w-20 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
                     <img src={Italy} alt="User Events" />
                   </div>
                 </div>
               </td>
               <th>
-                <Link to="events" className="btn btn-primary btn-md">
+                <Link to="events" className="btn btn-neutral opacity-80 btn-md">
                   details{" "}
                 </Link>
               </th>
@@ -140,15 +143,15 @@ export default function EventsSection() {
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
-                    <div className="w-20 ml-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div className="w-20 ml-8 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
                       <img src={Biergarten} alt="User Events" />
                     </div>
                   </div>
-
                 </div>
               </td>
               <td className="text-base">
-                Being at a Bavarian Biergarten and explore the many do's and dont's...
+                Being at a Bavarian Biergarten and explore the many do's and
+                dont's...
                 <br />
                 <span className="badge badge-ghost badge-sm">
                   Beginner Level
@@ -157,13 +160,13 @@ export default function EventsSection() {
               <td>
                 {" "}
                 <div className="avatar">
-                  <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                  <div className="w-20 rounded-full ring ring-neutral opacity-80 ring-offset-base-100 ring-offset-2">
                     <img src={Germany} alt="User Events" />
                   </div>
                 </div>
               </td>
               <th>
-                <Link to="events" className="btn btn-primary btn-md">
+                <Link to="events" className="btn btn-neutral opacity-80 btn-md">
                   details{" "}
                 </Link>
               </th>
