@@ -7,7 +7,6 @@ import { storage } from "../utils/firebase";
 import { registerUser } from "../utils/authUtils";
 
 import { StateContext } from "../stateContext";
-import Transition from "../animation/Transition";
 
 function Register({ isAuthenticated, setIsAuthenticated, setToken }) {
   const [formState, setFormState] = useState({
@@ -236,4 +235,4 @@ function Register({ isAuthenticated, setIsAuthenticated, setToken }) {
     </div>
   );
 }
-export default Transition(Register);
+export default Register;
