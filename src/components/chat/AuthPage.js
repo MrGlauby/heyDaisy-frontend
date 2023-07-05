@@ -33,7 +33,7 @@ const AuthPage = (props) => {
           <div className="m-5 text-3xl  font-bold max-w-4xl items-center text-center"></div>
           <br></br>
           <div className="chat chat-start">
-            <div className="chat-bubble bg-primary ml-10 text-2xl">
+            <div className="chat-bubble bg-neutral ml-10 text-2xl">
               Set a username to get started :)
             </div>
           </div>

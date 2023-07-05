@@ -29,10 +29,14 @@
   transform-origin: top;
 }
 
+.ce-message-bubble {
+  background-color: red !important;
+}
+
 /* chat page */
 
 #ce-message-form {
-  background-color: rgba(198, 192, 192, 0.4);
+  background-color: rgba(120, 120, 120, 0.296);
   padding: 2rem 1rem 1rem 1rem;
 }
 
@@ -80,7 +84,7 @@
   color: black !important;
 }
 .ce-my-message-body {
-  background-color: #6fadc7d7 !important;
+  background-color: #6fadc7f3 !important;
 }
 
 .ce-message-date-text {
@@ -186,4 +190,3 @@
 .ce-my-message-body {
   color: black;
 }
-              

@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function SingleStudent({ user }) {
-  console.log("imageInSingleStudent", user?.profilePicture);
-
   if (!user || user.length === 0) {
     return (
       <div className="flex justify-center ">
@@ -52,7 +50,9 @@ export default function SingleStudent({ user }) {
           </div>
           <div className="flex justify-center card-actions">
             <Link to={`/student/${user._id}`}>
-              <button className="btn btn-primary">See Profile</button>
+              <button className="btn btn-neutral opacity-90">
+                See Profile
+              </button>
             </Link>
           </div>
         </div>

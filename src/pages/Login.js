@@ -4,8 +4,9 @@ import { Navigate } from "react-router-dom";
 //import Loader from ".Loader";
 import { loginUser } from "../utils/authUtils";
 import { StateContext } from "../stateContext";
+// import Transition from "../animation/Transition";
 
-export default function Login({
+function Login({
   isAuthenticated,
   setIsAuthenticated,
   /*loading,
@@ -20,7 +21,6 @@ export default function Login({
   const { email, password } = formState;
 
   const { user, setUser } = useContext(StateContext);
-  console.log("one single user", user);
 
   const handleChange = (e) => {
     setFormState((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -36,7 +36,6 @@ export default function Login({
       const res = await loginUser({ email, password });
 
       localStorage.setItem("token", res.token);
-      console.log("another one", res.token);
       setToken(res.token);
       setIsAuthenticated(true);
       setUser(res.user);
@@ -44,7 +43,6 @@ export default function Login({
       //setLoading(false);
     } catch (error) {
       //setLoading(false);
-      console.log("fehler");
       return error.message;
     }
   };
@@ -57,10 +55,16 @@ export default function Login({
           <div className="text-center">
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6">
-            Whether you're a beginner or an advanced learner, we give you the ideal platform to connect with likeminded individuals to achieve your language goals!</p> <br></br>
+              Whether you're a beginner or an advanced learner, we give you the
+              ideal platform to connect with likeminded individuals to achieve
+              your language goals!
+            </p>{" "}
+            <br></br>
             <br></br>
             <div className="flex justify-around">
-            <p className="font-bold">Let's go!  |  ¡Vamos!  |  Andiamo!  |  Los geht's!</p>
+              <p className="font-bold">
+                Let's go! | ¡Vamos! | Andiamo! | Los geht's!
+              </p>
             </div>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -107,3 +111,4 @@ export default function Login({
     </div>
   );
 }
+export default Login;
