@@ -97,6 +97,13 @@
 .ce-chat-list {
   padding: 0.8rem;
 }
+.ce-chat-avatar-1 {
+  background-color: #9cca99fb !important;
+}
+
+.ce-avatar.undefined {
+  background-color: #9cca99fb !important;
+}
 
 /* body {
   background-repeat: no-repeat;
