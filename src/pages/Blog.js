@@ -12,7 +12,7 @@ function Blog() {
 
       <div className="hero p-10 bg-base-200">
         <div className="p-10">
-          <div className="max-w-4xl ">
+          <div className="max-w-4xl">
             <h1 className="text-5xl font-bold  ">Welcome to our blog page!</h1>
             <p className="py-6 text-justify">
               Here, you will find a wealth of information, news, specials, and
@@ -50,11 +50,15 @@ function Blog() {
         </div>
       </div>
 
-      <div className="hero min-h-screen">
-        <div className="hero-content">
-          <img src={party} className="rounded-lg shadow-2xl w-1/2 mb-20 " />
+      <div className="hero min-h-screen ">
+        <div className="hero-content lg:flex-reverse sm:flex-col p-10  ">
+          <img
+            src={party}
+            className="rounded-lg shadow-2xl w-1/2 mb-20 "
+            alt=""
+          />
           <div>
-            <h2 className="text-2xl font-bold">Welcome</h2>
+            <h2 className="text-4xl font-bold">Welcome</h2>
 
             <h1 className="text-2xl font-bold">
               29.7.23 - Welcome to heyDaisy !
@@ -94,8 +98,12 @@ function Blog() {
 
       {/* blog 2 */}
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content lg:flex-row-reverse">
-          <img src={work} className="rounded-lg shadow-2xl w-1/2 mb-20 " />
+        <div className="hero-content lg:flex-row-reverse p-10 md:flex md:flex-wrap">
+          <img
+            src={work}
+            className="rounded-lg shadow-2xl w-1/2 mb-20 "
+            alt=""
+          />
           <div>
             <h1 className="text-2xl font-bold"> 30.06.23 - Roadmap!</h1>
             <p className="py-2 text-justify  ">
@@ -130,8 +138,12 @@ function Blog() {
       {/* blog 3 */}
 
       <div className="hero min-h-screen">
-        <div className="hero-content">
-          <img src={community} className="rounded-lg shadow-2xl w-1/2 mb-20 " />
+        <div className="hero-content p-10">
+          <img
+            src={community}
+            className="rounded-lg shadow-2xl w-1/2 mb-20 "
+            alt=""
+          />
           <div>
             <h1 className="text-2xl font-bold"> 1.06.23 - Team Spirit!</h1>
             <p className="py-2 text-justify">
