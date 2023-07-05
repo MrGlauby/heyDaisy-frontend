@@ -5,8 +5,12 @@ import motivation from "../img/motivation.jpg";
 import behind from "../img/behind.jpg";
 import dudett from "../img/dudett.jpg";
 import dude from "../img/dude.jpg";
-import dude2 from "../img/dude2.jpg";
-import dude3 from "../img/dude3.jpg";
+
+import Alex from "../img/alex.png";
+import Chris from "../img/chris.png";
+import Kristof from "../img/kristof.png";
+import Thomas from "../img/thomas.png";
+
 import behindTheScenes from "../img/behindthescenes2.png";
 
 import Navbar from "../components/main/Navbar";
@@ -64,13 +68,41 @@ function About() {
         </div>
       </div> */}
 
-      <div className="hero bg-base-200 p-5">
-        <div className="hero-content lg:flex-row-reverse ">
-          <img src={dude} className="max-w-xs rounded-lg shadow-xl" alt="" />
-          <img src={dudett} className="max-w-xs rounded-lg shadow-xl" alt="" />
-          <img src={dudett} className="max-w-xs rounded-lg shadow-xl" alt="" />
-          <img src={dudett} className="max-w-xs rounded-lg shadow-xl" alt="" />
-          <div></div>
+      <div className="hero bg-base-200 p-5" >
+        <div className="hero-content ">  
+          <div class="mt-8">
+          <img src={Chris} className="max-w-xs rounded-lg shadow-xl  " alt="" />
+          <br></br>
+          <br></br>
+          <div>
+          <p>Chris is a former project manager who takes his passion for teamwork in programming seriously and only puts aside his keyboard for a good coffee and good talk. Plus, he is a true challenger in ping pong and kicker.</p>
+          </div>
+          </div>
+          
+          <div class="mt-9">
+          <img src={Alex} className="max-w-xs rounded-lg shadow-xl" alt="" />
+          <br></br>
+          <br></br>
+          <div >
+          <p>Former social worker Alex is the backend specialist in our team. Like a chamber hunter, she hunts down all your bugs and doesn't hesitate to kill them! Through her friendly and appreciative nature she makes all of our challenges feel like true team work. </p>
+          </div>
+          </div>
+
+          
+          <div className="mt-3">
+           <img src={Kristof} className="max-w-xs rounded-lg shadow-xl" alt="" />
+            <br></br>
+            <br></br>
+            <p> Kristof is a loving family man and former medicine store manager. His attention to detail and search for new technologies, together with his friendly and communicative manner he makes every project a pleasure. </p>
+          </div>
+          
+          <div class="mt-7">
+              <img src={Thomas} className="max-w-xs rounded-lg shadow-xl" alt=""/>
+              <br></br>
+              <br></br>
+          <p> Thomas is truly the one bringing good energy to the team. No matter how stressful it can get, you will not get the smile off of his face. His background as an educator gives him the needed endurance with team members that might have a bad day. </p>
+          </div>
+
         </div>
       </div>
 
